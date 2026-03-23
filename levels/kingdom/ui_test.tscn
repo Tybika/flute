@@ -1,0 +1,64 @@
+[gd_scene load_steps=7 format=3 uid="uid://i25argn50eql"]
+
+[ext_resource type="Theme" uid="uid://dx8l1gyxnt1wb" path="res://ui/themes/normal_theme.tres" id="1_1mtkh"]
+[ext_resource type="Texture2D" uid="uid://u04yc6no17c4" path="res://icon.svg" id="3_d86wr"]
+
+[sub_resource type="GDScript" id="GDScript_b38qh"]
+script/source = "extends Control
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	var themes = {
+		\"normal\" : load(\"res://ui/themes/normal_theme.tres\"),
+		\"pink\" : load(\"res://ui/themes/pink_theme.tres\"),
+	}
+	theme = themes[\"normal\"];
+	await get_tree().create_timer(1).timeout;
+	theme = themes[\"pink\"];
+
+func on_change_theme():
+	pass
+"
+
+[sub_resource type="Gradient" id="Gradient_l56hx"]
+colors = PackedColorArray(1, 0.69411767, 0, 1, 1, 0.13725491, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_seydp"]
+gradient = SubResource("Gradient_l56hx")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gx14l"]
+load_path = "res://.godot/imported/Sprite-0001.png-7647bf9f8b536d839277d4b64aee9852.ctex"
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_1mtkh")
+script = SubResource("GDScript_b38qh")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 506.0
+offset_top = 259.0
+offset_right = 642.0
+offset_bottom = 395.0
+text = "omg button w icon"
+icon = ExtResource("3_d86wr")
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+
+[node name="Sprite2D2" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(183, 180)
+scale = Vector2(1.4101563, 361.5)
+texture = SubResource("GradientTexture1D_seydp")
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(182, 181)
+scale = Vector2(2.5, 2.4861112)
+texture = SubResource("CompressedTexture2D_gx14l")

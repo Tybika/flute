@@ -1,0 +1,59 @@
+[gd_scene load_steps=2 format=3 uid="uid://cn254fpmr8cue"]
+
+[ext_resource type="PackedScene" uid="uid://d2s316l611lfc" path="res://ui/buttons/simulator/hot_reload.tscn" id="1_cskkm"]
+
+[node name="ProblemWindow" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Window" type="Window" parent="."]
+oversampling_override = 1.0
+initial_position = 1
+size = Vector2i(800, 480)
+borderless = true
+always_on_top = true
+popup_window = true
+minimize_disabled = true
+maximize_disabled = true
+min_size = Vector2i(50, 50)
+
+[node name="ColorRect" type="ColorRect" parent="Window"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.799318, 0.55554706, 0.5646338, 1)
+
+[node name="Content" type="MarginContainer" parent="Window"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Window/Content"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Window/Content/VBoxContainer"]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="Window/Content/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "TITLE SLA"
+
+[node name="HotReload" parent="Window/Content/VBoxContainer/HBoxContainer" instance=ExtResource("1_cskkm")]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Window/Content/VBoxContainer"]
+layout_mode = 2
+
+[node name="CodeContainer" type="VBoxContainer" parent="Window/Content/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+
+[node name="TagsContainer" type="HFlowContainer" parent="Window/Content/VBoxContainer"]
+layout_mode = 2

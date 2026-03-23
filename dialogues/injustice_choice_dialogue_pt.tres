@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://71v1lm8vq73l"]
+
+[ext_resource type="Script" uid="uid://c0ikf6yjgtk2l" path="res://dialogues/dialog_data.gd" id="1_48fus"]
+
+[resource]
+script = ExtResource("1_48fus")
+lines = Array[String](["\"Sim, é mais justo que eu fique preso por toda eternidade em um mundo quebrado", "Sozinho e esquecido…", "pode ir embora…", "", "Ou pode ficar e me ajudar! Vou te mostrar o trabalho de qualquer forma mesmo."])
+metadata/_custom_type_script = "uid://c0ikf6yjgtk2l"

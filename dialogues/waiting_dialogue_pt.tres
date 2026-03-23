@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://clsm1xyp51v1r"]
+
+[ext_resource type="Script" uid="uid://c0ikf6yjgtk2l" path="res://dialogues/dialog_data.gd" id="1_icy7n"]
+
+[resource]
+script = ExtResource("1_icy7n")
+lines = Array[String](["Aqui está vazio.", "Aqui também está vazio.", "Aqui parece vazio.", "Parece ter algo aqui… ah, não tem nada.", "Um monte de nada.", "Isso é poeira? Ah não, é nada.", "Como pode não ter nada?", "Acho que você entendu que não tem nada.", "Ok, não vou mais responder, não tem nada aqui."])
+metadata/_custom_type_script = "uid://c0ikf6yjgtk2l"

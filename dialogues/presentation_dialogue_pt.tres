@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://tu5vbcee4x4"]
+
+[ext_resource type="Script" uid="uid://c0ikf6yjgtk2l" path="res://dialogues/dialog_data.gd" id="1_cisan"]
+
+[resource]
+script = ExtResource("1_cisan")
+lines = Array[String](["Sério?", "Elementar…", "Podemos fazer uma parceria! Te mostro como as coisas estão por aqui, você resolve tudo e poderá jogar feliz para sempre."])
+metadata/_custom_type_script = "uid://c0ikf6yjgtk2l"

@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=3 uid="uid://bk3xiho5wdmwb"]
+
+[ext_resource type="PackedScene" uid="uid://bukpbqvvoq545" path="res://ui/buttons/tools/doc_button.tscn" id="1_vjp7d"]
+[ext_resource type="PackedScene" uid="uid://vh302orj3bux" path="res://ui/buttons/tools/wrench_button.tscn" id="2_hvw0v"]
+[ext_resource type="PackedScene" uid="uid://cupvraxw4j62m" path="res://ui/buttons/tools/project_button.tscn" id="3_hvw0v"]
+
+[node name="ToolColumn" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 40
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_constants/separation = 3
+alignment = 2
+
+[node name="DocButton" parent="MarginContainer/VBoxContainer" instance=ExtResource("1_vjp7d")]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="WrenchButton" parent="MarginContainer/VBoxContainer" instance=ExtResource("2_hvw0v")]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ProjectButton" parent="MarginContainer/VBoxContainer" instance=ExtResource("3_hvw0v")]
+layout_mode = 2
+size_flags_vertical = 3

@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://batcibhn0oi2e"]
+
+[ext_resource type="Script" uid="uid://c0ikf6yjgtk2l" path="res://dialogues/dialog_data.gd" id="1_oajlv"]
+
+[resource]
+script = ExtResource("1_oajlv")
+lines = Array[String](["Esse jogo provavelmente não está funcionando…", "...", "Você também acha?", "...", "É...", "Sem um programador não tem o que fazer... pode ir embora, eu só queria companhia"])
+metadata/_custom_type_script = "uid://c0ikf6yjgtk2l"
