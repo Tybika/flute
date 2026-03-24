@@ -1,0 +1,85 @@
+[gd_scene load_steps=4 format=3 uid="uid://cn254fpmr8cue"]
+
+[ext_resource type="Script" uid="uid://6pu3f5o5lhye" path="res://ui/windows/window_behavior.gd" id="1_j6gxp"]
+[ext_resource type="PackedScene" uid="uid://d2s316l611lfc" path="res://ui/buttons/simulator/hot_reload.tscn" id="2_66i4h"]
+[ext_resource type="PackedScene" uid="uid://21tpbdithc8v" path="res://ui/buttons/simulator/debug.tscn" id="3_nma68"]
+
+[node name="ProblemWindow" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Window" type="Window" parent="."]
+oversampling_override = 1.0
+initial_position = 1
+size = Vector2i(800, 480)
+popup_window = true
+popup_wm_hint = true
+min_size = Vector2i(50, 50)
+script = ExtResource("1_j6gxp")
+
+[node name="ColorRect" type="ColorRect" parent="Window"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.799318, 0.55554706, 0.5646338, 1)
+
+[node name="Content" type="MarginContainer" parent="Window"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Window/Content"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Window/Content/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.71
+
+[node name="TitleLabel" type="Label" parent="Window/Content/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "TITLE SLA"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Window/Content/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.43
+
+[node name="HotReload" parent="Window/Content/VBoxContainer/HBoxContainer/HBoxContainer" instance=ExtResource("2_66i4h")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Debug" parent="Window/Content/VBoxContainer/HBoxContainer/HBoxContainer" instance=ExtResource("3_nma68")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HSeparator" type="HSeparator" parent="Window/Content/VBoxContainer"]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Window/Content/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.0
+
+[node name="CodeContainer" type="VBoxContainer" parent="Window/Content/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+
+[node name="HSeparator2" type="HSeparator" parent="Window/Content/VBoxContainer"]
+layout_mode = 2
+
+[node name="TagsContainer" type="HFlowContainer" parent="Window/Content/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.5
+
+[connection signal="focus_exited" from="Window" to="Window" method="_on_focus_exited"]

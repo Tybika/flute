@@ -10,7 +10,6 @@ func _ready() -> void:
 func tree_structure():
 	# Resources
 	var dir_icon = preload("res://ui/windows/project_window/dir.png")
-	var open_icon = preload("res://ui/windows/project_window/dir_open.png")
 	var blocked_icon = preload("res://ui/windows/project_window/dir_block.png")
 	var dart_icon = preload("res://ui/windows/project_window/dart.png")
 	var img_icon = preload("res://ui/windows/project_window/image.png")
@@ -25,7 +24,7 @@ func tree_structure():
 	# Root
 	var root: TreeItem = tree.create_item()
 	root.set_text(0, "Flute_backdoor_403")
-	root.set_icon(0, open_icon)
+	root.set_icon(0, dir_icon)
 	
 	# First layer
 	new_tree_item(root, "android", blocked_icon)
@@ -95,3 +94,7 @@ func _on_item_collapsed(item: TreeItem):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
+
+func _on_window_focus_exited() -> void:
+	pass # Replace with function body.

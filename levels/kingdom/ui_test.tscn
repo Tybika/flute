@@ -28,7 +28,6 @@ colors = PackedColorArray(1, 0.69411767, 0, 1, 1, 0.13725491, 1, 1)
 gradient = SubResource("Gradient_l56hx")
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gx14l"]
-load_path = "res://.godot/imported/Sprite-0001.png-7647bf9f8b536d839277d4b64aee9852.ctex"
 
 [node name="Control" type="Control"]
 layout_mode = 3

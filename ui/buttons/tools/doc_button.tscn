@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bukpbqvvoq545"]
 
-[ext_resource type="Texture2D" uid="uid://u04yc6no17c4" path="res://icon.svg" id="1_vyjk1"]
+[ext_resource type="Texture2D" uid="uid://c80a8oera0v87" path="res://ui/buttons/tools/docs.png" id="1_qaxo5"]
 
 [node name="DocButton" type="Control"]
 layout_mode = 3
@@ -24,4 +24,5 @@ offset_right = 40.0
 offset_bottom = 40.0
 grow_horizontal = 2
 grow_vertical = 2
-icon = ExtResource("1_vyjk1")
+icon = ExtResource("1_qaxo5")
+icon_alignment = 1

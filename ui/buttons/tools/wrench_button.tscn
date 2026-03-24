@@ -32,4 +32,3 @@ action_mode = 0
 icon = ExtResource("2_7i08v")
 autowrap_mode = 3
 icon_alignment = 1
-expand_icon = true

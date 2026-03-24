@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://w81eby2el1gj"]
+[gd_scene load_steps=3 format=3 uid="uid://w81eby2el1gj"]
 
-[ext_resource type="Script" uid="uid://bpsk33nlxiscw" path="res://ui/windows/project_window/tree_init.gd" id="1_uvb34"]
+[ext_resource type="Script" uid="uid://bpsk33nlxiscw" path="res://ui/windows/project_window/project_lifecicle.gd" id="1_uvb34"]
+[ext_resource type="Script" uid="uid://6pu3f5o5lhye" path="res://ui/windows/window_behavior.gd" id="2_3ufn8"]
 
 [node name="ProjectWindow" type="Control"]
 layout_mode = 3
@@ -17,10 +18,10 @@ initial_position = 1
 size = Vector2i(800, 480)
 borderless = true
 always_on_top = true
-popup_window = true
 minimize_disabled = true
 maximize_disabled = true
 min_size = Vector2i(50, 50)
+script = ExtResource("2_3ufn8")
 
 [node name="ColorRect" type="ColorRect" parent="Window"]
 anchors_preset = 15
@@ -65,3 +66,5 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.71
+
+[connection signal="focus_exited" from="Window" to="Window" method="_on_focus_exited"]

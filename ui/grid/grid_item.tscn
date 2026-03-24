@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://bysb7dqdyvbvw"]
+
+[ext_resource type="Texture2D" uid="uid://c08nvnkiawcyj" path="res://ui/grid/circuit_tile.png" id="1_2dhoa"]
+[ext_resource type="Script" uid="uid://cf3ybilsjpp5k" path="res://ui/grid/grid_item_behavior.gd" id="1_gicyf"]
+[ext_resource type="Texture2D" uid="uid://bcvhuhp26b027" path="res://ui/grid/screw.png" id="2_6fjkw"]
+[ext_resource type="Texture2D" uid="uid://gv01t0tg1vfa" path="res://ui/grid/used_screw.png" id="3_o475v"]
+
+[node name="GridItem" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_gicyf")
+
+[node name="Circuit" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_2dhoa")
+stretch_mode = 1
+
+[node name="ScrewButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -192.0
+offset_top = -96.0
+offset_bottom = 96.0
+grow_horizontal = 0
+grow_vertical = 2
+texture_normal = ExtResource("2_6fjkw")
+texture_pressed = ExtResource("3_o475v")
+
+[connection signal="button_up" from="ScrewButton" to="." method="_on_screw_button_button_up"]

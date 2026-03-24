@@ -1,0 +1,62 @@
+[gd_scene load_steps=2 format=3 uid="uid://vgsfeqffqdyh"]
+
+[ext_resource type="PackedScene" uid="uid://bysb7dqdyvbvw" path="res://ui/grid/grid_item.tscn" id="1_gvhko"]
+
+[node name="ProblemGrid" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 3
+
+[node name="GridItem" parent="GridContainer" instance=ExtResource("1_gvhko")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="GridItem2" parent="GridContainer" instance=ExtResource("1_gvhko")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="GridItem3" parent="GridContainer" instance=ExtResource("1_gvhko")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="GridItem4" parent="GridContainer" instance=ExtResource("1_gvhko")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="GridItem5" parent="GridContainer" instance=ExtResource("1_gvhko")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="GridItem6" parent="GridContainer" instance=ExtResource("1_gvhko")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="GridItem7" parent="GridContainer" instance=ExtResource("1_gvhko")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="GridItem8" parent="GridContainer" instance=ExtResource("1_gvhko")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
