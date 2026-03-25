@@ -1,6 +1,6 @@
-extends Control
+extends Tree
 
-@onready var tree: Tree = $Window/Content/VBoxContainer/HBoxContainer2/ScrollContainer/Tree
+@onready var tree: Tree = self
 @onready var window: Window = $Window
 
 # Called when the node enters the scene tree for the first time.
@@ -10,11 +10,11 @@ func _ready() -> void:
 # Creates the directiory tree structure manually
 func tree_structure():
 	# Resources
-	var dir_icon = preload("res://ui/windows/project_window/dir.png")
-	var blocked_icon = preload("res://ui/windows/project_window/dir_block.png")
-	var dart_icon = preload("res://ui/windows/project_window/dart.png")
-	var img_icon = preload("res://ui/windows/project_window/image.png")
-	var sound_icon = preload("res://ui/windows/project_window/sound.png")
+	var dir_icon = preload("res://ui/modals/project_window/dir.png")
+	var blocked_icon = preload("res://ui/modals/project_window/dir_block.png")
+	var dart_icon = preload("res://ui/modals/project_window/dart.png")
+	var img_icon = preload("res://ui/modals/project_window/image.png")
+	var sound_icon = preload("res://ui/modals/project_window/sound.png")
 	
 	# Tree configs
 	tree.clear()

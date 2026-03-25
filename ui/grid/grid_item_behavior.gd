@@ -2,29 +2,32 @@ extends Control
 
 @onready var circuit: TextureRect = $Circuit
 @onready var button: TextureButton = $ScrewButton
-@onready var problem: PackedScene = load("res://ui/windows/problem_window/problem_window.tscn")
+@onready var problem: PackedScene = load("res://ui/modals/problem_window/problem_window.tscn")
 
-@export var callable: Callable
-
-var linked_problem: Node;
+@export var linked_modal: Node = null;
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass
 
-func _on_screw_button_button_up() -> void:
-	circuit.show()
-	button.hide()
-	if linked_problem:
-		linked_problem.show()
+# Provavelmente esse processo deve ser realizado pelo objeto que cuida dos 
+# modais na cena.
+func instanciate_something():
+	if linked_modal:
+		linked_modal.show()
 		print('voltando a instancia aí irra')
 	else:
-		linked_problem = problem.instantiate()
+		linked_modal = problem.instantiate()
 		print('instancia nova problem')
-		add_child(linked_problem)
-		print('adicionada instancia na árvore', typeof(linked_problem))
+		add_child(linked_modal)
+		print('adicionada instancia na árvore', typeof(linked_modal))
 
+func _on_button_up() -> void:
+	circuit.show()
+	button.hide()
+	
+	instanciate_something()
 
-func _on_problem_grid_focus_entered() -> void:
+func _on_release():
 	circuit.hide()
 	button.show()

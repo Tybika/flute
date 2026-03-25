@@ -41,4 +41,4 @@ grow_vertical = 2
 texture_normal = ExtResource("2_6fjkw")
 texture_pressed = ExtResource("3_o475v")
 
-[connection signal="button_up" from="ScrewButton" to="." method="_on_screw_button_button_up"]
+[connection signal="button_up" from="ScrewButton" to="." method="_on_button_up"]
