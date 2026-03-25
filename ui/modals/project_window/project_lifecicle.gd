@@ -1,12 +1,13 @@
 extends Control
 
 @onready var tree: Tree = $Window/Content/VBoxContainer/HBoxContainer2/ScrollContainer/Tree
+@onready var window: Window = $Window
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	tree_structure()
 
-# Creates the directiory structure manually
+# Creates the directiory tree structure manually
 func tree_structure():
 	# Resources
 	var dir_icon = preload("res://ui/windows/project_window/dir.png")
@@ -90,10 +91,6 @@ func _on_item_collapsed(item: TreeItem):
 		item.set_collapsed(true)
 
 # Handles visualization
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
 
 
 func _on_window_focus_exited() -> void:

@@ -1,6 +1,7 @@
 extends Control
 
-@onready var handSprite = $HandAnim
+@onready var animator: AnimationPlayer = $TextureRect/AnimationPlayer
+@onready var handSprite: TextureRect = $TextureRect
 @onready var label: Label = $VBox/InstructionLabel
 
 const instructions = [
@@ -26,7 +27,8 @@ func _on_gui_input(event: InputEvent) -> void:
 
 # Changes swipe animation visibility and activate 5 seconds timer
 func swipe_require():
-	handSprite.visible = true
+	handSprite.show()
+	animator.play("handling")
 	get_tree().create_timer(5).timeout.connect(_on_timer_timeout)
 
 # Provide instruction if player don't swipe in defined time

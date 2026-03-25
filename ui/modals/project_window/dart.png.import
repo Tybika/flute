@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bk0q6btgsfqg0"
-path="res://.godot/imported/dir_block.png-c0cd02a8c963bf2a6e345a2498fdadc0.ctex"
+uid="uid://6357m7e0hsrc"
+path="res://.godot/imported/dart.png-8e8fca3eb1a0330b8afe8a08deb22df4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ui/windows/project_window/dir_block.png"
-dest_files=["res://.godot/imported/dir_block.png-c0cd02a8c963bf2a6e345a2498fdadc0.ctex"]
+source_file="res://ui/modals/project_window/dart.png"
+dest_files=["res://.godot/imported/dart.png-8e8fca3eb1a0330b8afe8a08deb22df4.ctex"]
 
 [params]
 

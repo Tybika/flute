@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6357m7e0hsrc"
-path="res://.godot/imported/dart.png-87c2157d3ef0478f3e95a625be4f5283.ctex"
+uid="uid://x40oxm08pxsm"
+path="res://.godot/imported/padlock.png-0cdeaaed687c8bc4cebe6c61ce7a6101.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ui/windows/project_window/dart.png"
-dest_files=["res://.godot/imported/dart.png-87c2157d3ef0478f3e95a625be4f5283.ctex"]
+source_file="res://ui/modals/project_window/padlock.png"
+dest_files=["res://.godot/imported/padlock.png-0cdeaaed687c8bc4cebe6c61ce7a6101.ctex"]
 
 [params]
 

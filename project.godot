@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Flute"
+run/main_scene="uid://cuwom52h2tfqt"
 config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://icon.svg"
 
@@ -21,3 +22,4 @@ pointing/emulate_touch_from_mouse=true
 [rendering]
 
 renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true

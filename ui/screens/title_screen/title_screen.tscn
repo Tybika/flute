@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cuwom52h2tfqt"]
+[gd_scene load_steps=12 format=3 uid="uid://cuwom52h2tfqt"]
 
 [ext_resource type="Texture2D" uid="uid://btr0glk1cp8hi" path="res://ui/screens/title_screen/title.png" id="1_72buf"]
 [ext_resource type="Texture2D" uid="uid://buy3tfkl1cqpg" path="res://ui/screens/title_screen/broken_play.png" id="2_72buf"]
@@ -8,53 +8,44 @@
 [ext_resource type="Texture2D" uid="uid://sbyx3ui1qbo1" path="res://ui/screens/title_screen/hand_frames/title_hand0006.png" id="6_dk1uc"]
 [ext_resource type="Texture2D" uid="uid://176v3nrp3w8p" path="res://ui/screens/title_screen/hand_frames/title_hand0009.png" id="7_c8lgs"]
 [ext_resource type="Texture2D" uid="uid://cg143rh1kge7u" path="res://ui/screens/title_screen/hand_frames/title_hand0012.png" id="8_533ah"]
-[ext_resource type="Texture2D" uid="uid://d4gsre0vaffa3" path="res://ui/screens/title_screen/hand_frames/title_hand0015.png" id="9_qua4x"]
-[ext_resource type="Texture2D" uid="uid://cc0w17liw644r" path="res://ui/screens/title_screen/title_sheet.png" id="10_gwpbi"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_dk1uc"]
-atlas = ExtResource("10_gwpbi")
-region = Rect2(0, 0, 32, 32)
+[sub_resource type="Animation" id="Animation_e28hc"]
+resource_name = "handling"
+length = 0.9
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.36666667, 0.56666666, 0.76666665),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("4_1djn3"), ExtResource("5_gwpbi"), ExtResource("6_dk1uc"), ExtResource("7_c8lgs"), ExtResource("8_533ah")]
+}
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_c8lgs"]
-atlas = ExtResource("10_gwpbi")
-region = Rect2(32, 0, 32, 32)
+[sub_resource type="Animation" id="Animation_5f3d8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("4_1djn3")]
+}
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_1djn3"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("4_1djn3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_gwpbi")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_dk1uc")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_c8lgs")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_533ah")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_qua4x")
-}],
-"loop": true,
-"name": &"handling",
-"speed": 9.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_dk1uc")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_c8lgs")
-}],
-"loop": true,
-"name": &"outra ani",
-"speed": 5.0
-}]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ssu3a"]
+_data = {
+&"RESET": SubResource("Animation_5f3d8"),
+&"handling": SubResource("Animation_e28hc")
+}
 
 [node name="TitleScreen" type="Control"]
 layout_mode = 3
@@ -66,9 +57,10 @@ grow_vertical = 2
 script = ExtResource("2_485pg")
 
 [node name="VBox" type="VBoxContainer" parent="."]
-layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 648.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
@@ -95,12 +87,23 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="HandAnim" type="AnimatedSprite2D" parent="."]
+[node name="TextureRect" type="TextureRect" parent="."]
 visible = false
-position = Vector2(950, 404)
-scale = Vector2(0.5, 0.5)
-sprite_frames = SubResource("SpriteFrames_1djn3")
-animation = &"handling"
-autoplay = "handling"
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -800.0
+offset_top = -800.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("4_1djn3")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TextureRect"]
+libraries = {
+&"": SubResource("AnimationLibrary_ssu3a")
+}
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]

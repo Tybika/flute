@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://w81eby2el1gj"]
 
-[ext_resource type="Script" uid="uid://bpsk33nlxiscw" path="res://ui/windows/project_window/project_lifecicle.gd" id="1_uvb34"]
-[ext_resource type="Script" uid="uid://6pu3f5o5lhye" path="res://ui/windows/window_behavior.gd" id="2_3ufn8"]
+[ext_resource type="Script" uid="uid://bpsk33nlxiscw" path="res://ui/modals/project_window/project_lifecicle.gd" id="1_uvb34"]
+[ext_resource type="Script" uid="uid://6pu3f5o5lhye" path="res://ui/modals/modal_behavior.gd" id="2_3ufn8"]
 
 [node name="ProjectWindow" type="Control"]
 layout_mode = 3
@@ -16,8 +16,11 @@ script = ExtResource("1_uvb34")
 oversampling_override = 1.0
 initial_position = 1
 size = Vector2i(800, 480)
+visible = false
+transient = true
 borderless = true
 always_on_top = true
+popup_window = true
 minimize_disabled = true
 maximize_disabled = true
 min_size = Vector2i(50, 50)
