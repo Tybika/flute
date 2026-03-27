@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cupvraxw4j62m"]
+[gd_scene load_steps=3 format=3 uid="uid://cupvraxw4j62m"]
 
 [ext_resource type="Texture2D" uid="uid://dwe0qybf8v1c3" path="res://ui/buttons/tools/project.png" id="1_ttsrn"]
+[ext_resource type="Script" uid="uid://bb35gou6tvjoa" path="res://ui/buttons/tools/popup_button.gd" id="1_xfpkj"]
 
 [node name="ProjectButton" type="Control"]
 layout_mode = 3
@@ -9,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_xfpkj")
 
 [node name="Button" type="Button" parent="."]
 custom_minimum_size = Vector2(80, 80)
@@ -26,3 +28,5 @@ grow_horizontal = 2
 grow_vertical = 2
 icon = ExtResource("1_ttsrn")
 icon_alignment = 1
+
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]

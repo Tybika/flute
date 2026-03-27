@@ -1,13 +1,13 @@
 [gd_scene load_steps=12 format=3 uid="uid://cuwom52h2tfqt"]
 
-[ext_resource type="Texture2D" uid="uid://btr0glk1cp8hi" path="res://ui/screens/title_screen/title.png" id="1_72buf"]
-[ext_resource type="Texture2D" uid="uid://buy3tfkl1cqpg" path="res://ui/screens/title_screen/broken_play.png" id="2_72buf"]
-[ext_resource type="Script" uid="uid://txk41s1x24x3" path="res://ui/screens/title_screen/instruction_label.gd" id="2_485pg"]
-[ext_resource type="Texture2D" uid="uid://clmipw6qbty6d" path="res://ui/screens/title_screen/hand_frames/title_hand0000.png" id="4_1djn3"]
-[ext_resource type="Texture2D" uid="uid://c0ookq6ofklsj" path="res://ui/screens/title_screen/hand_frames/title_hand0003.png" id="5_gwpbi"]
-[ext_resource type="Texture2D" uid="uid://sbyx3ui1qbo1" path="res://ui/screens/title_screen/hand_frames/title_hand0006.png" id="6_dk1uc"]
-[ext_resource type="Texture2D" uid="uid://176v3nrp3w8p" path="res://ui/screens/title_screen/hand_frames/title_hand0009.png" id="7_c8lgs"]
-[ext_resource type="Texture2D" uid="uid://cg143rh1kge7u" path="res://ui/screens/title_screen/hand_frames/title_hand0012.png" id="8_533ah"]
+[ext_resource type="Texture2D" uid="uid://btr0glk1cp8hi" path="res://screens/title_screen/title.png" id="1_72buf"]
+[ext_resource type="Texture2D" uid="uid://buy3tfkl1cqpg" path="res://screens/title_screen/broken_play.png" id="2_72buf"]
+[ext_resource type="Script" uid="uid://txk41s1x24x3" path="res://screens/title_screen/instruction_label.gd" id="2_485pg"]
+[ext_resource type="Texture2D" uid="uid://clmipw6qbty6d" path="res://screens/title_screen/hand_frames/title_hand0000.png" id="4_1djn3"]
+[ext_resource type="Texture2D" uid="uid://c0ookq6ofklsj" path="res://screens/title_screen/hand_frames/title_hand0003.png" id="5_gwpbi"]
+[ext_resource type="Texture2D" uid="uid://sbyx3ui1qbo1" path="res://screens/title_screen/hand_frames/title_hand0006.png" id="6_dk1uc"]
+[ext_resource type="Texture2D" uid="uid://176v3nrp3w8p" path="res://screens/title_screen/hand_frames/title_hand0009.png" id="7_c8lgs"]
+[ext_resource type="Texture2D" uid="uid://cg143rh1kge7u" path="res://screens/title_screen/hand_frames/title_hand0012.png" id="8_533ah"]
 
 [sub_resource type="Animation" id="Animation_e28hc"]
 resource_name = "handling"

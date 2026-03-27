@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://vh302orj3bux"]
+[gd_scene load_steps=4 format=3 uid="uid://vh302orj3bux"]
 
+[ext_resource type="Script" uid="uid://d0n4rx00bp0nd" path="res://ui/buttons/tools/wrench_button.gd" id="1_jmgth"]
 [ext_resource type="Theme" uid="uid://b5gv54vplg4wv" path="res://ui/themes/pink_theme.tres" id="1_lgsin"]
 [ext_resource type="Texture2D" uid="uid://c3gcc3oamdt7o" path="res://ui/buttons/tools/wrench.png" id="2_7i08v"]
 
@@ -10,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_jmgth")
 
 [node name="Button" type="Button" parent="."]
 custom_minimum_size = Vector2(80, 80)
@@ -32,3 +34,5 @@ action_mode = 0
 icon = ExtResource("2_7i08v")
 autowrap_mode = 3
 icon_alignment = 1
+
+[connection signal="toggled" from="Button" to="." method="_on_button_toggled"]

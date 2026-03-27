@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://buy3tfkl1cqpg"
-path="res://.godot/imported/broken_play.png-5d9ac6288b1f979ef18163b2c171d67e.ctex"
+uid="uid://btr0glk1cp8hi"
+path="res://.godot/imported/title.png-2b97c0b1a276d593079b33542269c6d0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ui/screens/title_screen/broken_play.png"
-dest_files=["res://.godot/imported/broken_play.png-5d9ac6288b1f979ef18163b2c171d67e.ctex"]
+source_file="res://screens/title_screen/title.png"
+dest_files=["res://.godot/imported/title.png-2b97c0b1a276d593079b33542269c6d0.ctex"]
 
 [params]
 

@@ -11,9 +11,17 @@ config_version=5
 [application]
 
 config/name="Flute"
-run/main_scene="uid://cuwom52h2tfqt"
+run/main_scene="uid://c4alrmuq3dxcc"
 config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://icon.svg"
+run/stretch/aspect="expand"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
 
 [input_devices]
 

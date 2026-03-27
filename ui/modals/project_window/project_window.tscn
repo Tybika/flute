@@ -1,16 +1,17 @@
 [gd_scene load_steps=3 format=3 uid="uid://w81eby2el1gj"]
 
-[ext_resource type="Script" uid="uid://bpsk33nlxiscw" path="res://ui/modals/project_window/project_lifecicle.gd" id="1_uvb34"]
-[ext_resource type="Script" uid="uid://6pu3f5o5lhye" path="res://ui/modals/modal_behavior.gd" id="2_3ufn8"]
+[ext_resource type="Script" uid="uid://dl8sy6g6od8dl" path="res://ui/modals/project_window/project_modal.gd" id="1_uvb34"]
+[ext_resource type="Script" uid="uid://bpsk33nlxiscw" path="res://ui/modals/project_window/project_tree.gd" id="2_gtt7h"]
 
-[node name="Window" type="PopupPanel"]
+[node name="ProjectModal" type="PopupPanel" node_paths=PackedStringArray("back_button")]
 oversampling_override = 1.0
 initial_position = 1
-size = Vector2i(800, 480)
+size = Vector2i(900, 600)
 visible = true
 always_on_top = true
 min_size = Vector2i(50, 50)
-script = ExtResource("2_3ufn8")
+script = ExtResource("1_uvb34")
+back_button = NodePath("Content/VBoxContainer/HBoxContainer/Button")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 15
@@ -18,8 +19,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 4.0
 offset_top = 4.0
-offset_right = -4.0
-offset_bottom = -4.0
+offset_right = 896.0
+offset_bottom = 596.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.13919011, 0.15213647, 0.17496383, 1)
@@ -30,8 +31,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 4.0
 offset_top = 4.0
-offset_right = -4.0
-offset_bottom = -4.0
+offset_right = 896.0
+offset_bottom = 596.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -41,8 +42,15 @@ layout_mode = 2
 [node name="HBoxContainer" type="HBoxContainer" parent="Content/VBoxContainer"]
 layout_mode = 2
 
+[node name="Button" type="Button" parent="Content/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "<"
+
 [node name="TitleLabel" type="Label" parent="Content/VBoxContainer/HBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 9.0
 text = "../Flute"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="Content/VBoxContainer"]
@@ -58,12 +66,9 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-script = ExtResource("1_uvb34")
+script = ExtResource("2_gtt7h")
 
 [node name="MarginContainer" type="MarginContainer" parent="Content/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.71
-
-[connection signal="focus_exited" from="." to="." method="_on_focus_exited"]
-[connection signal="popup_hide" from="." to="." method="_on_popup_hide"]

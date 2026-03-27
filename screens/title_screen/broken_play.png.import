@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cg143rh1kge7u"
-path="res://.godot/imported/title_hand0012.png-4c6d5a23b6ce23f5ec53f8a5dc6c78e4.ctex"
+uid="uid://buy3tfkl1cqpg"
+path="res://.godot/imported/broken_play.png-132e8ce1c534ca906a7058769c2f1f1f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ui/screens/title_screen/hand_frames/title_hand0012.png"
-dest_files=["res://.godot/imported/title_hand0012.png-4c6d5a23b6ce23f5ec53f8a5dc6c78e4.ctex"]
+source_file="res://screens/title_screen/broken_play.png"
+dest_files=["res://.godot/imported/broken_play.png-132e8ce1c534ca906a7058769c2f1f1f.ctex"]
 
 [params]
 

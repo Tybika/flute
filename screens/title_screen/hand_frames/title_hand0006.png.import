@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c08nvnkiawcyj"
-path="res://.godot/imported/circuit_tile.png-79d690a45daf06d208f2bcd351971b34.ctex"
+uid="uid://sbyx3ui1qbo1"
+path="res://.godot/imported/title_hand0006.png-7ed5917fb85bf654af3435b19de1ddab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ui/grid/circuit_tile.png"
-dest_files=["res://.godot/imported/circuit_tile.png-79d690a45daf06d208f2bcd351971b34.ctex"]
+source_file="res://screens/title_screen/hand_frames/title_hand0006.png"
+dest_files=["res://.godot/imported/title_hand0006.png-7ed5917fb85bf654af3435b19de1ddab.ctex"]
 
 [params]
 

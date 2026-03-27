@@ -1,7 +1,6 @@
 extends Tree
 
 @onready var tree: Tree = self
-@onready var window: Window = $Window
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -91,7 +90,5 @@ func _on_item_collapsed(item: TreeItem):
 		item.set_collapsed(true)
 
 # Handles visualization
-
-
-func _on_window_focus_exited() -> void:
-	pass # Replace with function body.
+func view_algo():
+	pass

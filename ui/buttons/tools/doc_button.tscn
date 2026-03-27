@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://bukpbqvvoq545"]
+[gd_scene load_steps=3 format=3 uid="uid://bukpbqvvoq545"]
 
+[ext_resource type="Script" uid="uid://bb35gou6tvjoa" path="res://ui/buttons/tools/popup_button.gd" id="1_7ky88"]
 [ext_resource type="Texture2D" uid="uid://c80a8oera0v87" path="res://ui/buttons/tools/docs.png" id="1_qaxo5"]
 
 [node name="DocButton" type="Control"]
@@ -9,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_7ky88")
 
 [node name="Button" type="Button" parent="."]
 custom_minimum_size = Vector2(80, 80)
@@ -26,3 +28,5 @@ grow_horizontal = 2
 grow_vertical = 2
 icon = ExtResource("1_qaxo5")
 icon_alignment = 1
+
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]

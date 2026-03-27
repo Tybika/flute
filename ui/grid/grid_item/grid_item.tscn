@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://bysb7dqdyvbvw"]
 
-[ext_resource type="Texture2D" uid="uid://c08nvnkiawcyj" path="res://ui/grid/circuit_tile.png" id="1_2dhoa"]
-[ext_resource type="Script" uid="uid://cf3ybilsjpp5k" path="res://ui/grid/grid_item_behavior.gd" id="1_gicyf"]
-[ext_resource type="Texture2D" uid="uid://bcvhuhp26b027" path="res://ui/grid/screw.png" id="2_6fjkw"]
-[ext_resource type="Texture2D" uid="uid://gv01t0tg1vfa" path="res://ui/grid/used_screw.png" id="3_o475v"]
+[ext_resource type="Texture2D" uid="uid://c08nvnkiawcyj" path="res://ui/grid/grid_item/circuit_tile.png" id="1_2dhoa"]
+[ext_resource type="Script" uid="uid://cf3ybilsjpp5k" path="res://ui/grid/grid_item/grid_item.gd" id="1_gicyf"]
+[ext_resource type="Texture2D" uid="uid://bcvhuhp26b027" path="res://ui/grid/grid_item/screw.png" id="2_6fjkw"]
+[ext_resource type="Texture2D" uid="uid://gv01t0tg1vfa" path="res://ui/grid/grid_item/used_screw.png" id="3_o475v"]
 
 [node name="GridItem" type="Control"]
 layout_mode = 3
