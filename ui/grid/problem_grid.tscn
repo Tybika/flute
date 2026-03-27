@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://vgsfeqffqdyh"]
+[gd_scene load_steps=3 format=3 uid="uid://vgsfeqffqdyh"]
 
-[ext_resource type="PackedScene" uid="uid://bysb7dqdyvbvw" path="res://ui/grid/grid_item.tscn" id="1_gvhko"]
+[ext_resource type="PackedScene" uid="uid://bysb7dqdyvbvw" path="res://ui/grid/grid_item/grid_item.tscn" id="1_gvhko"]
+[ext_resource type="PackedScene" uid="uid://cn254fpmr8cue" path="res://ui/modals/problem_window/problem_window.tscn" id="2_03l12"]
 
 [node name="ProblemGrid" type="Control"]
 layout_mode = 3
@@ -21,10 +22,11 @@ theme_override_constants/h_separation = 0
 theme_override_constants/v_separation = 0
 columns = 3
 
-[node name="GridItem" parent="GridContainer" instance=ExtResource("1_gvhko")]
+[node name="GridItem" parent="GridContainer" node_paths=PackedStringArray("linked_modal") instance=ExtResource("1_gvhko")]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+linked_modal = NodePath("../../Modals/ProblemModal")
 
 [node name="GridItem2" parent="GridContainer" instance=ExtResource("1_gvhko")]
 layout_mode = 2
@@ -60,5 +62,10 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+
+[node name="Modals" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="ProblemModal" parent="Modals" instance=ExtResource("2_03l12")]
 
 [connection signal="focus_entered" from="." to="GridContainer/GridItem" method="_on_problem_grid_focus_entered"]

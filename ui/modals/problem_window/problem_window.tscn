@@ -1,17 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://cn254fpmr8cue"]
+[gd_scene load_steps=7 format=3 uid="uid://cn254fpmr8cue"]
 
-[ext_resource type="Script" uid="uid://6pu3f5o5lhye" path="res://ui/modals/modal_behavior.gd" id="1_j6gxp"]
+[ext_resource type="Script" uid="uid://ps70jg7splls" path="res://ui/modals/problem_window/problem_modal.gd" id="1_6rmfd"]
+[ext_resource type="Resource" uid="uid://uhgbm6u7fnxf" path="res://problems/sample_problem.tres" id="2_6fmu2"]
 [ext_resource type="PackedScene" uid="uid://d2s316l611lfc" path="res://ui/buttons/simulator/hot_reload.tscn" id="2_66i4h"]
 [ext_resource type="PackedScene" uid="uid://21tpbdithc8v" path="res://ui/buttons/simulator/debug.tscn" id="3_nma68"]
+[ext_resource type="PackedScene" uid="uid://ckj1y86yo2vjb" path="res://ui/modals/problem_window/tags/tags_tab.tscn" id="4_6rmfd"]
+[ext_resource type="PackedScene" uid="uid://dybdo0nsd50i1" path="res://ui/modals/problem_window/editable_line.tscn" id="5_xkpoo"]
 
 [node name="ProblemModal" type="PopupPanel" node_paths=PackedStringArray("back_button")]
 oversampling_override = 1.0
 initial_position = 1
-size = Vector2i(800, 480)
+size = Vector2i(900, 600)
 visible = true
 min_size = Vector2i(50, 50)
-script = ExtResource("1_j6gxp")
-back_button = NodePath("Content/VBoxContainer/HBoxContainer/Button")
+script = ExtResource("1_6rmfd")
+back_button = NodePath("Content/VBox/ToolBar/Button")
+modal_data = ExtResource("2_6fmu2")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 15
@@ -35,55 +39,61 @@ offset_right = -4.0
 offset_bottom = -4.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Content"]
+[node name="VBox" type="VBoxContainer" parent="Content"]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Content/VBoxContainer"]
+[node name="ToolBar" type="HBoxContainer" parent="Content/VBox"]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.71
 
-[node name="Button" type="Button" parent="Content/VBoxContainer/HBoxContainer"]
+[node name="Button" type="Button" parent="Content/VBox/ToolBar"]
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
 text = "<"
 flat = true
 
-[node name="TitleLabel" type="Label" parent="Content/VBoxContainer/HBoxContainer"]
+[node name="TitleLabel" type="Label" parent="Content/VBox/ToolBar"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "TITLE SLA"
 horizontal_alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Content/VBoxContainer/HBoxContainer"]
+[node name="IdeButtons" type="HBoxContainer" parent="Content/VBox/ToolBar"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.43
 
-[node name="HotReload" parent="Content/VBoxContainer/HBoxContainer/HBoxContainer" instance=ExtResource("2_66i4h")]
+[node name="HotReload" parent="Content/VBox/ToolBar/IdeButtons" instance=ExtResource("2_66i4h")]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Debug" parent="Content/VBoxContainer/HBoxContainer/HBoxContainer" instance=ExtResource("3_nma68")]
+[node name="Debug" parent="Content/VBox/ToolBar/IdeButtons" instance=ExtResource("3_nma68")]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="HSeparator" type="HSeparator" parent="Content/VBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="Content/VBox"]
 layout_mode = 2
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Content/VBoxContainer"]
+[node name="EditableLine" parent="Content/VBox" instance=ExtResource("5_xkpoo")]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="CodeView" type="ScrollContainer" parent="Content/VBox"]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 3.0
 
-[node name="CodeContainer" type="VBoxContainer" parent="Content/VBoxContainer/ScrollContainer"]
+[node name="CodeContainer" type="VBoxContainer" parent="Content/VBox/CodeView"]
 layout_mode = 2
 
-[node name="HSeparator2" type="HSeparator" parent="Content/VBoxContainer"]
+[node name="HSeparator2" type="HSeparator" parent="Content/VBox"]
 layout_mode = 2
 
-[node name="TagsContainer" type="HFlowContainer" parent="Content/VBoxContainer"]
+[node name="TagsByType" parent="Content/VBox" instance=ExtResource("4_6rmfd")]
 layout_mode = 2
-size_flags_vertical = 3
-size_flags_stretch_ratio = 1.5

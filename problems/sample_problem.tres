@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ProblemData" load_steps=2 format=3 uid="uid://uhgbm6u7fnxf"]
+
+[ext_resource type="Script" uid="uid://c74bhshb66n4q" path="res://problems/problem_data.gd" id="1_lreyp"]
+
+[resource]
+script = ExtResource("1_lreyp")
+title = "Sample Problem"
+context = Array[String](["Widget build(", "Algo algo mais pipipi", "outra linha e tal", "", "texto texto texto"])
+answer_line = Array[String](["final int = 7", "final = 7"])
+tags = Dictionary[String, Array]({
+"Tipo": ["Array", "int", "bool", "double"],
+"Variável": ["var", "const", "final"]
+})
+metadata/_custom_type_script = "uid://c74bhshb66n4q"

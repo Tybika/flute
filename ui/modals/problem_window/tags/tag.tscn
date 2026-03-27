@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6sneautxhwhf"]
+
+[ext_resource type="Script" uid="uid://dsb7yxvimqlxp" path="res://ui/modals/problem_window/tags/tag.gd" id="1_5rf8y"]
+
+[node name="Tag" type="PanelContainer"]
+custom_minimum_size = Vector2(30, 40)
+offset_right = 123.0
+offset_bottom = 40.0
+script = ExtResource("1_5rf8y")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 5
+
+[node name="Label" type="Label" parent="MarginContainer"]
+layout_mode = 2
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
