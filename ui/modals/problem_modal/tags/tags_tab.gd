@@ -1,6 +1,6 @@
 extends TabContainer
 
-@onready var tag_scn : PackedScene = load("res://ui/modals/problem_window/tags/tag.tscn")
+@onready var tag_scn : PackedScene = load("res://ui/modals/problem_modal/tags/tag.tscn")
 @onready var tags_data: Dictionary[String, Array]
 
 # Called when the node enters the scene tree for the first time.

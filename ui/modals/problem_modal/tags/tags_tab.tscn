@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://ckj1y86yo2vjb"]
 
-[ext_resource type="Script" uid="uid://c5fcjjcwf0gdo" path="res://ui/modals/problem_window/tags/tags_tab.gd" id="1_roqdk"]
+[ext_resource type="Script" uid="uid://c5fcjjcwf0gdo" path="res://ui/modals/problem_modal/tags/tags_tab.gd" id="1_roqdk"]
 
 [node name="TagsTab" type="TabContainer"]
 custom_minimum_size = Vector2(400, 200)

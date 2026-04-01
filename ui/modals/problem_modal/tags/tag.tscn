@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c6sneautxhwhf"]
 
-[ext_resource type="Script" uid="uid://dsb7yxvimqlxp" path="res://ui/modals/problem_window/tags/tag.gd" id="1_5rf8y"]
+[ext_resource type="Script" uid="uid://dsb7yxvimqlxp" path="res://ui/modals/problem_modal/tags/tag.gd" id="1_5rf8y"]
 
 [node name="Tag" type="PanelContainer"]
 custom_minimum_size = Vector2(30, 40)

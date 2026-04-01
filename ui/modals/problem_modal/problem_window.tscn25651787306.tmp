@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://d2s316l611lfc" path="res://ui/buttons/simulator/hot_reload.tscn" id="2_66i4h"]
 [ext_resource type="PackedScene" uid="uid://21tpbdithc8v" path="res://ui/buttons/simulator/debug.tscn" id="3_nma68"]
 [ext_resource type="PackedScene" uid="uid://ckj1y86yo2vjb" path="res://ui/modals/problem_window/tags/tags_tab.tscn" id="4_6rmfd"]
-[ext_resource type="PackedScene" uid="uid://dybdo0nsd50i1" path="res://ui/modals/problem_window/editable_line.tscn" id="5_xkpoo"]
+[ext_resource type="PackedScene" uid="uid://cb3djy6e03hxn" path="res://ui/views/code_view/line_view.tscn" id="5_xkpoo"]
 
 [node name="ProblemModal" type="PopupPanel" node_paths=PackedStringArray("back_button")]
 oversampling_override = 1.0
@@ -27,7 +27,7 @@ offset_right = -4.0
 offset_bottom = -4.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.799318, 0.55554706, 0.5646338, 1)
+color = Color(0, 0, 0, 1)
 
 [node name="Content" type="MarginContainer" parent="."]
 anchors_preset = 15
@@ -80,17 +80,9 @@ size_flags_horizontal = 3
 [node name="HSeparator" type="HSeparator" parent="Content/VBox"]
 layout_mode = 2
 
-[node name="EditableLine" parent="Content/VBox" instance=ExtResource("5_xkpoo")]
+[node name="LineView" parent="Content/VBox" instance=ExtResource("5_xkpoo")]
 layout_mode = 2
-size_flags_vertical = 3
-
-[node name="CodeView" type="ScrollContainer" parent="Content/VBox"]
-layout_mode = 2
-size_flags_vertical = 3
 size_flags_stretch_ratio = 3.0
-
-[node name="CodeContainer" type="VBoxContainer" parent="Content/VBox/CodeView"]
-layout_mode = 2
 
 [node name="HSeparator2" type="HSeparator" parent="Content/VBox"]
 layout_mode = 2

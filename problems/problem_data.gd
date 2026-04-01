@@ -5,4 +5,9 @@ class_name ProblemData
 @export var context: Array[String] = []
 @export var answer_line: Array[String] = []
 @export var answer_position: int = -1
-@export var tags: Dictionary[String, Array] = {}
+@export var tags: Dictionary[String, Array] = {
+	"variáveis": [],
+	"tipos": [],
+	"operadores": [],
+	"sintaxe": ["(", ")", "[", "]", "{", "}", ":", ";", ",", "\"", ]
+}

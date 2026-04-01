@@ -1,0 +1,92 @@
+[gd_scene load_steps=7 format=3 uid="uid://cn254fpmr8cue"]
+
+[ext_resource type="Script" uid="uid://ps70jg7splls" path="res://ui/modals/problem_window/problem_modal.gd" id="1_6rmfd"]
+[ext_resource type="Resource" uid="uid://uhgbm6u7fnxf" path="res://problems/sample_problem.tres" id="2_6fmu2"]
+[ext_resource type="PackedScene" uid="uid://d2s316l611lfc" path="res://ui/buttons/simulator/hot_reload.tscn" id="2_66i4h"]
+[ext_resource type="PackedScene" uid="uid://21tpbdithc8v" path="res://ui/buttons/simulator/debug.tscn" id="3_nma68"]
+[ext_resource type="PackedScene" uid="uid://ckj1y86yo2vjb" path="res://ui/modals/problem_window/tags/tags_tab.tscn" id="4_6rmfd"]
+[ext_resource type="PackedScene" uid="uid://cb3djy6e03hxn" path="res://ui/views/code_view/line_view.tscn" id="5_xkpoo"]
+
+[node name="ProblemModal" type="PopupPanel" node_paths=PackedStringArray("back_button")]
+oversampling_override = 1.0
+initial_position = 1
+size = Vector2i(900, 600)
+visible = true
+min_size = Vector2i(50, 50)
+script = ExtResource("1_6rmfd")
+back_button = NodePath("Content/VBox/ToolBar/Button")
+modal_data = ExtResource("2_6fmu2")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = -4.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Content" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = -4.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBox" type="VBoxContainer" parent="Content"]
+layout_mode = 2
+
+[node name="ToolBar" type="HBoxContainer" parent="Content/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.71
+
+[node name="Button" type="Button" parent="Content/VBox/ToolBar"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+text = "<"
+flat = true
+
+[node name="TitleLabel" type="Label" parent="Content/VBox/ToolBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+text = "TITLE SLA"
+horizontal_alignment = 1
+
+[node name="IdeButtons" type="HBoxContainer" parent="Content/VBox/ToolBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.43
+
+[node name="HotReload" parent="Content/VBox/ToolBar/IdeButtons" instance=ExtResource("2_66i4h")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Debug" parent="Content/VBox/ToolBar/IdeButtons" instance=ExtResource("3_nma68")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HSeparator" type="HSeparator" parent="Content/VBox"]
+layout_mode = 2
+
+[node name="LineView" parent="Content/VBox" instance=ExtResource("5_xkpoo")]
+layout_mode = 2
+size_flags_stretch_ratio = 3.0
+
+[node name="HSeparator2" type="HSeparator" parent="Content/VBox"]
+layout_mode = 2
+
+[node name="TagsByType" parent="Content/VBox" instance=ExtResource("4_6rmfd")]
+layout_mode = 2
