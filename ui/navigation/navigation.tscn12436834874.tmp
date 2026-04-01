@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://crg0la80n81d5"]
+
+[ext_resource type="Script" uid="uid://c0qfoiy7poxxj" path="res://ui/navigation/navigation.gd" id="1_xhdb8"]
+[ext_resource type="Script" uid="uid://ccoivhbjl4epq" path="res://ui/navigation/swipe_input.gd" id="2_8sqav"]
+
+[node name="Navigation" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xhdb8")
+
+[node name="Control" type="Control" parent="."]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_8sqav")
+
+[connection signal="ui_input_swipe" from="Control" to="." method="_on_ui_input_swipe"]
