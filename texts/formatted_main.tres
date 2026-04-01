@@ -1,0 +1,70 @@
+[gd_resource type="Resource" script_class="TextData" load_steps=2 format=3 uid="uid://dqsdaujqakn1s"]
+
+[ext_resource type="Script" uid="uid://b8ttwtxu3cyox" path="res://texts/text_data.gd" id="1_vvk8w"]
+
+[resource]
+script = ExtResource("1_vvk8w")
+long_text = " import 'dart:core';
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Calculadora',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepOrange),
+      ),
+      home: const MyHomePage(title: 'Calculadora'),
+    );
+  }
+}
+
+class LoadingPage extends StatelessWidget{
+  const LoadingPage({super.key, required this.title});
+
+  final String title;
+
+  @override
+  Widget build(BuildContext context){
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Theme.of(context).colorScheme.tertiary,
+        title: Text(title),
+      ),
+      body: Center(
+        child: const CircularProgressIndicator(),
+      ),
+    );
+  }
+}
+
+
+class MyHomePage extends StatefulWidget {
+
+  const MyHomePage({super.key, required this.title});
+
+  // This widget is the home page of your application. It is stateful, meaning
+  // that it has a State object (defined below) that contains fields that affect
+  // how it looks.
+
+  // This class is the configuration for the state. It holds the values (in this
+  // case the title) provided by the parent (in this case the App widget) and
+  // used by the build method of the State. Fields in a Widget subclass are
+  // always marked \"final\".
+
+  final String title;
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+"
+metadata/_custom_type_script = "uid://b8ttwtxu3cyox"

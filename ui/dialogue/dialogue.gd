@@ -20,11 +20,13 @@ func _ready() -> void:
 	if data:
 		lines = data.lines
 		lines = chunck(lines)
-	next_dialogue()
+	
+	if visible:
+		next_dialogue()
 
 # Divides lines bigger than max line length (default or max_length metadata) at last whitespace
 func chunck(dialogue: Array[String]):
-	if get_meta("max_length"):
+	if has_meta("max_length"):
 		max_line_len = get_meta("max_length")
 	
 	var i = 0
@@ -76,4 +78,9 @@ func write_line(line: String):
 # Handles touch at dialog box
 func _on_dialogue_gui_input(event: InputEvent) -> void:
 	if event is InputEventScreenTouch && !event.pressed && !writing:
+		next_dialogue()
+
+
+func _on_visibility_changed() -> void:
+	if visible:
 		next_dialogue()

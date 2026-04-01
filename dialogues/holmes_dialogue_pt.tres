@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource("1_oajlv")
-lines = Array[String](["Esse jogo provavelmente não está funcionando…", "...", "Você também acha?", "...", "É...", "Sem um programador não tem o que fazer... pode ir embora, eu só queria companhia"])
+lines = Array[String](["Esse jogo provavelmente não está funcionando…", "...", "Você também acha?", "...", "É...", "Sem um programador não tem o que fazer... pode ir embora, eu só queria companhia mesmo."])
 metadata/_custom_type_script = "uid://c0ikf6yjgtk2l"

@@ -59,3 +59,4 @@ size_flags_vertical = 0
 autowrap_mode = 3
 
 [connection signal="gui_input" from="." to="." method="_on_dialogue_gui_input"]
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
