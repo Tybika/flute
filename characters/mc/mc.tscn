@@ -1,0 +1,105 @@
+[gd_scene load_steps=11 format=3 uid="uid://d1axjb33n1hmy"]
+
+[ext_resource type="Script" uid="uid://dbudww37f5crn" path="res://characters/mc/character_body_2d.gd" id="1_a5uke"]
+[ext_resource type="Texture2D" uid="uid://dt06tli8t765l" path="res://characters/mc/mc_back_8b_white.png" id="1_rbgsn"]
+[ext_resource type="Texture2D" uid="uid://bhiqa1rl2ua7q" path="res://characters/mc/mc_front_8b_white.png" id="1_yo5vl"]
+[ext_resource type="Texture2D" uid="uid://ub7buv2oef0c" path="res://characters/mc/mc_left_8b_white.png" id="3_a5uke"]
+[ext_resource type="Texture2D" uid="uid://b2yohqnid3qui" path="res://characters/mc/mc_back_8b_white1.png" id="3_lv6fq"]
+[ext_resource type="Texture2D" uid="uid://bl8ygmkrpat1u" path="res://characters/mc/mc_back_8b_white2.png" id="4_qlr3a"]
+[ext_resource type="Texture2D" uid="uid://dae4c4ym7knua" path="res://characters/mc/mc_right_8b_white.png" id="5_0micv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0micv"]
+size = Vector2(21, 23)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g05og"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_rbgsn")
+}],
+"loop": true,
+"name": &"back_idle_8",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_lv6fq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_qlr3a")
+}],
+"loop": true,
+"name": &"back_walking_8",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_yo5vl")
+}],
+"loop": true,
+"name": &"front_idle_8",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_a5uke")
+}],
+"loop": true,
+"name": &"side_idle_8",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_0micv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_yo5vl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_a5uke")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_rbgsn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_yo5vl")
+}],
+"loop": false,
+"name": &"spin_8",
+"speed": 2.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a5uke"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"hand_animation",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"sherlock",
+"speed": 5.0
+}]
+
+[node name="MainCharacter" type="CharacterBody2D"]
+script = ExtResource("1_a5uke")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, 3.5)
+shape = SubResource("RectangleShape2D_0micv")
+
+[node name="BodySprite" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_g05og")
+animation = &"front_idle_8"
+
+[node name="DialogueSprite" type="AnimatedSprite2D" parent="."]
+visible = false
+sprite_frames = SubResource("SpriteFrames_a5uke")
+animation = &"new_animation"
