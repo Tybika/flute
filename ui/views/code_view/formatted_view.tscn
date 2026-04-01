@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://bg7xbgsimrixh"]
+
+[ext_resource type="Script" uid="uid://dmtiirhfroc76" path="res://ui/views/code_view/formatted_view.gd" id="1_0ap15"]
+
+[node name="FormattedView" type="ScrollContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0ap15")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="Label" type="RichTextLabel" parent="MarginContainer"]
+custom_minimum_size = Vector2(600, 200)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+fit_content = true
+autowrap_mode = 0

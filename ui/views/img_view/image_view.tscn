@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://cfvw1oebkgvmc"]
+
+[ext_resource type="Script" uid="uid://sawuqdcgr1mj" path="res://ui/views/img_view/image_view.gd" id="1_s1m1h"]
+
+[node name="ImageView" type="CenterContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_s1m1h")
+img_paths = Dictionary[String, String]({
+"bg": "res://levels/kingdom/bg-encaixe-test.png"
+})
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
