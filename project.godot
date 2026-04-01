@@ -11,10 +11,15 @@ config_version=5
 [application]
 
 config/name="Flute"
-run/main_scene="uid://c4alrmuq3dxcc"
+run/main_scene="uid://dqasnpo6blp48"
 config/features=PackedStringArray("4.5", "Mobile")
+boot_splash/use_filter=false
 config/icon="res://icon.svg"
 run/stretch/aspect="expand"
+
+[audio]
+
+buses/default_bus_layout=""
 
 [display]
 
@@ -29,5 +34,6 @@ pointing/emulate_touch_from_mouse=true
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="mobile"
 textures/vram_compression/import_etc2_astc=true
