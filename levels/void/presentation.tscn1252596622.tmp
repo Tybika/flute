@@ -1,0 +1,71 @@
+[gd_scene load_steps=12 format=3 uid="uid://dqasnpo6blp48"]
+
+[ext_resource type="PackedScene" uid="uid://d1axjb33n1hmy" path="res://characters/mc/mc.tscn" id="1_7jn3c"]
+[ext_resource type="Script" uid="uid://bcccpjl2b7bdi" path="res://levels/void/presentation_scene.gd" id="1_afln7"]
+[ext_resource type="PackedScene" uid="uid://b4iyeuvlevcoq" path="res://ui/dialogue/dialogue_box/dialogue_box.tscn" id="2_jb2fb"]
+[ext_resource type="Script" uid="uid://bdexij0jl002p" path="res://levels/void/dialogues_layer.gd" id="3_a2mgq"]
+[ext_resource type="Resource" uid="uid://tu5vbcee4x4" path="res://dialogues/presentation_dialogue_pt.tres" id="3_afln7"]
+[ext_resource type="Resource" uid="uid://batcibhn0oi2e" path="res://dialogues/holmes_dialogue_pt.tres" id="3_jb2fb"]
+[ext_resource type="PackedScene" uid="uid://cgmqnh3vw08s7" path="res://ui/choice/choice.tscn" id="6_2t1c1"]
+[ext_resource type="Script" uid="uid://bsxi35hucigev" path="res://levels/void/choices_layer.gd" id="7_oi1fw"]
+[ext_resource type="Resource" uid="uid://71v1lm8vq73l" path="res://dialogues/injustice_choice_dialogue_pt.tres" id="7_xo01p"]
+[ext_resource type="Resource" uid="uid://cwi0k4b0lmbgb" path="res://dialogues/accept_choice_dialog_pt.tres" id="8_8gb4b"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_di2vn"]
+bg_color = Color(0.004019165, 0.004019165, 0.004019165, 1)
+
+[node name="Void" type="Node2D"]
+script = ExtResource("1_afln7")
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(1300, 800)
+offset_right = 1311.0
+offset_bottom = 800.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_di2vn")
+
+[node name="Mc" parent="." node_paths=PackedStringArray("anim_handler") instance=ExtResource("1_7jn3c")]
+position = Vector2(670, 333)
+anim_handler = NodePath("..")
+
+[node name="DialoguesLayer" type="CanvasLayer" parent="."]
+script = ExtResource("3_a2mgq")
+
+[node name="HolmesDialogue" parent="DialoguesLayer" instance=ExtResource("2_jb2fb")]
+visible = false
+data = ExtResource("3_jb2fb")
+
+[node name="PresentationDialogue" parent="DialoguesLayer" instance=ExtResource("2_jb2fb")]
+visible = false
+data = ExtResource("3_afln7")
+
+[node name="InjusticeDialogue" parent="DialoguesLayer" instance=ExtResource("2_jb2fb")]
+data = ExtResource("7_xo01p")
+
+[node name="AcceptDialogue" parent="DialoguesLayer" instance=ExtResource("2_jb2fb")]
+data = ExtResource("8_8gb4b")
+
+[node name="ChoicesLayer" type="CanvasLayer" parent="."]
+script = ExtResource("7_oi1fw")
+
+[node name="ProgramerChoice" parent="ChoicesLayer" node_paths=PackedStringArray("handler1", "handler2") instance=ExtResource("6_2t1c1")]
+visible = false
+choice1 = "Eu sei programar"
+handler1 = {
+NodePath(".."): "_on_programmer_button_up"
+}
+choice2 = "Sair"
+handler2 = {
+NodePath("."): "_on_exit_button_up"
+}
+
+[node name="HelpChoice" parent="ChoicesLayer" instance=ExtResource("6_2t1c1")]
+anchors_preset = -1
+anchor_right = 1.0220001
+anchor_bottom = 1.0610001
+offset_top = -8.0
+offset_right = 35.839844
+offset_bottom = 0.07989502
+choice1 = "Pode ser"
+choice2 = "Não parece justo"
