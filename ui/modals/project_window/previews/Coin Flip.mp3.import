@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c4e3t4fn1in11"
+path="res://.godot/imported/Coin Flip.mp3-dc186cd21f3f003e25a0fa017024d322.mp3str"
+
+[deps]
+
+source_file="res://ui/modals/project_window/previews/Coin Flip.mp3"
+dest_files=["res://.godot/imported/Coin Flip.mp3-dc186cd21f3f003e25a0fa017024d322.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://ct6n2satj5iu6"]
+
+[ext_resource type="Script" uid="uid://bf7h5pho5pcc7" path="res://ui/modals/project_window/project_view_manager.gd" id="1_ut2bi"]
+[ext_resource type="PackedScene" uid="uid://cfvw1oebkgvmc" path="res://ui/views/img_view/image_view.tscn" id="2_ywf7v"]
+[ext_resource type="PackedScene" uid="uid://bg7xbgsimrixh" path="res://ui/views/code_view/formatted_view.tscn" id="3_0onn0"]
+[ext_resource type="PackedScene" uid="uid://cpv10kjbvy3ev" path="res://ui/views/audio_view/audio_view.tscn" id="4_evx55"]
+
+[node name="ProjectView" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ut2bi")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.71
+
+[node name="ImageView" parent="MarginContainer" instance=ExtResource("2_ywf7v")]
+visible = false
+layout_mode = 2
+
+[node name="RawView" parent="MarginContainer" instance=ExtResource("3_0onn0")]
+visible = false
+layout_mode = 2
+
+[node name="AudioView" parent="MarginContainer" instance=ExtResource("4_evx55")]
+visible = false
+layout_mode = 2

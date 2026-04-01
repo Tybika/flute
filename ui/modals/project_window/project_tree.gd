@@ -1,10 +1,15 @@
 extends Tree
 
+@export var handler: Control
 @onready var tree: Tree = self
+
+signal item_selected_id(item: TreeItem)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	tree_structure()
+	if handler:
+		tree.item_selected_id.connect(handler._on_tree_item_selected_id)
 
 # Creates the directiory tree structure manually
 func tree_structure():
@@ -78,6 +83,8 @@ func new_tree_item(parent: TreeItem, text: String, icon: Texture2D = null,
 	if closed_folder:
 		tree.create_item(item).set_text(0, "Não autorizado")
 		item.set_metadata(0, {"blocked" : true})
+	else:
+		item.set_metadata(0, {"blocked" : false})
 	
 	item.set_collapsed(true)
 	return item
@@ -89,6 +96,7 @@ func _on_item_collapsed(item: TreeItem):
 	if meta && meta.blocked:
 		item.set_collapsed(true)
 
-# Handles visualization
-func view_algo():
-	pass
+
+func _on_item_selected() -> void:
+	var item = get_selected()
+	item_selected_id.emit(item)
