@@ -9,7 +9,7 @@ func _ready() -> void:
 
 func _on_gui_input(event: InputEvent):
 	if event is InputEventScreenTouch && event.double_tap:
-		button.toggled
+		button.toggled()
 
 func _on_button_toggled(toggled_on: bool) -> void:
 	if toggled_on:

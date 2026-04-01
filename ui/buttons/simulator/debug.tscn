@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://21tpbdithc8v"]
+[gd_scene load_steps=3 format=3 uid="uid://21tpbdithc8v"]
 
 [ext_resource type="Texture2D" uid="uid://dxl6fs5rkm34t" path="res://ui/buttons/simulator/debug.png" id="1_xmljn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xmljn"]
 
 [node name="Debug" type="Control"]
 layout_mode = 3
@@ -26,4 +28,5 @@ theme_override_constants/margin_bottom = 5
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xmljn")
 icon = ExtResource("1_xmljn")
