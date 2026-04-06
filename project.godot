@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Flute"
-run/main_scene="uid://dqasnpo6blp48"
+run/main_scene="uid://cxcijfp2wss2p"
 config/features=PackedStringArray("4.5", "Mobile")
 boot_splash/use_filter=false
 config/icon="res://icon.svg"
@@ -26,11 +26,16 @@ buses/default_bus_layout=""
 window/size/viewport_width=1280
 window/size/viewport_height=720
 window/stretch/mode="viewport"
-window/stretch/aspect="expand"
+window/stretch/aspect="ignore"
+
+[gui]
+
+theme/custom_font="uid://diexthh42xb4e"
 
 [input_devices]
 
 pointing/emulate_touch_from_mouse=true
+pointing/emulate_mouse_from_touch=false
 
 [rendering]
 

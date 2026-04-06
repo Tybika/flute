@@ -1,7 +1,8 @@
-[gd_scene format=3 uid="uid://cxcijfp2wss2p"]
+[gd_scene load_steps=2 format=3 uid="uid://cxcijfp2wss2p"]
+
+[ext_resource type="Script" uid="uid://drf2tm6hh6bnc" path="res://scene_manager.gd" id="1_gyfs4"]
 
 [node name="MainScene" type="Node2D"]
 
-[node name="Node2D" type="Node2D" parent="."]
-
-[node name="CurrentScene" type="Node2D" parent="Node2D"]
+[node name="SceneManager" type="Node2D" parent="."]
+script = ExtResource("1_gyfs4")
