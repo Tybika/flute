@@ -12,7 +12,6 @@ const JUMP_VELOCITY = -400.0
 func _ready() -> void:
 	set_physics_process(false)
 
-
 func activate_physics():
 	set_physics_process(true)
 
@@ -21,12 +20,17 @@ func spin(repeat: int = 1):
 		body.play("spin_" + theme_suffix)
 	await body.animation_finished
 
-func tools_cutscene_mov():
+func tools_cutscene_out():
 	var tween = self.create_tween()
-	tween.tween_property(self, "position", Vector2(position.x, -100), 2.4)
-	tween.play()
-	body.play("back_walking_" + theme_suffix)
 	
+	tween.tween_property(self, "position", Vector2(position.x, -100), 2.4)
+	body.play("back_walking_" + theme_suffix)
+
+func tools_cutscene_back():
+	var tween = self.create_tween()
+	tween.tween_property(self, "position", Vector2(position.x, 325), 
+			2.4).finished.connect(func(): body.play("front_idle_" + theme_suffix))
+	body.play("front_walking_" + theme_suffix)
 
 func drop_cutscene_mov():
 	pass
