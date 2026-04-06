@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://cgmqnh3vw08s7"]
+[gd_scene format=3 uid="uid://cgmqnh3vw08s7"]
 
 [ext_resource type="Script" uid="uid://dinu2o5eojudu" path="res://ui/choice/choice.gd" id="1_2spnq"]
 [ext_resource type="PackedScene" uid="uid://ciujkc3d1tk0d" path="res://ui/buttons/generic/generic_button.tscn" id="2_qe34u"]
@@ -6,7 +6,7 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2spnq"]
 bg_color = Color(0, 0, 0, 0.5568628)
 
-[node name="Choice" type="Control"]
+[node name="Choice" type="Control" unique_id=1476937164]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -15,7 +15,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_2spnq")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="." unique_id=320299846]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -24,7 +24,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_2spnq")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1770777170]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -32,11 +32,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Choice1" parent="VBoxContainer" instance=ExtResource("2_qe34u")]
+[node name="Choice1" parent="VBoxContainer" unique_id=1231407482 instance=ExtResource("2_qe34u")]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Choice2" parent="VBoxContainer" instance=ExtResource("2_qe34u")]
+[node name="Choice2" parent="VBoxContainer" unique_id=2121986220 instance=ExtResource("2_qe34u")]
 layout_mode = 2
 size_flags_vertical = 3
 

@@ -1,8 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://cb3djy6e03hxn"]
+[gd_scene format=3 uid="uid://cb3djy6e03hxn"]
 
 [ext_resource type="Script" uid="uid://dey0mjnr82ud0" path="res://ui/views/code_view/line_view.gd" id="1_eqoxf"]
 
-[node name="LineView" type="ScrollContainer"]
+[node name="LineView" type="ScrollContainer" unique_id=1274117872]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -13,7 +13,7 @@ size_flags_vertical = 3
 script = ExtResource("1_eqoxf")
 code_data = Array[String](["static build() {", "    return{", "        Algo algo aí  = 0 sla", "", "        Algo algo aí ()", "        Algo algo aí ()", "    };", "};"])
 
-[node name="VBox" type="VBoxContainer" parent="."]
+[node name="VBox" type="VBoxContainer" parent="." unique_id=800804020]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3

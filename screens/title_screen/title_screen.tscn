@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cuwom52h2tfqt"]
+[gd_scene format=3 uid="uid://cuwom52h2tfqt"]
 
 [ext_resource type="Texture2D" uid="uid://btr0glk1cp8hi" path="res://screens/title_screen/title.png" id="1_72buf"]
 [ext_resource type="Texture2D" uid="uid://buy3tfkl1cqpg" path="res://screens/title_screen/broken_play.png" id="2_72buf"]
@@ -48,7 +48,7 @@ _data = {
 &"handling": SubResource("Animation_e28hc")
 }
 
-[node name="TitleScreen" type="Control"]
+[node name="TitleScreen" type="Control" unique_id=960689568]
 custom_minimum_size = Vector2(10, 10)
 layout_mode = 3
 anchors_preset = 15
@@ -58,7 +58,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2_485pg")
 
-[node name="VBox" type="VBoxContainer" parent="."]
+[node name="VBox" type="VBoxContainer" parent="." unique_id=1872078621]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -68,28 +68,28 @@ grow_vertical = 2
 size_flags_horizontal = 3
 alignment = 1
 
-[node name="TitleTexture" type="TextureRect" parent="VBox"]
+[node name="TitleTexture" type="TextureRect" parent="VBox" unique_id=526624236]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 2.0
 texture = ExtResource("1_72buf")
 stretch_mode = 3
 
-[node name="BrokenPlay" type="TextureRect" parent="VBox"]
+[node name="BrokenPlay" type="TextureRect" parent="VBox" unique_id=611095725]
 modulate = Color(1, 1, 1, 0.5647059)
 layout_mode = 2
 size_flags_vertical = 3
 texture = ExtResource("2_72buf")
 stretch_mode = 5
 
-[node name="InstructionLabel" type="Label" parent="VBox"]
+[node name="InstructionLabel" type="Label" parent="VBox" unique_id=268856205]
 layout_mode = 2
 size_flags_vertical = 6
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=732093994]
 visible = false
 layout_mode = 1
 anchors_preset = 3
@@ -103,12 +103,10 @@ grow_horizontal = 0
 grow_vertical = 0
 texture = ExtResource("4_1djn3")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="TextureRect"]
-libraries = {
-&"": SubResource("AnimationLibrary_ssu3a")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TextureRect" unique_id=2085734223]
+libraries/ = SubResource("AnimationLibrary_ssu3a")
 
-[node name="Navigation" parent="." instance=ExtResource("9_bgok2")]
+[node name="Navigation" parent="." unique_id=1786432107 instance=ExtResource("9_bgok2")]
 visible = false
 layout_mode = 1
 left_scene_name = "Presentation"

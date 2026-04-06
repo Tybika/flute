@@ -1,9 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://dybdo0nsd50i1"]
+[gd_scene format=3 uid="uid://dybdo0nsd50i1"]
 
 [ext_resource type="Script" uid="uid://brgr5b5frhouv" path="res://ui/modals/problem_modal/editable_line/editable_line.gd" id="1_bhqpe"]
 [ext_resource type="Texture2D" uid="uid://c8jkmwjm120py" path="res://ui/modals/problem_modal/editable_line/close.png" id="2_10ow5"]
 
-[node name="EditableLine" type="MarginContainer"]
+[node name="EditableLine" type="MarginContainer" unique_id=676310873]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -15,14 +15,14 @@ theme_override_constants/margin_right = 30
 theme_override_constants/margin_bottom = 30
 script = ExtResource("1_bhqpe")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="." unique_id=1036409565]
 layout_mode = 2
 
-[node name="HBoxContainer" type="FlowContainer" parent="."]
+[node name="HBoxContainer" type="FlowContainer" parent="." unique_id=1019692879]
 custom_minimum_size = Vector2(0, 10)
 layout_mode = 2
 
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="Button" parent="." unique_id=984593256]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 4

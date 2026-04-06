@@ -1,11 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://ciujkc3d1tk0d"]
+[gd_scene format=3 uid="uid://ciujkc3d1tk0d"]
 
 [ext_resource type="Script" uid="uid://dy1ltn7huyalr" path="res://ui/buttons/generic/generic_button.gd" id="1_nfkc4"]
 [ext_resource type="Texture2D" uid="uid://dxnptil7tiuh5" path="res://ui/buttons/generic/button_border.png" id="2_emdam"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yaggh"]
 
-[node name="GenericButton" type="Control"]
+[node name="GenericButton" type="Control" unique_id=607675419]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -14,7 +14,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_nfkc4")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=79402445]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 1
 anchors_preset = 8
@@ -30,7 +30,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_top = 5
 
-[node name="NinePatchRect" type="NinePatchRect" parent="MarginContainer"]
+[node name="NinePatchRect" type="NinePatchRect" parent="MarginContainer" unique_id=276944241]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 texture = ExtResource("2_emdam")
@@ -40,13 +40,13 @@ patch_margin_top = 4
 patch_margin_right = 19
 patch_margin_bottom = 17
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer" unique_id=691062999]
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="Button" type="Button" parent="MarginContainer/MarginContainer"]
+[node name="Button" type="Button" parent="MarginContainer/MarginContainer" unique_id=1142980040]
 layout_mode = 2
 theme_override_styles/focus = SubResource("StyleBoxEmpty_yaggh")
 flat = true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://i25argn50eql"]
+[gd_scene format=3 uid="uid://i25argn50eql"]
 
 [ext_resource type="Theme" uid="uid://dx8l1gyxnt1wb" path="res://ui/themes/normal_theme.tres" id="1_1mtkh"]
 [ext_resource type="Texture2D" uid="uid://u04yc6no17c4" path="res://icon.svg" id="3_d86wr"]
@@ -29,7 +29,7 @@ gradient = SubResource("Gradient_l56hx")
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gx14l"]
 
-[node name="Control" type="Control"]
+[node name="Control" type="Control" unique_id=2046562234]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -41,7 +41,7 @@ grow_vertical = 2
 theme = ExtResource("1_1mtkh")
 script = SubResource("GDScript_b38qh")
 
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="Button" parent="." unique_id=1359863052]
 layout_mode = 0
 offset_left = 506.0
 offset_top = 259.0
@@ -50,14 +50,14 @@ offset_bottom = 395.0
 text = "omg button w icon"
 icon = ExtResource("3_d86wr")
 
-[node name="Parallax2D" type="Parallax2D" parent="."]
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=725653330]
 
-[node name="Sprite2D2" type="Sprite2D" parent="Parallax2D"]
+[node name="Sprite2D2" type="Sprite2D" parent="Parallax2D" unique_id=983367197]
 position = Vector2(183, 180)
 scale = Vector2(1.4101563, 361.5)
 texture = SubResource("GradientTexture1D_seydp")
 
-[node name="Sprite2D" type="Sprite2D" parent="Parallax2D"]
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=808826304]
 position = Vector2(182, 181)
 scale = Vector2(2.5, 2.4861112)
 texture = SubResource("CompressedTexture2D_gx14l")

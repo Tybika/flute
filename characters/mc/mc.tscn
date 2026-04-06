@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://d1axjb33n1hmy"]
+[gd_scene format=3 uid="uid://d1axjb33n1hmy"]
 
 [ext_resource type="Script" uid="uid://dbudww37f5crn" path="res://characters/mc/character_body_2d.gd" id="1_a5uke"]
 [ext_resource type="Texture2D" uid="uid://dt06tli8t765l" path="res://characters/mc/mc_back_8b_white.png" id="1_rbgsn"]
@@ -100,19 +100,19 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="MainCharacter" type="CharacterBody2D"]
+[node name="MainCharacter" type="CharacterBody2D" unique_id=267921760]
 script = ExtResource("1_a5uke")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1832254575]
 position = Vector2(1.5, 3.5)
 shape = SubResource("RectangleShape2D_0micv")
 
-[node name="BodySprite" type="AnimatedSprite2D" parent="."]
+[node name="BodySprite" type="AnimatedSprite2D" parent="." unique_id=1882492044]
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_g05og")
 animation = &"front_idle_8"
 
-[node name="DialogueSprite" type="AnimatedSprite2D" parent="."]
+[node name="DialogueSprite" type="AnimatedSprite2D" parent="." unique_id=1818757662]
 visible = false
 sprite_frames = SubResource("SpriteFrames_a5uke")
 animation = &"new_animation"

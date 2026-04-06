@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://dqasnpo6blp48"]
+[gd_scene format=3 uid="uid://dqasnpo6blp48"]
 
 [ext_resource type="PackedScene" uid="uid://d1axjb33n1hmy" path="res://characters/mc/mc.tscn" id="1_7jn3c"]
 [ext_resource type="Script" uid="uid://bcccpjl2b7bdi" path="res://levels/void/presentation_scene.gd" id="1_afln7"]
@@ -106,10 +106,10 @@ _data = {
 &"button_switch": SubResource("Animation_hlkwf")
 }
 
-[node name="Void" type="Node2D"]
+[node name="Void" type="Node2D" unique_id=1590448197]
 script = ExtResource("1_afln7")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="." unique_id=267983156]
 custom_minimum_size = Vector2(1280, 720)
 offset_right = 1280.0
 offset_bottom = 720.0
@@ -117,43 +117,43 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_di2vn")
 
-[node name="Mc" parent="." node_paths=PackedStringArray("anim_handler") instance=ExtResource("1_7jn3c")]
+[node name="Mc" parent="." unique_id=1553303958 node_paths=PackedStringArray("anim_handler") instance=ExtResource("1_7jn3c")]
 position = Vector2(635, 325)
 anim_handler = NodePath("..")
 
-[node name="Navigation" parent="." instance=ExtResource("3_cly30")]
+[node name="Navigation" parent="." unique_id=258925388 instance=ExtResource("3_cly30")]
 
-[node name="DialoguesLayer" type="CanvasLayer" parent="."]
+[node name="DialoguesLayer" type="CanvasLayer" parent="." unique_id=409684728]
 script = ExtResource("3_a2mgq")
 
-[node name="HolmesBox" parent="DialoguesLayer" instance=ExtResource("2_jb2fb")]
+[node name="HolmesBox" parent="DialoguesLayer" unique_id=457696871 instance=ExtResource("2_jb2fb")]
 visible = false
 data = ExtResource("3_jb2fb")
 
-[node name="PresentationBox" parent="DialoguesLayer" instance=ExtResource("2_jb2fb")]
+[node name="PresentationBox" parent="DialoguesLayer" unique_id=1184858776 instance=ExtResource("2_jb2fb")]
 visible = false
 data = ExtResource("3_afln7")
 
-[node name="InjusticeBox" parent="DialoguesLayer" instance=ExtResource("2_jb2fb")]
+[node name="InjusticeBox" parent="DialoguesLayer" unique_id=720673137 instance=ExtResource("2_jb2fb")]
 visible = false
 data = ExtResource("7_xo01p")
 
-[node name="AcceptBox" parent="DialoguesLayer" instance=ExtResource("2_jb2fb")]
+[node name="AcceptBox" parent="DialoguesLayer" unique_id=650697459 instance=ExtResource("2_jb2fb")]
 visible = false
 data = ExtResource("8_8gb4b")
 
-[node name="WhereBox" parent="DialoguesLayer" instance=ExtResource("2_jb2fb")]
+[node name="WhereBox" parent="DialoguesLayer" unique_id=1987326377 instance=ExtResource("2_jb2fb")]
 visible = false
 data = ExtResource("11_p2cnd")
 
-[node name="ToolsBox" parent="DialoguesLayer" instance=ExtResource("2_jb2fb")]
+[node name="ToolsBox" parent="DialoguesLayer" unique_id=1870494372 instance=ExtResource("2_jb2fb")]
 visible = false
 data = ExtResource("12_hlkwf")
 
-[node name="ChoicesLayer" type="CanvasLayer" parent="."]
+[node name="ChoicesLayer" type="CanvasLayer" parent="." unique_id=1825669029]
 script = ExtResource("7_oi1fw")
 
-[node name="ProgramerChoice" parent="ChoicesLayer" node_paths=PackedStringArray("handler1", "handler2") instance=ExtResource("6_2t1c1")]
+[node name="ProgramerChoice" parent="ChoicesLayer" unique_id=1448663994 node_paths=PackedStringArray("handler1", "handler2") instance=ExtResource("6_2t1c1")]
 visible = false
 choice1 = "Eu sei programar"
 handler1 = {
@@ -164,7 +164,7 @@ handler2 = {
 NodePath(".."): "_on_exit_button_up"
 }
 
-[node name="HelpChoice" parent="ChoicesLayer" node_paths=PackedStringArray("handler1", "handler2") instance=ExtResource("6_2t1c1")]
+[node name="HelpChoice" parent="ChoicesLayer" unique_id=1139335146 node_paths=PackedStringArray("handler1", "handler2") instance=ExtResource("6_2t1c1")]
 visible = false
 choice1 = "Pode ser"
 handler1 = {
@@ -175,11 +175,11 @@ handler2 = {
 NodePath(".."): "_on_injustice_button_up"
 }
 
-[node name="ToolsLayer" type="CanvasLayer" parent="."]
+[node name="ToolsLayer" type="CanvasLayer" parent="." unique_id=636814317]
 visible = false
 script = ExtResource("15_7uxef")
 
-[node name="Control" type="Control" parent="ToolsLayer"]
+[node name="Control" type="Control" parent="ToolsLayer" unique_id=1213545335]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -187,7 +187,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Buttons" type="Control" parent="ToolsLayer/Control"]
+[node name="Buttons" type="Control" parent="ToolsLayer/Control" unique_id=987858839]
 custom_minimum_size = Vector2(300, 200)
 layout_mode = 1
 anchors_preset = 8
@@ -202,7 +202,7 @@ offset_bottom = -40.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ToolsInstructions" type="NinePatchRect" parent="ToolsLayer/Control/Buttons"]
+[node name="ToolsInstructions" type="NinePatchRect" parent="ToolsLayer/Control/Buttons" unique_id=861555041]
 visible = false
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 1
@@ -223,7 +223,7 @@ patch_margin_right = 39
 patch_margin_bottom = 40
 metadata/_edit_use_anchors_ = true
 
-[node name="MarginContainer" type="MarginContainer" parent="ToolsLayer/Control/Buttons/ToolsInstructions"]
+[node name="MarginContainer" type="MarginContainer" parent="ToolsLayer/Control/Buttons/ToolsInstructions" unique_id=377997557]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -235,13 +235,13 @@ theme_override_constants/margin_top = 50
 theme_override_constants/margin_right = 50
 theme_override_constants/margin_bottom = 50
 
-[node name="Label" type="Label" parent="ToolsLayer/Control/Buttons/ToolsInstructions/MarginContainer"]
+[node name="Label" type="Label" parent="ToolsLayer/Control/Buttons/ToolsInstructions/MarginContainer" unique_id=1791612610]
 custom_minimum_size = Vector2(10, 30)
 layout_mode = 2
 size_flags_vertical = 0
 autowrap_mode = 3
 
-[node name="DocButton" parent="ToolsLayer/Control/Buttons" instance=ExtResource("15_0kawd")]
+[node name="DocButton" parent="ToolsLayer/Control/Buttons" unique_id=1882526180 instance=ExtResource("15_0kawd")]
 layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
@@ -253,7 +253,7 @@ grow_vertical = 1
 size_flags_horizontal = 3
 mouse_behavior_recursive = 1
 
-[node name="ProjectButton" parent="ToolsLayer/Control/Buttons" instance=ExtResource("16_7uxef")]
+[node name="ProjectButton" parent="ToolsLayer/Control/Buttons" unique_id=1814762386 instance=ExtResource("16_7uxef")]
 layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
@@ -266,7 +266,7 @@ grow_vertical = 1
 size_flags_horizontal = 3
 mouse_behavior_recursive = 1
 
-[node name="WrenchButton" parent="ToolsLayer/Control/Buttons" instance=ExtResource("14_p2cnd")]
+[node name="WrenchButton" parent="ToolsLayer/Control/Buttons" unique_id=955363444 instance=ExtResource("14_p2cnd")]
 layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
@@ -279,11 +279,9 @@ grow_vertical = 1
 size_flags_horizontal = 3
 mouse_behavior_recursive = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="ToolsLayer/Control"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ToolsLayer/Control" unique_id=509711269]
 root_node = NodePath("../..")
-libraries = {
-&"": SubResource("AnimationLibrary_0o703")
-}
+libraries/ = SubResource("AnimationLibrary_0o703")
 
 [connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
 [connection signal="add_tree_requested" from="Navigation" to="." method="_on_navigation_add_tree_requested"]

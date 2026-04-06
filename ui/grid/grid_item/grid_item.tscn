@@ -1,11 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://bysb7dqdyvbvw"]
+[gd_scene format=3 uid="uid://bysb7dqdyvbvw"]
 
 [ext_resource type="Texture2D" uid="uid://c08nvnkiawcyj" path="res://ui/grid/grid_item/circuit_tile.png" id="1_2dhoa"]
 [ext_resource type="Script" uid="uid://cf3ybilsjpp5k" path="res://ui/grid/grid_item/grid_item.gd" id="1_gicyf"]
 [ext_resource type="Texture2D" uid="uid://bcvhuhp26b027" path="res://ui/grid/grid_item/screw.png" id="2_6fjkw"]
 [ext_resource type="Texture2D" uid="uid://gv01t0tg1vfa" path="res://ui/grid/grid_item/used_screw.png" id="3_o475v"]
 
-[node name="GridItem" type="Control"]
+[node name="GridItem" type="Control" unique_id=910408023]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -15,7 +15,7 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_gicyf")
 
-[node name="Circuit" type="TextureRect" parent="."]
+[node name="Circuit" type="TextureRect" parent="." unique_id=544396659]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -26,7 +26,7 @@ grow_vertical = 2
 texture = ExtResource("1_2dhoa")
 stretch_mode = 1
 
-[node name="ScrewButton" type="TextureButton" parent="."]
+[node name="ScrewButton" type="TextureButton" parent="." unique_id=2028710683]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0

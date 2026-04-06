@@ -1,11 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://chkex55b7kobi"]
+[gd_scene format=3 uid="uid://chkex55b7kobi"]
 
 [ext_resource type="Script" uid="uid://ps70jg7splls" path="res://ui/modals/problem_modal/linecode_problem/problem_modal.gd" id="1_h8mfg"]
 [ext_resource type="Resource" uid="uid://uhgbm6u7fnxf" path="res://problems/sample_problem.tres" id="2_fmjy2"]
 [ext_resource type="PackedScene" uid="uid://d2s316l611lfc" path="res://ui/buttons/simulator/hot_reload.tscn" id="3_rw8ip"]
 [ext_resource type="PackedScene" uid="uid://21tpbdithc8v" path="res://ui/buttons/simulator/debug.tscn" id="4_5bqok"]
 
-[node name="ProblemModal" type="PopupPanel" node_paths=PackedStringArray("back_button")]
+[node name="ProblemModal" type="PopupPanel" unique_id=753928045 node_paths=PackedStringArray("back_button")]
 oversampling_override = 1.0
 initial_position = 1
 size = Vector2i(900, 600)
@@ -15,7 +15,7 @@ script = ExtResource("1_h8mfg")
 back_button = NodePath("Margin/Content/ToolBar/Button")
 modal_data = ExtResource("2_fmjy2")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2036289759]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -27,7 +27,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="Margin" type="MarginContainer" parent="."]
+[node name="Margin" type="MarginContainer" parent="." unique_id=2101638001]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -42,40 +42,40 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="Content" type="VBoxContainer" parent="Margin"]
+[node name="Content" type="VBoxContainer" parent="Margin" unique_id=1701278905]
 layout_mode = 2
 
-[node name="ToolBar" type="HBoxContainer" parent="Margin/Content"]
+[node name="ToolBar" type="HBoxContainer" parent="Margin/Content" unique_id=471157379]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.71
 
-[node name="Button" type="Button" parent="Margin/Content/ToolBar"]
+[node name="Button" type="Button" parent="Margin/Content/ToolBar" unique_id=15990325]
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
 text = "<"
 flat = true
 
-[node name="TitleLabel" type="Label" parent="Margin/Content/ToolBar"]
+[node name="TitleLabel" type="Label" parent="Margin/Content/ToolBar" unique_id=931384156]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.0
 text = "TITLE SLA"
 horizontal_alignment = 1
 
-[node name="IdeButtons" type="HBoxContainer" parent="Margin/Content/ToolBar"]
+[node name="IdeButtons" type="HBoxContainer" parent="Margin/Content/ToolBar" unique_id=793083545]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.43
 
-[node name="HotReload" parent="Margin/Content/ToolBar/IdeButtons" node_paths=PackedStringArray("handler") instance=ExtResource("3_rw8ip")]
+[node name="HotReload" parent="Margin/Content/ToolBar/IdeButtons" unique_id=1578172520 node_paths=PackedStringArray("handler") instance=ExtResource("3_rw8ip")]
 layout_mode = 2
 size_flags_horizontal = 3
 handler = NodePath("../../../../..")
 
-[node name="Debug" parent="Margin/Content/ToolBar/IdeButtons" instance=ExtResource("4_5bqok")]
+[node name="Debug" parent="Margin/Content/ToolBar/IdeButtons" unique_id=772787782 instance=ExtResource("4_5bqok")]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="HSeparator" type="HSeparator" parent="Margin/Content"]
+[node name="HSeparator" type="HSeparator" parent="Margin/Content" unique_id=1881664856]
 layout_mode = 2

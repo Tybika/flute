@@ -1,9 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://b4iyeuvlevcoq"]
+[gd_scene format=3 uid="uid://b4iyeuvlevcoq"]
 
 [ext_resource type="Texture2D" uid="uid://e6qjpvcwvmsf" path="res://ui/dialogue/dialogue_box/border.png" id="1_ldqrc"]
 [ext_resource type="Script" uid="uid://c5gppvpua3q6p" path="res://ui/dialogue/dialogue.gd" id="2_11gau"]
 
-[node name="DialogueBox" type="Control"]
+[node name="DialogueBox" type="Control" unique_id=1968214931]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -15,7 +15,7 @@ size_flags_vertical = 3
 script = ExtResource("2_11gau")
 label_path = NodePath("VBoxContainer/NinePatchRect/MarginContainer/Label")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2104790761]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -23,13 +23,13 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Control" type="Control" parent="VBoxContainer"]
+[node name="Control" type="Control" parent="VBoxContainer" unique_id=239216375]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 1.71
 mouse_filter = 2
 
-[node name="NinePatchRect" type="NinePatchRect" parent="VBoxContainer"]
+[node name="NinePatchRect" type="NinePatchRect" parent="VBoxContainer" unique_id=1990612385]
 custom_minimum_size = Vector2(0, 200)
 layout_mode = 2
 size_flags_vertical = 3
@@ -40,7 +40,7 @@ patch_margin_top = 44
 patch_margin_right = 38
 patch_margin_bottom = 44
 
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/NinePatchRect"]
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/NinePatchRect" unique_id=1073783507]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -48,11 +48,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 50
-theme_override_constants/margin_top = 30
+theme_override_constants/margin_top = 50
 theme_override_constants/margin_right = 50
 theme_override_constants/margin_bottom = 50
 
-[node name="Label" type="Label" parent="VBoxContainer/NinePatchRect/MarginContainer"]
+[node name="Label" type="Label" parent="VBoxContainer/NinePatchRect/MarginContainer" unique_id=1409602666]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 size_flags_vertical = 0

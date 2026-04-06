@@ -1,8 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://gualfru75hab"]
+[gd_scene format=3 uid="uid://gualfru75hab"]
 
 [ext_resource type="Script" uid="uid://cgae1u8ivtuc" path="res://ui/modals/docs_window/docs_modal.gd" id="1_1uyv8"]
 
-[node name="DocsModal" type="PopupPanel"]
+[node name="DocsModal" type="PopupPanel" unique_id=1516062428]
 oversampling_override = 1.0
 initial_position = 1
 size = Vector2i(900, 600)
@@ -10,7 +10,7 @@ visible = true
 min_size = Vector2i(50, 50)
 script = ExtResource("1_1uyv8")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=846106868]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -22,7 +22,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.799318, 0.55554706, 0.5646338, 1)
 
-[node name="Content" type="MarginContainer" parent="."]
+[node name="Content" type="MarginContainer" parent="." unique_id=1524929919]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

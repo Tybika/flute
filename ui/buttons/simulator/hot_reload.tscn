@@ -1,11 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://d2s316l611lfc"]
+[gd_scene format=3 uid="uid://d2s316l611lfc"]
 
 [ext_resource type="Texture2D" uid="uid://8dq1txhin8d5" path="res://ui/buttons/simulator/hot_reload.png" id="1_fhmda"]
 [ext_resource type="Script" uid="uid://dlgenjialwn1w" path="res://ui/buttons/simulator/hot_reload.gd" id="1_juco5"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_juco5"]
 
-[node name="HotReload" type="Control"]
+[node name="HotReload" type="Control" unique_id=1671794769]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -14,7 +14,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_juco5")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=2082004145]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -26,7 +26,7 @@ theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Button" type="Button" parent="MarginContainer"]
+[node name="Button" type="Button" parent="MarginContainer" unique_id=39162439]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4

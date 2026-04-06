@@ -1,8 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://ckj1y86yo2vjb"]
+[gd_scene format=3 uid="uid://ckj1y86yo2vjb"]
 
 [ext_resource type="Script" uid="uid://c5fcjjcwf0gdo" path="res://ui/modals/problem_modal/tags/tags_tab.gd" id="1_roqdk"]
 
-[node name="TagsTab" type="TabContainer"]
+[node name="TagsTab" type="TabContainer" unique_id=834626671]
 custom_minimum_size = Vector2(400, 200)
 size_flags_vertical = 3
 tabs_position = 1
