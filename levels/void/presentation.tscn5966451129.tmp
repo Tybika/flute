@@ -11,62 +11,23 @@
 [ext_resource type="Script" uid="uid://bsxi35hucigev" path="res://levels/void/choices_layer.gd" id="7_oi1fw"]
 [ext_resource type="Resource" uid="uid://71v1lm8vq73l" path="res://dialogues/injustice_choice_dialogue_pt.tres" id="7_xo01p"]
 [ext_resource type="Resource" uid="uid://cwi0k4b0lmbgb" path="res://dialogues/accept_choice_dialog_pt.tres" id="8_8gb4b"]
+[ext_resource type="PackedScene" uid="uid://7hefj2fgp10y" path="res://ui/dialogue/dialogue_bubble/dialogue_bubble.tscn" id="10_qecyl"]
 [ext_resource type="Resource" uid="uid://453b5vjl0isy" path="res://dialogues/where_dialogue_pt.tres" id="11_p2cnd"]
-[ext_resource type="Resource" uid="uid://c1ho507kel8gm" path="res://dialogues/tools_dialogue_pt.tres" id="12_hlkwf"]
+[ext_resource type="Resource" uid="uid://c1ho507kel8gm" path="res://dialogues/tools_dialogue_pt.tres" id="11_vmf5u"]
 [ext_resource type="PackedScene" uid="uid://vh302orj3bux" path="res://ui/buttons/tools/wrench_button.tscn" id="14_p2cnd"]
 [ext_resource type="PackedScene" uid="uid://bukpbqvvoq545" path="res://ui/buttons/tools/doc_button.tscn" id="15_0kawd"]
 [ext_resource type="Script" uid="uid://bgd12l738veqv" path="res://levels/void/tools_layer.gd" id="15_7uxef"]
-[ext_resource type="Texture2D" uid="uid://e6qjpvcwvmsf" path="res://ui/dialogue/dialogue_box/border.png" id="15_hlkwf"]
 [ext_resource type="PackedScene" uid="uid://cupvraxw4j62m" path="res://ui/buttons/tools/project_button.tscn" id="16_7uxef"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_di2vn"]
 bg_color = Color(0.004019165, 0.004019165, 0.004019165, 1)
-
-[sub_resource type="Animation" id="Animation_l7214"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Control/Buttons/DocButton:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Control/Buttons/ProjectButton:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(101, 0)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Control/Buttons/WrenchButton:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(202, 0)]
-}
 
 [sub_resource type="Animation" id="Animation_hlkwf"]
 resource_name = "button_switch"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Control/Buttons/DocButton:position")
+tracks/0/path = NodePath("Buttons/DocButton:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -78,7 +39,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Control/Buttons/ProjectButton:position")
+tracks/1/path = NodePath("Buttons/ProjectButton:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -90,7 +51,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Control/Buttons/WrenchButton:position")
+tracks/2/path = NodePath("Buttons/WrenchButton:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -98,6 +59,45 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(202, 0), Vector2(250, 0), Vector2(275, 56), Vector2(275, 150), Vector2(250, 150), Vector2(620, 150)]
+}
+
+[sub_resource type="Animation" id="Animation_l7214"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Buttons/DocButton:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Buttons/ProjectButton:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(101, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Buttons/WrenchButton:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(202, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0o703"]
@@ -142,13 +142,32 @@ data = ExtResource("7_xo01p")
 visible = false
 data = ExtResource("8_8gb4b")
 
-[node name="WhereBox" parent="DialoguesLayer" instance=ExtResource("2_jb2fb")]
+[node name="WhereBubble" parent="DialoguesLayer" instance=ExtResource("10_qecyl")]
 visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -6.0
+offset_top = 66.0
+offset_right = -6.0
+offset_bottom = 66.0
 data = ExtResource("11_p2cnd")
 
-[node name="ToolsBox" parent="DialoguesLayer" instance=ExtResource("2_jb2fb")]
+[node name="ToolsBubble" parent="DialoguesLayer" instance=ExtResource("10_qecyl")]
 visible = false
-data = ExtResource("12_hlkwf")
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -6.0
+offset_top = 66.0
+offset_right = -6.0
+offset_bottom = 66.0
+data = ExtResource("11_vmf5u")
+metadata/max_length = 100
 
 [node name="ChoicesLayer" type="CanvasLayer" parent="."]
 script = ExtResource("7_oi1fw")
@@ -176,20 +195,11 @@ NodePath(".."): "_on_injustice_button_up"
 }
 
 [node name="ToolsLayer" type="CanvasLayer" parent="."]
-visible = false
 script = ExtResource("15_7uxef")
 
-[node name="Control" type="Control" parent="ToolsLayer"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Buttons" type="Control" parent="ToolsLayer/Control"]
+[node name="Buttons" type="Control" parent="ToolsLayer"]
 custom_minimum_size = Vector2(300, 200)
-layout_mode = 1
+layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -202,58 +212,16 @@ offset_bottom = -40.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ToolsInstructions" type="NinePatchRect" parent="ToolsLayer/Control/Buttons"]
-visible = false
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -108.0
-offset_top = 280.0
-offset_right = 108.0
-offset_bottom = 280.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("15_hlkwf")
-region_rect = Rect2(0, 0, 160, 160)
-patch_margin_left = 42
-patch_margin_top = 46
-patch_margin_right = 39
-patch_margin_bottom = 40
-metadata/_edit_use_anchors_ = true
-
-[node name="MarginContainer" type="MarginContainer" parent="ToolsLayer/Control/Buttons/ToolsInstructions"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 50
-theme_override_constants/margin_top = 50
-theme_override_constants/margin_right = 50
-theme_override_constants/margin_bottom = 50
-
-[node name="Label" type="Label" parent="ToolsLayer/Control/Buttons/ToolsInstructions/MarginContainer"]
-custom_minimum_size = Vector2(10, 30)
-layout_mode = 2
-size_flags_vertical = 0
-autowrap_mode = 3
-
-[node name="DocButton" parent="ToolsLayer/Control/Buttons" instance=ExtResource("15_0kawd")]
+[node name="DocButton" parent="ToolsLayer/Buttons" instance=ExtResource("15_0kawd")]
 layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
 offset_right = 97.00122
 offset_bottom = 200.0
-grow_horizontal = 1
-grow_vertical = 1
 size_flags_horizontal = 3
-mouse_behavior_recursive = 1
 
-[node name="ProjectButton" parent="ToolsLayer/Control/Buttons" instance=ExtResource("16_7uxef")]
+[node name="ProjectButton" parent="ToolsLayer/Buttons" instance=ExtResource("16_7uxef")]
 layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
@@ -261,12 +229,10 @@ anchor_bottom = 0.0
 offset_left = 101.0
 offset_right = 198.00098
 offset_bottom = 200.00217
-grow_horizontal = 1
-grow_vertical = 1
 size_flags_horizontal = 3
-mouse_behavior_recursive = 1
 
-[node name="WrenchButton" parent="ToolsLayer/Control/Buttons" instance=ExtResource("14_p2cnd")]
+[node name="WrenchButton" parent="ToolsLayer/Buttons" instance=ExtResource("14_p2cnd")]
+process_mode = 4
 layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
@@ -274,13 +240,9 @@ anchor_bottom = 0.0
 offset_left = 202.0
 offset_right = 299.99976
 offset_bottom = 199.99887
-grow_horizontal = 1
-grow_vertical = 1
 size_flags_horizontal = 3
-mouse_behavior_recursive = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="ToolsLayer/Control"]
-root_node = NodePath("../..")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ToolsLayer"]
 libraries = {
 &"": SubResource("AnimationLibrary_0o703")
 }
@@ -290,4 +252,6 @@ libraries = {
 [connection signal="child_exiting_tree" from="DialoguesLayer" to="DialoguesLayer" method="_on_child_exiting_tree"]
 [connection signal="child_exiting_tree" from="ChoicesLayer" to="ChoicesLayer" method="_on_child_exiting_tree"]
 [connection signal="skip_scene" from="ChoicesLayer" to="DialoguesLayer" method="_on_skip"]
-[connection signal="gui_input" from="ToolsLayer/Control/Buttons" to="ToolsLayer" method="_on_buttons_gui_input"]
+[connection signal="gui_input" from="ToolsLayer/Buttons/DocButton" to="ToolsLayer" method="_on_doc_button_gui_input"]
+[connection signal="gui_input" from="ToolsLayer/Buttons/ProjectButton" to="ToolsLayer" method="_on_project_button_gui_input"]
+[connection signal="gui_input" from="ToolsLayer/Buttons/WrenchButton" to="ToolsLayer" method="_on_wrench_button_gui_input"]
