@@ -3,6 +3,9 @@ extends Control
 @onready var animator: AnimationPlayer = $TextureRect/AnimationPlayer
 @onready var handSprite: TextureRect = $TextureRect
 @onready var label: Label = $VBox/InstructionLabel
+@onready var navigation = $Navigation
+
+signal add_tree_requested(item_name: String)
 
 const instructions = [
 	"Ei… Clique uma vez em qualquer lugar para jogar",
@@ -30,7 +33,12 @@ func swipe_require():
 	handSprite.show()
 	animator.play("handling")
 	get_tree().create_timer(5).timeout.connect(_on_timer_timeout)
+	await get_tree().create_timer(1).timeout
+	navigation.show()
 
 # Provide instruction if player don't swipe in defined time
 func _on_timer_timeout() -> void:
 	label.text = instructions[3]
+
+func _on_navigation_add_tree_requested(item_name: String) -> void:
+	add_tree_requested.emit(item_name)
