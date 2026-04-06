@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://crg0la80n81d5"]
+[gd_scene load_steps=4 format=3 uid="uid://crg0la80n81d5"]
 
 [ext_resource type="Script" uid="uid://c0qfoiy7poxxj" path="res://ui/navigation/navigation.gd" id="1_xhdb8"]
 [ext_resource type="Script" uid="uid://ccoivhbjl4epq" path="res://ui/navigation/swipe_input.gd" id="2_8sqav"]
+[ext_resource type="AudioStream" uid="uid://hpea17g28hc8" path="res://ui/navigation/Classic UI SFX - Short - Low #3.wav" id="3_oivhs"]
 
 [node name="Navigation" type="Control"]
+process_mode = 4
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -22,4 +24,9 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2_8sqav")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_oivhs")
+volume_db = 7.477
+
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
 [connection signal="ui_input_swipe" from="Control" to="." method="_on_ui_input_swipe"]

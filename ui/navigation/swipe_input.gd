@@ -26,12 +26,12 @@ func calc_drag():
 		var direction: Vector2 = initial_pos.direction_to(final_pos)
 		var dir: String
 		if abs(direction.x) > abs(direction.y):
-			if direction.x > 0:
+			if direction.x < 0:
 				dir = "left"
 			else:
 				dir = "right"
 		else:
-			if direction.y > 0:
+			if direction.y < 0:
 				dir = "up"
 			else:
 				dir = "down" 
