@@ -12,7 +12,8 @@ func _on_gui_input(event: InputEvent):
 		button.toggled()
 
 func _on_button_toggled(toggled_on: bool) -> void:
-	if toggled_on:
-		linked_view.show()
-	else:
-		linked_view.hide()
+	if linked_view:
+		if toggled_on:
+			linked_view.show()
+		else:
+			linked_view.hide()

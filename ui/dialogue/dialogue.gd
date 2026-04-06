@@ -17,12 +17,11 @@ var writing_delay: float = 0
 
 # Get dialogues from resource, chuncks and starts it
 func _ready() -> void:
+	visible = false
+	
 	if data:
 		lines = data.lines
 		lines = chunck(lines)
-	
-	if visible:
-		next_dialogue()
 
 # Divides lines bigger than max line length (default or max_length metadata) at last whitespace
 func chunck(dialogue: Array[String]):
