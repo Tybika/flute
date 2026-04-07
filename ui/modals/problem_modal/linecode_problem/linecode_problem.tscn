@@ -1,21 +1,19 @@
 [gd_scene format=3 uid="uid://cn254fpmr8cue"]
 
-[ext_resource type="Script" uid="uid://ps70jg7splls" path="res://ui/modals/problem_modal/linecode_problem/problem_modal.gd" id="1_6rmfd"]
-[ext_resource type="Resource" uid="uid://uhgbm6u7fnxf" path="res://problems/sample_problem.tres" id="2_6fmu2"]
-[ext_resource type="PackedScene" uid="uid://d2s316l611lfc" path="res://ui/buttons/simulator/hot_reload.tscn" id="2_66i4h"]
-[ext_resource type="PackedScene" uid="uid://21tpbdithc8v" path="res://ui/buttons/simulator/debug.tscn" id="3_nma68"]
-[ext_resource type="PackedScene" uid="uid://ckj1y86yo2vjb" path="res://ui/modals/problem_modal/tags/tags_tab.tscn" id="4_6rmfd"]
-[ext_resource type="PackedScene" uid="uid://cb3djy6e03hxn" path="res://ui/views/code_view/line_view.tscn" id="5_xkpoo"]
+[ext_resource type="Script" uid="uid://ps70jg7splls" path="res://ui/modals/problem_modal/linecode_problem/linecode_problem.gd" id="1_n0vok"]
+[ext_resource type="PackedScene" uid="uid://d2s316l611lfc" path="res://ui/buttons/simulator/hot_reload.tscn" id="3_aj4h4"]
+[ext_resource type="PackedScene" uid="uid://21tpbdithc8v" path="res://ui/buttons/simulator/debug.tscn" id="4_5wvnm"]
+[ext_resource type="PackedScene" uid="uid://cb3djy6e03hxn" path="res://ui/views/code_view/line_view.tscn" id="5_v1ila"]
+[ext_resource type="PackedScene" uid="uid://ckj1y86yo2vjb" path="res://ui/modals/problem_modal/tags/tags_tab.tscn" id="6_4g2bd"]
 
-[node name="ProblemModal" type="PopupPanel" unique_id=971610259 node_paths=PackedStringArray("back_button")]
+[node name="LineCodeProblemModal" type="PopupPanel" unique_id=971610259 node_paths=PackedStringArray("back_button")]
 oversampling_override = 1.0
 initial_position = 1
 size = Vector2i(900, 600)
 visible = true
 min_size = Vector2i(50, 50)
-script = ExtResource("1_6rmfd")
+script = ExtResource("1_n0vok")
 back_button = NodePath("Content/VBox/ToolBar/Button")
-modal_data = ExtResource("2_6fmu2")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1658290119]
 anchors_preset = 15
@@ -70,24 +68,24 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.43
 
-[node name="HotReload" parent="Content/VBox/ToolBar/IdeButtons" unique_id=505492822 node_paths=PackedStringArray("handler") instance=ExtResource("2_66i4h")]
+[node name="HotReload" parent="Content/VBox/ToolBar/IdeButtons" unique_id=505492822 node_paths=PackedStringArray("handler") instance=ExtResource("3_aj4h4")]
 layout_mode = 2
 size_flags_horizontal = 3
 handler = NodePath("../../../../..")
 
-[node name="Debug" parent="Content/VBox/ToolBar/IdeButtons" unique_id=1128422462 instance=ExtResource("3_nma68")]
+[node name="Debug" parent="Content/VBox/ToolBar/IdeButtons" unique_id=1128422462 instance=ExtResource("4_5wvnm")]
 layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="HSeparator" type="HSeparator" parent="Content/VBox" unique_id=1727155082]
 layout_mode = 2
 
-[node name="LineView" parent="Content/VBox" unique_id=1392753470 instance=ExtResource("5_xkpoo")]
+[node name="LineView" parent="Content/VBox" unique_id=1392753470 instance=ExtResource("5_v1ila")]
 layout_mode = 2
 size_flags_stretch_ratio = 3.0
 
 [node name="HSeparator2" type="HSeparator" parent="Content/VBox" unique_id=577770881]
 layout_mode = 2
 
-[node name="TagsByType" parent="Content/VBox" unique_id=832152744 instance=ExtResource("4_6rmfd")]
+[node name="TagsByType" parent="Content/VBox" unique_id=832152744 instance=ExtResource("6_4g2bd")]
 layout_mode = 2

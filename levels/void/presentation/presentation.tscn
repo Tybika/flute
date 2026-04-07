@@ -1,21 +1,21 @@
 [gd_scene format=3 uid="uid://dqasnpo6blp48"]
 
 [ext_resource type="PackedScene" uid="uid://d1axjb33n1hmy" path="res://characters/mc/mc.tscn" id="1_7jn3c"]
-[ext_resource type="Script" uid="uid://bcccpjl2b7bdi" path="res://levels/void/presentation_scene.gd" id="1_afln7"]
+[ext_resource type="Script" uid="uid://bcccpjl2b7bdi" path="res://levels/void/presentation/presentation_scene.gd" id="1_afln7"]
 [ext_resource type="PackedScene" uid="uid://b4iyeuvlevcoq" path="res://ui/dialogue/dialogue_box/dialogue_box.tscn" id="2_jb2fb"]
-[ext_resource type="Script" uid="uid://bdexij0jl002p" path="res://levels/void/dialogues_layer.gd" id="3_a2mgq"]
+[ext_resource type="Script" uid="uid://bdexij0jl002p" path="res://levels/void/presentation/dialogues_layer.gd" id="3_a2mgq"]
 [ext_resource type="Resource" uid="uid://tu5vbcee4x4" path="res://dialogues/presentation_dialogue_pt.tres" id="3_afln7"]
 [ext_resource type="PackedScene" uid="uid://crg0la80n81d5" path="res://ui/navigation/navigation.tscn" id="3_cly30"]
 [ext_resource type="Resource" uid="uid://batcibhn0oi2e" path="res://dialogues/holmes_dialogue_pt.tres" id="3_jb2fb"]
 [ext_resource type="PackedScene" uid="uid://cgmqnh3vw08s7" path="res://ui/choice/choice.tscn" id="6_2t1c1"]
-[ext_resource type="Script" uid="uid://bsxi35hucigev" path="res://levels/void/choices_layer.gd" id="7_oi1fw"]
+[ext_resource type="Script" uid="uid://bsxi35hucigev" path="res://levels/void/presentation/choices_layer.gd" id="7_oi1fw"]
 [ext_resource type="Resource" uid="uid://71v1lm8vq73l" path="res://dialogues/injustice_choice_dialogue_pt.tres" id="7_xo01p"]
 [ext_resource type="Resource" uid="uid://cwi0k4b0lmbgb" path="res://dialogues/accept_choice_dialog_pt.tres" id="8_8gb4b"]
 [ext_resource type="Resource" uid="uid://453b5vjl0isy" path="res://dialogues/where_dialogue_pt.tres" id="11_p2cnd"]
 [ext_resource type="Resource" uid="uid://c1ho507kel8gm" path="res://dialogues/tools_dialogue_pt.tres" id="12_hlkwf"]
 [ext_resource type="PackedScene" uid="uid://vh302orj3bux" path="res://ui/buttons/tools/wrench_button.tscn" id="14_p2cnd"]
 [ext_resource type="PackedScene" uid="uid://bukpbqvvoq545" path="res://ui/buttons/tools/doc_button.tscn" id="15_0kawd"]
-[ext_resource type="Script" uid="uid://bgd12l738veqv" path="res://levels/void/tools_layer.gd" id="15_7uxef"]
+[ext_resource type="Script" uid="uid://bgd12l738veqv" path="res://levels/void/presentation/tools_layer.gd" id="15_7uxef"]
 [ext_resource type="Texture2D" uid="uid://e6qjpvcwvmsf" path="res://ui/dialogue/dialogue_box/border.png" id="15_hlkwf"]
 [ext_resource type="PackedScene" uid="uid://cupvraxw4j62m" path="res://ui/buttons/tools/project_button.tscn" id="16_7uxef"]
 
@@ -63,6 +63,7 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id="Animation_hlkwf"]
 resource_name = "button_switch"
+length = 1.1666666
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -98,6 +99,20 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(202, 0), Vector2(250, 0), Vector2(275, 56), Vector2(275, 150), Vector2(250, 150), Vector2(620, 150)]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("..")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.1333333),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"finish_cutscene"
+}]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0o703"]

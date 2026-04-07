@@ -6,14 +6,19 @@ extends BaseModal
 
 # Needs to call setup
 func _ready() -> void:
+	push_data()
+	setup()
+
+func push_data():
 	if modal_data:
+		print("DATA: ", modal_data)
 		if modal_data.title:
+			print(modal_title)
 			modal_title.text = modal_data.title
 		
 		if modal_data.tags:
 			tabs.set_tag_data(modal_data.tags)
 			tabs.update()
-	setup()
 
 # Refatorar para permitir comportamento correto em mais de uma resposta: deve
 # alterar a estrutura dos dados para diferenciar os campos e as respostas entre si

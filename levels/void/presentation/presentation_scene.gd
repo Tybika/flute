@@ -67,6 +67,8 @@ func _on_visibility_changed() -> void:
 		if first_time:
 			start_cutscene()
 
+func finish_cutscene():
+	add_tree_requested.emit("void2")
 
 func _on_alone_timeout():
 	_clear_cutscene()

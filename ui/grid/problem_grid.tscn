@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://vgsfeqffqdyh"]
 
-[ext_resource type="PackedScene" uid="uid://bysb7dqdyvbvw" path="res://ui/grid/grid_item/grid_item.tscn" id="1_gvhko"]
-[ext_resource type="PackedScene" uid="uid://cn254fpmr8cue" path="res://ui/modals/problem_modal/linecode_problem/problem_window.tscn" id="2_03l12"]
+[ext_resource type="Script" uid="uid://dj0h8rtekh4v5" path="res://ui/grid/problem_grid.gd" id="1_164ca"]
 
 [node name="ProblemGrid" type="Control" unique_id=892260471]
 layout_mode = 3
@@ -10,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_164ca")
 
 [node name="GridContainer" type="GridContainer" parent="." unique_id=1183866648]
 layout_mode = 1
@@ -22,50 +22,5 @@ theme_override_constants/h_separation = 0
 theme_override_constants/v_separation = 0
 columns = 3
 
-[node name="GridItem" parent="GridContainer" unique_id=1231440268 node_paths=PackedStringArray("linked_modal") instance=ExtResource("1_gvhko")]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-linked_modal = NodePath("../../Modals/ProblemModal")
-
-[node name="GridItem2" parent="GridContainer" unique_id=1060507459 instance=ExtResource("1_gvhko")]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="GridItem3" parent="GridContainer" unique_id=1523150018 instance=ExtResource("1_gvhko")]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="GridItem4" parent="GridContainer" unique_id=560575577 instance=ExtResource("1_gvhko")]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="GridItem5" parent="GridContainer" unique_id=1724120968 instance=ExtResource("1_gvhko")]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="GridItem6" parent="GridContainer" unique_id=55750592 instance=ExtResource("1_gvhko")]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="GridItem7" parent="GridContainer" unique_id=995181279 instance=ExtResource("1_gvhko")]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="GridItem8" parent="GridContainer" unique_id=232075939 instance=ExtResource("1_gvhko")]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
 [node name="Modals" type="CanvasLayer" parent="." unique_id=550264270]
 visible = false
-
-[node name="ProblemModal" parent="Modals" unique_id=622449705 instance=ExtResource("2_03l12")]
-
-[connection signal="focus_entered" from="." to="GridContainer/GridItem" method="_on_problem_grid_focus_entered"]

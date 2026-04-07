@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ProblemData" format=3 uid="uid://bk5e0i7oc5xir"]
+
+[ext_resource type="Script" uid="uid://c74bhshb66n4q" path="res://problems/problem_data.gd" id="1_b5vrt"]
+
+[resource]
+script = ExtResource("1_b5vrt")
+title = "Background"
+answer_line = Array[String](["int"])
+tags = Dictionary[String, Array]({
+"operadores": [],
+"sintaxe": ["(", ")", "[", "]", "{", "}", ":", ";", ",", "\""],
+"tipos": ["int"],
+"variáveis": ["var"]
+})
+metadata/_custom_type_script = "uid://c74bhshb66n4q"

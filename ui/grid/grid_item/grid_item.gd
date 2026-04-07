@@ -6,6 +6,12 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	connect_linked_modal()
+
+func set_linked_modal(problem_modal: PopupPanel):
+	linked_modal = problem_modal
+
+func connect_linked_modal():
 	if linked_modal:
 		linked_modal.popup_hide.connect(_on_close_modal)
 
