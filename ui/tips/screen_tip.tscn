@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://c7tsvict5rmh0"]
+
+[ext_resource type="Script" uid="uid://2oppcgagjmcw" path="res://ui/tips/screen_tip.gd" id="1_0xtqk"]
+[ext_resource type="Texture2D" uid="uid://pxxelnq1etvy" path="res://ui/tips/tip_border.png" id="1_rsusn"]
+
+[node name="ScreenTip" type="Control" unique_id=357104330]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0xtqk")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=253041507]
+custom_minimum_size = Vector2(100, 160)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 70.0
+grow_horizontal = 2
+texture = ExtResource("1_rsusn")
+patch_margin_left = 14
+patch_margin_top = 35
+patch_margin_right = 72
+patch_margin_bottom = 35
+
+[node name="MarginContainer" type="MarginContainer" parent="NinePatchRect" unique_id=236375738]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 80
+theme_override_constants/margin_bottom = 20
+
+[node name="Label" type="Label" parent="NinePatchRect/MarginContainer" unique_id=1822977963]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+autowrap_mode = 3
+
+[node name="Button" type="Button" parent="NinePatchRect" unique_id=1121722425]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
