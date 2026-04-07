@@ -1,2 +1,8 @@
 # flute
-A beginner-friendly, cross-platform game that acts as a Flutter coding simulator, where players can interact with the very game they are playing.
+A tiny framework to build a mobile narrative game that simulates a Flutter ambient to problem-solve, where players can interact with the very game they are playing.
+
+# How to install
+## Player installation
+
+## Developer
+
