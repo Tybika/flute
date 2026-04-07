@@ -2,14 +2,15 @@ extends Node2D
 
 @onready var resources: Dictionary[String, PackedScene] = {
 	"title": load("res://screens/title_screen/title_screen.tscn"),
-	"presentation": load("res://levels/void/presentation.tscn"),
+	"void_cutscene": load("res://levels/void/presentation/presentation.tscn"),
+	"void_level": load("res://levels/void/problem/problem.tscn"),
 	"game": load("res://screens/problem_screen/problem_screen.tscn"),
 }
 @onready var game_save
 
 @onready var title: Node
-@onready var void_begin: Node
-@onready var void_room: Node
+@onready var void_cutscene: Node
+@onready var void_level: Node
 @onready var game: Node
 @onready var end: Node
 
@@ -17,12 +18,12 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	title = _instance_of("title")
-	void_begin = _instance_of("presentation")
-	void_room = _instance_of("presentation")
+	void_cutscene = _instance_of("void_cutscene")
+	void_level = _instance_of("void_level")
 	game = _instance_of("game")
 	
 #	_connect_multiple_tree_signal(
-#			[title, void_begin, void_room, game]
+#			[title, void_cutscene, void_room, game]
 #			)
 	_resize_control_node(title)
 	_connect_tree_signal(title)
@@ -44,9 +45,18 @@ func _connect_multiple_tree_signal(nodes: Array[Node]):
 func _connect_tree_signal(node_emissor: Node) -> void:
 	node_emissor.add_tree_requested.connect(_on_add_tree_requested)
 
+
+func _switch_scene(new_scene: Node):
+	add_child(new_scene)
+	remove_child(get_child(0))
+
 func _on_add_tree_requested(item_name: String) -> void:
+	print("recebi sgnal: ", item_name)
 	match item_name.to_lower():
-		"void begin", "void_begin", "void1", "presentation":
-			add_child(void_begin)
+		"void begin", "void begin", "void1", "presentation":
+			_switch_scene(void_cutscene)
+		"void background", "void level", "void2", "background":
+			print("leu o singal e agora vai trocar")
+			_switch_scene(void_level)
 		_:
 			print("NÃO MATCH")
