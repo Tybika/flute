@@ -26,7 +26,9 @@ func _ready() -> void:
 #			[title, void_cutscene, void_room, game]
 #			)
 	_resize_control_node(title)
-	_connect_tree_signal(title)
+	_connect_multiple_tree_signal(
+			[title, void_cutscene]
+			)
 	add_child(title)
 
 func _resize_control_node(node: Control):
@@ -51,12 +53,10 @@ func _switch_scene(new_scene: Node):
 	remove_child(get_child(0))
 
 func _on_add_tree_requested(item_name: String) -> void:
-	print("recebi sgnal: ", item_name)
 	match item_name.to_lower():
 		"void begin", "void begin", "void1", "presentation":
 			_switch_scene(void_cutscene)
 		"void background", "void level", "void2", "background":
-			print("leu o singal e agora vai trocar")
 			_switch_scene(void_level)
 		_:
 			print("NÃO MATCH")

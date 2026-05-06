@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://b2yohqnid3qui" path="res://characters/mc/mc_back_8b_white1.png" id="3_lv6fq"]
 [ext_resource type="Texture2D" uid="uid://bl8ygmkrpat1u" path="res://characters/mc/mc_back_8b_white2.png" id="4_qlr3a"]
 [ext_resource type="Texture2D" uid="uid://dae4c4ym7knua" path="res://characters/mc/mc_right_8b_white.png" id="5_0micv"]
+[ext_resource type="Texture2D" uid="uid://co76747bi2uim" path="res://characters/mc/mc_front_32b.png" id="5_c8vv2"]
 [ext_resource type="Texture2D" uid="uid://byj0ck5dooepa" path="res://characters/mc/mc_front_8b_white1.png" id="6_kds3f"]
 [ext_resource type="Texture2D" uid="uid://cyku4bo1g2coi" path="res://characters/mc/mc_front_8b_white2.png" id="7_c8vv2"]
 
@@ -32,6 +33,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"back_walking_8",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_c8vv2")
+}],
+"loop": true,
+"name": &"front_idle_32",
 "speed": 5.0
 }, {
 "frames": [{
@@ -110,7 +119,7 @@ shape = SubResource("RectangleShape2D_0micv")
 [node name="BodySprite" type="AnimatedSprite2D" parent="." unique_id=1882492044]
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_g05og")
-animation = &"front_idle_8"
+animation = &"front_idle_32"
 
 [node name="DialogueSprite" type="AnimatedSprite2D" parent="." unique_id=1818757662]
 visible = false

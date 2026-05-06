@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Flute"
-run/main_scene="uid://cxcijfp2wss2p"
+run/main_scene="uid://b3juhcfe76gil"
 config/features=PackedStringArray("4.6", "Mobile")
 boot_splash/use_filter=false
 config/icon="res://icon.svg"

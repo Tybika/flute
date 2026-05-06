@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bir8fdrelu20f"
-path="res://.godot/imported/bg-encaixe-test.png-822959c63d86491ac1f9f0b29ea856df.ctex"
+uid="uid://ceqv2lbpu2umt"
+path="res://.godot/imported/joystick_icon.png-e04264368ed789bec96f67488597f2a8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://levels/kingdom/bg-encaixe-test.png"
-dest_files=["res://.godot/imported/bg-encaixe-test.png-822959c63d86491ac1f9f0b29ea856df.ctex"]
+source_file="res://virtual_joystick/previews/joystick_icon.png"
+dest_files=["res://.godot/imported/joystick_icon.png-e04264368ed789bec96f67488597f2a8.ctex"]
 
 [params]
 

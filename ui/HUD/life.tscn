@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://b82kl1gvhjcor"]
+
+[ext_resource type="Texture2D" uid="uid://cmq33w0a85kfq" path="res://ui/HUD/heart_fill_32.png" id="1_kw3lh"]
+
+[node name="Life" type="TextureRect" unique_id=1903605499]
+custom_minimum_size = Vector2(32, 32)
+texture = ExtResource("1_kw3lh")
+expand_mode = 2

@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://vgsfeqffqdyh" path="res://ui/grid/problem_grid.tscn" id="1_3nygn"]
 [ext_resource type="Script" uid="uid://b0ysf06x6iucx" path="res://screens/problem_screen/problem_screen.gd" id="1_u7j1w"]
+[ext_resource type="PackedScene" uid="uid://cnk6rjifqeacd" path="res://ui/HUD/hud.tscn" id="2_ht7sd"]
 [ext_resource type="PackedScene" uid="uid://gualfru75hab" path="res://ui/modals/docs_window/docs_modal.tscn" id="2_jvcb2"]
 [ext_resource type="PackedScene" uid="uid://w81eby2el1gj" path="res://ui/modals/project_window/project_window.tscn" id="3_8tijo"]
 [ext_resource type="PackedScene" uid="uid://bukpbqvvoq545" path="res://ui/buttons/tools/doc_button.tscn" id="4_s1vem"]
@@ -12,6 +13,11 @@
 script = ExtResource("1_u7j1w")
 
 [node name="HUD" type="CanvasLayer" parent="." unique_id=695480228]
+
+[node name="Hud" parent="HUD" unique_id=1672325373 instance=ExtResource("2_ht7sd")]
+anchors_preset = -1
+anchor_right = 0.869
+offset_right = -0.32006836
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=540062281]
 layer = 2
