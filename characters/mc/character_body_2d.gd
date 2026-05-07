@@ -3,6 +3,7 @@ extends CharacterBody2D
 @onready var body = $BodySprite
 @onready var dialogue = $DialogueSprite
 
+@export var default_theme: String
 @export var anim_handler: Node
 
 var theme_suffix: String = "8"
@@ -11,6 +12,13 @@ const JUMP_VELOCITY = -400.0
 
 func _ready() -> void:
 	set_physics_process(false)
+	
+	if default_theme:
+		if default_theme == "8":
+			style_8bit()
+			
+		elif default_theme == "32":
+			style_32bit()
 
 func activate_physics():
 	set_physics_process(true)
@@ -56,3 +64,16 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+
+func update_current_anim_style():
+	var current_anim = body.get_animation()
+	current_anim = current_anim.rsplit("_", true, 1)[0]
+	body.play(current_anim + "_" + theme_suffix)
+
+func style_8bit():
+	theme_suffix = "8"
+	update_current_anim_style()
+
+func style_32bit():
+	theme_suffix = "32"
+	update_current_anim_style()

@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://b3juhcfe76gil"]
 
+[ext_resource type="Script" uid="uid://rhg35aygufk7" path="res://levels/kingdom/kingdom_start.gd" id="1_8r3nu"]
 [ext_resource type="PackedScene" uid="uid://lulwvlut2hro" path="res://levels/kingdom/kingdom_background/kingdom_background.tscn" id="1_a1fbq"]
 [ext_resource type="Texture2D" uid="uid://gxayq6s6eput" path="res://levels/kingdom/earth_tileset_32.png" id="2_x7o1a"]
 [ext_resource type="PackedScene" uid="uid://d1axjb33n1hmy" path="res://characters/mc/mc.tscn" id="3_hqguy"]
@@ -242,6 +243,7 @@ sources/0 = SubResource("TileSetAtlasSource_hqguy")
 sources/1 = SubResource("TileSetAtlasSource_lu05x")
 
 [node name="KingdomStart" type="Node2D" unique_id=52564875]
+script = ExtResource("1_8r3nu")
 
 [node name="ColouredBackground" type="ColorRect" parent="." unique_id=319422247]
 custom_minimum_size = Vector2(100, 100)
@@ -251,7 +253,6 @@ offset_bottom = 720.0
 color = Color(0, 0, 0, 1)
 
 [node name="KingdomBackground" parent="." unique_id=1693397381 instance=ExtResource("1_a1fbq")]
-visible = false
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1533059816]
 scale = Vector2(2.14, 2.14)

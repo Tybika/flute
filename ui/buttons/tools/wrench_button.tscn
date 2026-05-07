@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d0n4rx00bp0nd" path="res://ui/buttons/tools/wrench_button.gd" id="1_jmgth"]
 [ext_resource type="Theme" uid="uid://b5gv54vplg4wv" path="res://ui/themes/pink_theme.tres" id="1_lgsin"]
-[ext_resource type="Texture2D" uid="uid://c3gcc3oamdt7o" path="res://ui/buttons/tools/wrench.png" id="2_7i08v"]
+[ext_resource type="Texture2D" uid="uid://c3gcc3oamdt7o" path="res://ui/buttons/tools/wrench_32.png" id="2_7i08v"]
 
 [node name="WrenchButton" type="Control" unique_id=1174186059]
 layout_mode = 3

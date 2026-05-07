@@ -31,7 +31,9 @@ const TOOLS_DESC: Dictionary[String, String] = {
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	docs_b.style_8bit()
+	project_b.style_8bit()
+	wrench_b.style_8bit()
 
 func update_label(event, type: String):
 	if event is InputEventScreenTouch && !event.pressed:

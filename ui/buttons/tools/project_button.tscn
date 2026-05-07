@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cupvraxw4j62m"]
 
-[ext_resource type="Texture2D" uid="uid://dwe0qybf8v1c3" path="res://ui/buttons/tools/project.png" id="1_ttsrn"]
+[ext_resource type="Texture2D" uid="uid://dwe0qybf8v1c3" path="res://ui/buttons/tools/project_32.png" id="1_ttsrn"]
 [ext_resource type="Script" uid="uid://bb35gou6tvjoa" path="res://ui/buttons/tools/popup_button.gd" id="1_xfpkj"]
 
 [node name="ProjectButton" type="Control" unique_id=1238847130]

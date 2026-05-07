@@ -20,6 +20,8 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_q2v8u")
 
 [node name="MainCharacter" parent="." unique_id=267921760 instance=ExtResource("1_8s8nh")]
 position = Vector2(635, 325)
+default_theme = "8"
 
 [node name="ProblemScreen" parent="." unique_id=1344442422 instance=ExtResource("2_j8bp0")]
 problems = Array[ExtResource("3_q2v8u")]([ExtResource("4_ld66g")])
+default_theme = "8"

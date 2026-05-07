@@ -8,11 +8,13 @@
 [ext_resource type="PackedScene" uid="uid://bukpbqvvoq545" path="res://ui/buttons/tools/doc_button.tscn" id="4_s1vem"]
 [ext_resource type="PackedScene" uid="uid://vh302orj3bux" path="res://ui/buttons/tools/wrench_button.tscn" id="5_u7j1w"]
 [ext_resource type="PackedScene" uid="uid://cupvraxw4j62m" path="res://ui/buttons/tools/project_button.tscn" id="6_ht7sd"]
+[ext_resource type="Script" uid="uid://bep8wtu8wsv6d" path="res://screens/problem_screen/tools_column.gd" id="6_v8pc3"]
 
 [node name="ProblemScreen" type="Node2D" unique_id=1344442422]
 script = ExtResource("1_u7j1w")
 
 [node name="HUD" type="CanvasLayer" parent="." unique_id=695480228]
+visible = false
 
 [node name="Hud" parent="HUD" unique_id=1672325373 instance=ExtResource("2_ht7sd")]
 anchors_preset = -1
@@ -65,6 +67,7 @@ size_flags_horizontal = 10
 theme_override_constants/margin_top = 100
 theme_override_constants/margin_right = 40
 theme_override_constants/margin_bottom = 100
+script = ExtResource("6_v8pc3")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="UI/Control/HBox/ToolsColumn" unique_id=233258088]
 custom_minimum_size = Vector2(80, 100)
