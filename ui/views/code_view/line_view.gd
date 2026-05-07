@@ -6,10 +6,17 @@ extends ScrollContainer
 @export var code_data: Array[String]
 static var edit_counter = 0
 
+var label_sett : LabelSettings
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	config_label_sett()
 	if code_data:
 		create_lines()
+
+func config_label_sett():
+	label_sett = LabelSettings.new()
+	label_sett.set_font(preload("res://ui/views/code_view/CASCADIACODE.TTF"))
 
 func create_lines():
 	var instance: Control
@@ -22,10 +29,13 @@ func create_lines():
 		else:
 			instance = Label.new()
 			instance.text = linecode
-		
+			instance.set_label_settings(label_sett)
+			
 		instance.size_flags_horizontal = SIZE_EXPAND_FILL
 		instance.size_flags_vertical = SIZE_EXPAND_FILL
 		vbox.add_child(instance)
+		
+		
 
 func get_answer():
 	var answer: Array[String] = []
