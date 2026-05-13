@@ -21,6 +21,13 @@ run/stretch/aspect="expand"
 
 buses/default_bus_layout=""
 
+[autoload]
+
+SignalBus="*uid://dg54kst3d3tvi"
+ShaderManager="*uid://c4uce5ojc11i1"
+SceneManager="*uid://chgemud0l0br4"
+Saver="*uid://by5edqdq5ou3y"
+
 [display]
 
 window/size/viewport_width=1280
