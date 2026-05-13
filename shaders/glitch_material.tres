@@ -1,0 +1,18 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://dw0al0sue3gld"]
+
+[ext_resource type="Shader" uid="uid://eyygcl3vyn26" path="res://shaders/retro_vhs_glitch.gdshader" id="1_k07ly"]
+
+[resource]
+shader = ExtResource("1_k07ly")
+shader_parameter/activated = false
+shader_parameter/intensity = 0.7290000346275
+shader_parameter/glitch_frequency = 2.0
+shader_parameter/glitch_duration = 0.35100001597398
+shader_parameter/red_displacement = 0.02
+shader_parameter/green_displacement = 0.0290000013775
+shader_parameter/blue_displacement = 0.02800000133
+shader_parameter/scanline_intensity = 0.3
+shader_parameter/noise_intensity = 0.0070000003325
+shader_parameter/slice_intensity = 0.4
+shader_parameter/ghost_intensity = 0.1
+shader_parameter/negative_intensity = 0.0

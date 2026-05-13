@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://dhecrlge0fj2w"]
+
+[ext_resource type="Script" uid="uid://c0ikf6yjgtk2l" path="res://dialogues/dialog_data.gd" id="1_q8gd7"]
+
+[resource]
+script = ExtResource("1_q8gd7")
+lines = Array[String](["O qUE vocÃª feZ?", "uSE esSe b0tÃ£o quando jÃ¡ s0ubeR que FuNcI0na"])
+metadata/_custom_type_script = "uid://c0ikf6yjgtk2l"

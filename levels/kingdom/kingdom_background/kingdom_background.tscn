@@ -8,40 +8,49 @@
 [node name="KingdomBackground" type="Node2D" unique_id=1693397381]
 
 [node name="Sky" type="Parallax2D" parent="." unique_id=249589746]
+use_parent_material = true
 scroll_scale = Vector2(0.1, 0.1)
 
 [node name="Sky" type="Sprite2D" parent="Sky" unique_id=1789095747]
+use_parent_material = true
 position = Vector2(641, 360.61002)
 scale = Vector2(1.6685416, 1.6731018)
 texture = ExtResource("1_ea0gd")
 
 [node name="BigClouds" type="Parallax2D" parent="." unique_id=827766289]
+use_parent_material = true
 scroll_scale = Vector2(0.5, 0.5)
 scroll_offset = Vector2(-1, -1)
 
 [node name="Sprite2D" type="Sprite2D" parent="BigClouds" unique_id=1001283260]
+use_parent_material = true
 position = Vector2(641.5, 365)
 scale = Vector2(1.2548828, 1.25)
 texture = ExtResource("2_wk0lm")
 
 [node name="Hills" type="Parallax2D" parent="." unique_id=1486086418]
+use_parent_material = true
 scroll_scale = Vector2(0.7, 0.7)
 scroll_offset = Vector2(-3, -5)
 
 [node name="Hills" type="Sprite2D" parent="Hills" unique_id=1390949056]
+use_parent_material = true
 position = Vector2(643.53, 317)
 scale = Vector2(1.2548242, 1.24)
 texture = ExtResource("3_oq51q")
 
 [node name="Walls" type="Parallax2D" parent="." unique_id=611397435]
+use_parent_material = true
 scroll_offset = Vector2(-3, -74)
 
 [node name="Wall1" type="Sprite2D" parent="Walls" unique_id=1896366292]
+use_parent_material = true
 position = Vector2(328, 489)
 scale = Vector2(0.85, 0.85)
 texture = ExtResource("2_73mdr")
 
 [node name="Wall2" type="Sprite2D" parent="Walls" unique_id=2099575016]
+use_parent_material = true
 position = Vector2(980, 488)
 scale = Vector2(0.85, 0.85)
 texture = ExtResource("2_73mdr")

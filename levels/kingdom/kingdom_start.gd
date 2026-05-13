@@ -6,7 +6,7 @@ extends Node2D
 @onready var mc = $MainCharacter
 @onready var problem = $ProblemScreen
 
-var colors = {
+const colors = {
 	"black": Color.BLACK,
 	"gray": Color("#303030"),
 	"red": Color.CRIMSON,
@@ -20,11 +20,6 @@ var colors = {
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
 	pass
 
 func update_style(style: String, color = null):

@@ -4,6 +4,9 @@ extends BaseModal
 @onready var modal_title = $Content/VBox/ToolBar/TitleLabel
 @onready var line_view = $Content/VBox/LineView
 
+signal shader_requested
+signal shader_released
+
 # Needs to call setup
 func _ready() -> void:
 	push_data()
@@ -38,6 +41,6 @@ func check_syntax() -> bool:
 	
 func _on_hot_reload_button_up():
 	if check_answer():
-		pass
+		shader_released.emit()
 	else: 
-		pass
+		shader_requested.emit()

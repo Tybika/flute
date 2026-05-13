@@ -14,7 +14,6 @@
 script = ExtResource("1_u7j1w")
 
 [node name="HUD" type="CanvasLayer" parent="." unique_id=695480228]
-visible = false
 
 [node name="Hud" parent="HUD" unique_id=1672325373 instance=ExtResource("2_ht7sd")]
 anchors_preset = -1

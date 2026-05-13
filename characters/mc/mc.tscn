@@ -117,6 +117,7 @@ position = Vector2(1.5, 3.5)
 shape = SubResource("RectangleShape2D_0micv")
 
 [node name="BodySprite" type="AnimatedSprite2D" parent="." unique_id=1882492044]
+use_parent_material = true
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_g05og")
 animation = &"front_idle_32"
