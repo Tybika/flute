@@ -5,6 +5,8 @@ var materials = [
 	load("res://shaders/screen_glitch_material.tres")
 ]
 
+var status: bool = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	# Chamar o save pra recuperar lá
@@ -27,11 +29,16 @@ func _get_shader_nodes() -> Array[Node]:
 	return nodes
 
 func _set_active_state(state: bool):
-	for node in _get_shader_nodes():
-		node.material.set_shader_parameter("active", state)
+	if not state == status:
+		for node in _get_shader_nodes():
+			node.material.set_shader_parameter("active", state)
+		status = state
 
 func activate():
 	_set_active_state(true)
 
 func deactivate():
 	_set_active_state(false)
+
+func is_active() -> bool:
+	return status
