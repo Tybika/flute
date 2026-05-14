@@ -112,4 +112,3 @@ layout_mode = 1
 left_scene_name = "Presentation"
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
-[connection signal="add_tree_requested" from="Navigation" to="." method="_on_navigation_add_tree_requested"]

@@ -39,6 +39,3 @@ func swipe_require():
 # Provide instruction if player don't swipe in defined time
 func _on_timer_timeout() -> void:
 	label.text = instructions[3]
-
-func _on_navigation_add_tree_requested(item_name: String) -> void:
-	add_tree_requested.emit(item_name)

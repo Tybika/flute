@@ -20,7 +20,7 @@ extends Node2D
 	]
 
 var current = 0
-signal add_tree_requested(item_name: String)
+signal next_scene_requested
 
 func _create_alone_timer():
 	get_tree().create_timer(8).timeout.connect(_on_alone_timeout)
@@ -56,10 +56,6 @@ func call_scene_event(scene_event: Callable):
 	await scene_event.call()
 
 
-func _on_navigation_add_tree_requested(item_name: String) -> void:
-	add_tree_requested.emit(item_name)
-
-
 func _on_visibility_changed() -> void:
 	if visible:
 		await get_tree().process_frame
@@ -68,7 +64,7 @@ func _on_visibility_changed() -> void:
 			start_cutscene()
 
 func finish_cutscene():
-	add_tree_requested.emit("void2")
+	next_scene_requested.emit()
 
 func _on_alone_timeout():
 	_clear_cutscene()

@@ -17,7 +17,6 @@ func next():
 		await current_choice.tree_exited
 
 func _on_exit_button_up():
-	print("chamou função quit")
 	get_tree().quit()
 
 func _on_programmer_button_up():

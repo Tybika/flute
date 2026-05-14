@@ -299,7 +299,6 @@ root_node = NodePath("../..")
 libraries/ = SubResource("AnimationLibrary_0o703")
 
 [connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
-[connection signal="add_tree_requested" from="Navigation" to="." method="_on_navigation_add_tree_requested"]
 [connection signal="child_exiting_tree" from="DialoguesLayer" to="DialoguesLayer" method="_on_child_exiting_tree"]
 [connection signal="child_exiting_tree" from="ChoicesLayer" to="ChoicesLayer" method="_on_child_exiting_tree"]
 [connection signal="skip_scene" from="ChoicesLayer" to="DialoguesLayer" method="_on_skip"]

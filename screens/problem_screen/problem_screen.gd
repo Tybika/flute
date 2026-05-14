@@ -1,6 +1,8 @@
 extends Node2D
 
 @export var problems: Array[ProblemData]
+@export var handler: Node
+@export var methods: Array[StringName]
 @onready var problem_grid = $UI/Control/HBox/Modals/ProblemGrid
 @onready var hud = $HUD/Hud
 @onready var ui = $UI
@@ -11,7 +13,6 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	print(problems)
 	if problems:
 		problem_grid.set_problems(problems)
 		problem_grid.grid_create()
@@ -24,6 +25,7 @@ func _ready() -> void:
 	
 	if not problem_visible:
 		hide_problems()
+	
 
 func update_style(method_name: String):
 	hud.call(method_name)

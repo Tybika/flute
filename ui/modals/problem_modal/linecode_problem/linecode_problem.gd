@@ -4,6 +4,8 @@ extends BaseModal
 @onready var modal_title = $Content/VBox/ToolBar/TitleLabel
 @onready var line_view = $Content/VBox/LineView
 
+var dialogue_clone: Node
+
 signal shader_requested
 signal shader_released
 
@@ -12,11 +14,18 @@ func _ready() -> void:
 	push_data()
 	setup()
 
+func _call_handler():
+	var node = handler["node"]
+	var method_name = handler["method"]
+	
+	if handler.has("params"):
+		node.call(method_name, handler["params"])
+	else:
+		node.call(method_name)
+
 func push_data():
 	if modal_data:
-		print("DATA: ", modal_data)
 		if modal_data.title:
-			print(modal_title)
 			modal_title.text = modal_data.title
 		
 		if modal_data.tags:
@@ -42,5 +51,9 @@ func check_syntax() -> bool:
 func _on_hot_reload_button_up():
 	if check_answer():
 		shader_released.emit()
+		
+		if not handler == null:
+			_call_handler()
 	else: 
 		shader_requested.emit()
+		

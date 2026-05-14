@@ -6,7 +6,7 @@ extends Control
 @export var right_scene_name: String
 @onready var player = $AudioStreamPlayer
 
-signal add_tree_requested(item_name: String)
+signal next_scene_requested
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -15,30 +15,36 @@ func _ready() -> void:
 func play_unvailable() -> void:
 	player.play()
 
-func go_to(target_name: String):
-	add_tree_requested.emit(target_name)
+#func go_to(target_name: String):
+#	next_scene_requested.emit(target_name)
 
+func _go_to():
+	next_scene_requested.emit()
 
 func _on_ui_input_swipe(direction: String) -> void:
 	match direction:
 		"up":
 			if top_scene_name:
-				go_to(bot_scene_name)
+				#go_to(bot_scene_name)
+				_go_to()
 			else: 
 				play_unvailable()
 		"down":
 			if bot_scene_name:
-				go_to(bot_scene_name)
+				#go_to(bot_scene_name)
+				_go_to()
 			else: 
 				play_unvailable()
 		"left":
 			if left_scene_name:
-				go_to(left_scene_name)
+				#go_to(left_scene_name)
+				_go_to()
 			else: 
 				play_unvailable()
 		"right":
 			if right_scene_name:
-				go_to(right_scene_name)
+				#go_to(right_scene_name)
+				_go_to()
 			else: 
 				play_unvailable()
 

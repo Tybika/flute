@@ -36,5 +36,4 @@ func emit_any_signal(signal_name):
 	emit_signal(signal_name)
 
 func _on_node_added(node: Node):
-	print("adicionado nó: ", node)
 	_connect_recursive(node)
