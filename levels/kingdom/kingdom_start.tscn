@@ -11,6 +11,10 @@
 [ext_resource type="Script" uid="uid://c74bhshb66n4q" path="res://problems/problem_data.gd" id="5_uyvqg"]
 [ext_resource type="Resource" uid="uid://uhgbm6u7fnxf" path="res://problems/sample_problem.tres" id="6_lu05x"]
 [ext_resource type="Material" uid="uid://dw0al0sue3gld" path="res://shaders/glitch_material.tres" id="7_6227m"]
+[ext_resource type="Resource" uid="uid://bhrqvnftw17gn" path="res://problems/life_reference_problem.tres" id="11_aw6nl"]
+[ext_resource type="Resource" uid="uid://byejspmnfwg6g" path="res://problems/clouds_problem.tres" id="12_wqj8n"]
+[ext_resource type="Resource" uid="uid://bpxpx1lbm37l" path="res://problems/coin_layout_problem.tres" id="13_wqj8n"]
+[ext_resource type="Resource" uid="uid://c85pyq83k37cr" path="res://problems/theme_problem.tres" id="14_bo5ia"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hqguy"]
 resource_name = "earth_32"
@@ -270,4 +274,4 @@ material = ExtResource("7_6227m")
 position = Vector2(348, 548)
 
 [node name="ProblemScreen" parent="." unique_id=1344442422 instance=ExtResource("4_ben2r")]
-problems = Array[ExtResource("5_uyvqg")]([ExtResource("6_lu05x"), ExtResource("6_lu05x"), ExtResource("6_lu05x"), ExtResource("6_lu05x"), ExtResource("6_lu05x"), ExtResource("6_lu05x"), ExtResource("6_lu05x"), ExtResource("6_lu05x"), ExtResource("6_lu05x")])
+problems = Array[ExtResource("5_uyvqg")]([ExtResource("11_aw6nl"), ExtResource("12_wqj8n"), ExtResource("13_wqj8n"), ExtResource("6_lu05x"), ExtResource("14_bo5ia"), ExtResource("6_lu05x"), ExtResource("6_lu05x"), ExtResource("6_lu05x"), ExtResource("6_lu05x")])

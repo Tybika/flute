@@ -38,10 +38,9 @@ func check_answer() -> bool:
 	if modal_data.answer_line && line_view.has_method("get_answer"):
 		var user_answer = line_view.get_answer()
 		
-		for u_answer in user_answer:
-			for answer in modal_data.answer_line:
-				if u_answer == answer:
-					return true
+		for answer in modal_data.answer_line:
+			if user_answer == answer.replace(" ", ""):
+				return true
 	
 	return false
 

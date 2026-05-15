@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ProblemData" format=3 uid="uid://bk5e0i7oc5xir"]
+
+[ext_resource type="Script" uid="uid://c74bhshb66n4q" path="res://problems/problem_data.gd" id="1_mtyy3"]
+
+[resource]
+script = ExtResource("1_mtyy3")
+title = "Background"
+answer_line = Array[String](["Image.asset(\"img/background.png\")", "Image.asset(\"img/background_final.png\")", "Image.file(imgFile)"])
+tags = Dictionary[String, Array]({
+"caminhos": ["sfx", "img", "coin.wav", "error.wav", "step.wav", "success.wav", "background.png", "background_final.png", "coin_icon.gif", "life_icon.png"],
+"classe": ["Image"],
+"construtor": [".new", ".asset", ".network", ".file", ".memory"],
+"sintaxe": ["(", ")", "[", "]", "{", "}", ":", ";", ",", "\"", "/"],
+"variáveis": ["imgFile"]
+})
+metadata/_custom_type_script = "uid://c74bhshb66n4q"

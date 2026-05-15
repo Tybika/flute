@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ProblemData" format=3 uid="uid://c85pyq83k37cr"]
+
+[ext_resource type="Script" uid="uid://c74bhshb66n4q" path="res://problems/problem_data.gd" id="1_nwgyd"]
+
+[resource]
+script = ExtResource("1_nwgyd")
+title = "Background"
+answer_line = Array[String](["seedColor : Colors.8pink", "seedColor : Colors.8black", "seedColor : Colors.8gray", "seedColor : Colors.8red", "seedColor : Colors.8marsala", "seedColor : Colors.8blue", "seedColor : Colors.8navy", "seedColor : Colors.8magenta", "seedColor : Colors.8green", "seedColor : Colors.32full"])
+tags = Dictionary[String, Array]({
+"classe": ["Colors"],
+"parâmetros": ["seedColor", "brightness", "dynamicSchemeVariant", "contrastLevel"],
+"propriedades": [".8pink", ".8black", ".8gray", ".8red", ".8marsala", ".8blue", ".8navy", ".8magenta", ".8green", ".32full"],
+"sintaxe": ["(", ")", "[", "]", "{", "}", ":", ";", ",", "\""]
+})
+metadata/_custom_type_script = "uid://c74bhshb66n4q"

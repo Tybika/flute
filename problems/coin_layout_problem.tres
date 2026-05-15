@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="ProblemData" format=3 uid="uid://bpxpx1lbm37l"]
+
+[ext_resource type="Script" uid="uid://c74bhshb66n4q" path="res://problems/problem_data.gd" id="1_db3xv"]
+
+[resource]
+script = ExtResource("1_db3xv")
+title = "CoinCounter"
+metadata/_custom_type_script = "uid://c74bhshb66n4q"

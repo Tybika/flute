@@ -6,8 +6,8 @@ var scenes_order: Array[String] = [
 	"void_cutscene", 
 	"void_level",
 	"kingdom_level",
-	"kingdom_play",
-	"kingdom_cutscene",
+	#"kingdom_play",
+	#"kingdom_cutscene",
 	"credits"
 	]
 
@@ -18,7 +18,7 @@ var name_to_scene: Dictionary[String, PackedScene] = {
 	"kingdom_level": load("res://screens/problem_screen/problem_screen.tscn"),
 	"kingdom_play": load("res://levels/kingdom/ui_test.tscn"),
 	"kingdom_cutscene": load("res://levels/kingdom/ui_test.tscn"),
-	"credits": load("res://levels/kingdom/ui_test.tscn"),
+	"credits": load("res://screens/credits/credits.tscn"),
 }
 
 var scenes: Array[Node]

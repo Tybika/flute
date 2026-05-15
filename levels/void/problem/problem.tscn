@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://6q7028l7qvew"]
 
 [ext_resource type="PackedScene" uid="uid://d1axjb33n1hmy" path="res://characters/mc/mc.tscn" id="1_8s8nh"]
-[ext_resource type="Script" uid="uid://bkynmxue4lnot" path="res://levels/void/problem/teste_tree_enter.gd" id="1_ld66g"]
+[ext_resource type="Script" uid="uid://buwbyfs4fbrg2" path="res://levels/void/problem/background_handler.gd" id="1_ld66g"]
 [ext_resource type="PackedScene" uid="uid://c4alrmuq3dxcc" path="res://screens/problem_screen/problem_screen.tscn" id="2_j8bp0"]
 [ext_resource type="Script" uid="uid://c74bhshb66n4q" path="res://problems/problem_data.gd" id="3_q2v8u"]
-[ext_resource type="Resource" uid="uid://bk5e0i7oc5xir" path="res://problems/background.tres" id="4_ld66g"]
+[ext_resource type="Resource" uid="uid://bk5e0i7oc5xir" path="res://problems/background_image_problem.tres" id="4_ld66g"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q2v8u"]
 bg_color = Color(0.004019165, 0.004019165, 0.004019165, 1)
@@ -24,7 +24,9 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_q2v8u")
 position = Vector2(635, 325)
 default_theme = "8"
 
-[node name="ProblemScreen" parent="." unique_id=1344442422 instance=ExtResource("2_j8bp0")]
+[node name="ProblemScreen" parent="." unique_id=1344442422 node_paths=PackedStringArray("handler") instance=ExtResource("2_j8bp0")]
 problems = Array[ExtResource("3_q2v8u")]([ExtResource("4_ld66g")])
+handler = NodePath("..")
+methods = Array[StringName]([&"on_bg_hot_reload"])
 default_theme = "8"
 hud_visible = false

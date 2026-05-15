@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ProblemData" format=3 uid="uid://bgd3kvrwdv2q"]
+
+[ext_resource type="Script" uid="uid://c74bhshb66n4q" path="res://problems/problem_data.gd" id="1_jce7w"]
+
+[resource]
+script = ExtResource("1_jce7w")
+title = "Joystick"
+answer_line = Array[String]([""])
+metadata/_custom_type_script = "uid://c74bhshb66n4q"

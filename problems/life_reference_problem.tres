@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ProblemData" format=3 uid="uid://bhrqvnftw17gn"]
+
+[ext_resource type="Script" uid="uid://c74bhshb66n4q" path="res://problems/problem_data.gd" id="1_38ys6"]
+
+[resource]
+script = ExtResource("1_38ys6")
+title = "LifeCounter"
+answer_line = Array[String](["player.getVidaTotal()"])
+tags = Dictionary[String, Array]({
+"classe": ["Player"],
+"métodos": [".getVidaAtual", ".getVidaTotal"],
+"propriedades": ["_vidaTotal", "_vidaAtual"],
+"sintaxe": ["(", ")", "[", "]", "{", "}", ":", ";", ",", "\"", "<", ">"],
+"variáveis": ["life", "player"]
+})
+metadata/_custom_type_script = "uid://c74bhshb66n4q"

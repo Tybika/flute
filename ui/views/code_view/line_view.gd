@@ -37,7 +37,7 @@ func create_lines():
 		
 		
 
-func get_answer():
+func get_answer() -> String:
 	var answer: Array[String] = []
 	var children = vbox.get_children()
 	
@@ -45,4 +45,4 @@ func get_answer():
 		if child.has_method("get_value"):
 			answer.append(child.get_value())
 	
-	return answer
+	return "".join(answer).replace(" ", "")

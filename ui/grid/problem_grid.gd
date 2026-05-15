@@ -1,6 +1,7 @@
 extends Control
 
 @export var problems: Array[ProblemData]
+@export var handlers: Dictionary
 @onready var grid_c = $GridContainer
 @onready var modals = $Modals
 @onready var grid_item = load("res://ui/grid/grid_item/grid_item.tscn")
@@ -12,7 +13,9 @@ func _ready() -> void:
 
 func set_problems(problems_arr: Array[ProblemData]):
 	problems = problems_arr
-	print("problemas setados: ", problems)
+
+func set_handlers(handlers_arr: Dictionary):
+	handlers = handlers_arr
 
 func grid_create():
 	if problems:
@@ -20,18 +23,15 @@ func grid_create():
 		if count < 3:
 			grid_c.columns = count
 			
-		for problem in problems:
-			print("criando um item do grid")
+		for i in range(len(problems)):
 			var modal = problem_modal.instantiate()
-			modal.set_data(problem)
+			modal.set_data(problems[i])
+			if i < len(handlers):
+				print("conectou handler")
+				modal.set_handler(handlers[i])
 			modals.add_child(modal)
 			
 			var item = grid_item.instantiate()
 			item.set_linked_modal(modal)
-			grid_c.add_child(item)
-			print("criou. Olhe os filhso: ", grid_c.get_children(), modals.get_children())
 			
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+			grid_c.add_child(item)

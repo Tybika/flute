@@ -41,5 +41,9 @@ func update_style(style: String, color = null):
 		tilemap.call(method_name)
 		mc.call(method_name)
 		problem.call(method_name)
-		
-	
+
+func coin_alignment(alignment: String):
+	problem.coin_alignment(alignment)
+
+func life_update():
+	problem.life_update()
