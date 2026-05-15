@@ -18,4 +18,13 @@ func style_32bit() -> void:
 	update_style("style_32bit")
 
 func coin_alignment(alignment: String):
-	pass
+	match alignment:
+		"center":
+			pass
+		"row":
+			pass
+
+func life_default():
+	life_cont.update_total_life(15)
+	for i in range(14):
+		life_cont.lose_life()

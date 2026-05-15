@@ -30,13 +30,13 @@ func _ready() -> void:
 	
 # Lose one life
 func lose_life() -> void:
-	update_current_life(false)
+	_update_current_life(false)
 
 # Regens one lost life
 func regen_life() -> void:
-	update_current_life()
+	_update_current_life()
 
-func update_current_life(life_status: bool = true):
+func _update_current_life(life_status: bool = true):
 	var length = len(lifes_status)
 	
 	var iter = {
