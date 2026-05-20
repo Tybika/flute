@@ -1,0 +1,63 @@
+[gd_resource type="Resource" script_class="TextData" format=3 uid="uid://dipb3rgvv4073"]
+
+[ext_resource type="Script" uid="uid://b8ttwtxu3cyox" path="res://texts/text_data.gd" id="1_dm6lq"]
+
+[resource]
+script = ExtResource("1_dm6lq")
+long_text = "[b]ColorScheme[/b]
+Classe da biblioteca do Material Design no Flutter
+
+Um conjunto de 45 cores com base na especificação do Material Design que pode ser usado para configurar as propriedades de cor da maioria dos componentes. 
+Cores podem ser definidas em um componenete Flutter no nível de componente usando as propriedades dele, ou no nível do aplicativo usando temas (Theme).
+
+Exemplo:
+Você pode definir o plano de fundo da AppBar 
+
+[ol]
+por definir o AppBar.backgroundColor para um valor de cor específico.
+por definir globalmente a cor de fundo do AppBar usando a propriedade ThemeData.appBarTheme usando a classe ThemeData. 
+por definir a propriedade ThemeData.colorScheme para um ColorScheme personalizado. 
+[/ol]
+
+
+Construtores
+
+ColorScheme( { required Brightness brightness,  required Color primary,  required Color onPrimary, 
+Color? primaryContainer, Color? onPrimaryContainer, Color? primaryFixed, Color? primaryFixedDim, Color? onPrimaryFixed, Color? onPrimaryFixedVariant, required Color secondary, required Color onSecondary, Color? secondaryContainer, Color? onSecondaryContainer, Color? secondaryFixed, Color? secondaryFixedDim, Color? onSecondaryFixed, Color? onSecondaryFixedVariant, Color? tertiary, Color? onTertiary, Color? tertiaryContainer, Color? onTertiaryContainer, Color? tertiaryFixed, Color? tertiaryFixedDim, Color? onTertiaryFixed, Color? onTertiaryFixedVariant, required Color error, required Color onError, Color? errorContainer, Color? onErrorContainer, required Color surface, required Color onSurface, Color? surfaceDim, Color? surfaceBright, Color? surfaceContainerLowest, Color? surfaceContainerLow, Color? surfaceContainer, Color? surfaceContainerHigh, Color? surfaceContainerHighest, Color? onSurfaceVariant, Color? outline, Color? outlineVariant, Color? shadow, Color? scrim, Color? inverseSurface, Color? onInverseSurface, Color? inversePrimary, Color? surfaceTint, @Deprecated('Use surface instead. ' 'This feature was deprecated after v3.18.0-0.1.pre.') Color? background, @Deprecated('Use onSurface instead. ' 'This feature was deprecated after v3.18.0-0.1.pre.') Color? onBackground, @Deprecated('Use surfaceContainerHighest instead. ' 'This feature was deprecated after v3.18.0-0.1.pre.') Color? surfaceVariant})
+
+Create a ColorScheme instance from the given colors. 
+
+
+
+ColorScheme.dark({Brightness brightness = Brightness.dark, Color primary = const Color(0xffbb86fc), Color onPrimary = Colors.black, ...})
+
+Create the dark color scheme that matches the baseline Material 2 color scheme. 
+
+
+
+ColorScheme.fromSeed( { required Color seedColor, 
+Brightness brightness = Brightness.light, DynamicSchemeVariant dynamicSchemeVariant = DynamicSchemeVariant.tonalSpot, double contrastLevel = 0.0, ... })
+
+Generate a ColorScheme derived from the given seedColor. 
+
+
+
+ColorScheme.highContrastDark({...})
+
+Create a high contrast ColorScheme based on the dark baseline Material 2 color scheme.
+
+
+
+ColorScheme.highContrastLight({...})
+
+Create a high contrast ColorScheme based on a purple primary color that matches the baseline Material 2 color scheme. 
+
+
+
+ColorScheme.light({...}}
+
+Create a light ColorScheme based on a purple primary color that matches the baseline Material 2 color scheme. 
+
+
+"
+metadata/_custom_type_script = "uid://b8ttwtxu3cyox"

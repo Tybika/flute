@@ -1,0 +1,67 @@
+[gd_resource type="Resource" script_class="TextData" format=3 uid="uid://palvsvndoole"]
+
+[ext_resource type="Script" uid="uid://b8ttwtxu3cyox" path="res://texts/text_data.gd" id="1_y22p8"]
+
+[resource]
+script = ExtResource("1_y22p8")
+long_text = "[b]Operadores[/b]
+Referência de linguagem do Dart
+
+Os operadores suportados em Dart podem ser divididos entre: aritméticos, relacionais, de tipo, de atribuição, lógicos, bitwise. Ainda, 
+
+
+
+Operadores aritméticos
++ 					soma e concatenação
+- 					subtração e negação
+* 					multiplicação
+/   ~/    %		divisão, divisão inteira, resto
+
+
+
+Operadores relacionais e igualdade
+  ==  		igual 
+  !=   		não igual
+>   >=    	maior que, igual ou maior
+<   <=		menor que, igual ou menor
+
+
+
+Operadores de tipo
+as		assina um tipo
+is		verifica se é do tipo especificado
+is!		verifica se não é do tipo especificado
+
+
+
+Operadores de atribuição
+= 		atribuição
+??= 	atribuição se for nulo
+operações com atribuição
++=   -=   *=   /=   ~/=  %=   ^=  |=   &=  <<=  >>=
+
+
+
+Operadores lógicos
+!		negação
+|| 		ou lógico
+&&	e lógico
+
+
+
+Operadores de bit
+& 		e
+|		ou inclusivo
+^		ou exclusivo
+>> >>> << 	shift
+
+
+
+Outros operadores
+( ) 	chamada de função
+[ ]		acesso a subscript
+?[ ]	acesso condicional a subscript
+. 		acesso a expressão
+!		atribuição não nula
+"
+metadata/_custom_type_script = "uid://b8ttwtxu3cyox"

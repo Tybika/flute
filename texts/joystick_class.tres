@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="TextData" format=3 uid="uid://t7xh36chfun1"]
+
+[ext_resource type="Script" uid="uid://b8ttwtxu3cyox" path="res://texts/text_data.gd" id="1_rcy46"]
+
+[resource]
+script = ExtResource("1_rcy46")
+long_text = "[b]Joystick class[/b]
+pacote externo construído em Flutter 
+
+Flutter Joystick é um pacote de joystick virtual para aplicativos Flutter que fornece interativo componentes do joystick para o design da interface do usuário. O componente permite aos usuários arrastar um stick dentro de uma área definida. Você pode personalizar o comportamento e aparência. 
+
+Construtor
+Joystick ( { required void Function(StickDragDetails) listener, Duration period = const Duration(milliseconds: 100), InvalidType base, InvalidType stick = const JoystickStick(), JoystickMode mode = JoystickMode.all, StickOffsetCalculator stickOffsetCalculator = const CircleStickOffsetCalculator(), JoystickController? controller, Function? onStickDragStart, Function? onStickDragEnd, bool includeInitialAnimation = true, })
+
+Veja como você pode usá-lo:
+[ul]
+[b]listener[/b] é uma função de retorno de chamada que é invocada em uma frequência especificada (period) quando o bastão de joystick é arrastado. O parâmetro de listener, details, fornece o deslocamento do bastão do centro da base nas dimensões x e y, variando de -1.0 a +1.0.
+[b]period[/b] é a fatia de tempo em que o listener é acionado a partir do momento em que o bastão é arrastado. O padrão é 100 milissegundos.
+[b]mode[/b] é o modo de direções possíveis do joystick. O modo padrão é all, permitindo o movimento em qualquer direção: vertical, horizontal e diagonal.
+[b]includeInitialAnimation[/b] decide se a animação de movimento inicial do bastão deve ser incluída. Por padrão true.
+[/ul]"
+metadata/_custom_type_script = "uid://b8ttwtxu3cyox"

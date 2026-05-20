@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="TextData" format=3 uid="uid://cah2kany8v1ri"]
+
+[ext_resource type="Script" uid="uid://b8ttwtxu3cyox" path="res://texts/text_data.gd" id="1_jtmco"]
+
+[resource]
+script = ExtResource("1_jtmco")
+long_text = "[b]List<E> class[/b]
+Classe da biblioteca principal do Dart
+
+Uma coleção indexável de objetos com um comprimento.
+
+Subclasses desta classe implementam diferentes tipos de listas. Os tipos mais comuns de listas são listas de tamanho estático e listas de tamanho dinâmico. A lista dinâmica padrão, criada por [], mantém um buffer interno, que cresce quando necessário.
+
+Construtores
+
+ List.empty({bool growable = false})
+    Cria uma nova lista vazia.
+
+
+List.filled(int length, E fill, {bool growable = false})
+	Cria uma lista do tamanho dado com valor de fill em cada posição.
+
+
+List.from(Iterable elements, {bool growable = true})
+    Cria uma lista contendo todos os elementos.
+
+
+List.generate(int length, E generator(int index), {bool growable = true})
+    Gera uma lista de valores.
+
+
+List.of(Iterable<E> elements, {bool growable = true})
+    Cria uma lista a partir de elementos.
+
+
+List.unmodifiable(Iterable elements)
+    Cria uma lista imutável com todos os elementos.
+ 
+
+"
+metadata/_custom_type_script = "uid://b8ttwtxu3cyox"

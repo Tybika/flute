@@ -79,4 +79,4 @@ func get_current_scene_name() -> String:
 	return current_name
 
 func get_current_scene() -> Node:
-	return get_tree().current_scene
+	return scenes[current_index]

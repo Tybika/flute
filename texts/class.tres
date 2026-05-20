@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="TextData" format=3 uid="uid://bdr5utvfe7gx3"]
+
+[ext_resource type="Script" uid="uid://b8ttwtxu3cyox" path="res://texts/text_data.gd" id="1_jc7yj"]
+
+[resource]
+script = ExtResource("1_jc7yj")
+long_text = "[b]Classes[/b]
+Referência da linguagem Dart
+
+Dart é uma linguagem orientada a objetos com classes e herança única. Cada objeto é uma instância de uma classe, e de todas as classes - exceto Null - descendem de Object.
+
+
+Usando os membros da classe
+
+Objetos têm membros constituídos por funções e dados (métodos e variáveis de instância, respectivamente). Quando você chama um método, você invoca ele sobre um objeto: o método tem acesso às funções desse objeto e dados. Use um ponto ( . ) para se referir a uma variável de instância ou método
+
+
+Usando construtores
+
+Você pode criar um objeto usando um construtor. Nomes de construtores podem ser ClassName ou ClassName.identifier.
+
+
+Variáveis de instância
+
+Uma variável de instância que pode ser nula não inicializada têm valor nulo, enquanto variáveis de instância não nuláveis devem ser inicializadas na declaração. 
+Variáveis de instância podem ser final, nesse caso devem ser definidas exatamente uma vez.
+
+
+Variáveis e métodos de classe
+
+Use \"static\" para implementar variáveis e métodos em toda a classe. 
+Variáveis estáticas (variáveis de classe) são úteis para o estado de toda a classe e constantes. 
+Métodos estáticos (métodos de classe) não operam em uma instância e, portanto, não tenha acesso a objetos. Eles, no entanto, têm acesso às variáveis estáticas. "
+metadata/_custom_type_script = "uid://b8ttwtxu3cyox"
