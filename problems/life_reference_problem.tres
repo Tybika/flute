@@ -5,6 +5,7 @@
 [resource]
 script = ExtResource("1_38ys6")
 title = "LifeCounter"
+context = Array[String]([""])
 answer_line = Array[String](["player.getVidaTotal()"])
 tags = Dictionary[String, Array]({
 "classe": ["Player"],

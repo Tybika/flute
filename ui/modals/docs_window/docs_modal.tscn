@@ -1,6 +1,10 @@
 [gd_scene format=3 uid="uid://gualfru75hab"]
 
 [ext_resource type="Script" uid="uid://cgae1u8ivtuc" path="res://ui/modals/docs_window/docs_modal.gd" id="1_1uyv8"]
+[ext_resource type="Texture2D" uid="uid://c80a8oera0v87" path="res://ui/buttons/tools/docs_32.png" id="2_k2acq"]
+[ext_resource type="Texture2D" uid="uid://341vbhrhy8hh" path="res://ui/modals/docs_window/dart_color.png" id="3_k2acq"]
+[ext_resource type="Script" uid="uid://bpsk33nlxiscw" path="res://ui/modals/project_window/project_tree.gd" id="4_vjc5l"]
+[ext_resource type="PackedScene" uid="uid://ct6n2satj5iu6" path="res://ui/modals/project_window/project_view.tscn" id="5_2kw66"]
 
 [node name="DocsModal" type="PopupPanel" unique_id=1516062428]
 oversampling_override = 1.0
@@ -20,7 +24,7 @@ offset_right = -4.0
 offset_bottom = -4.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.799318, 0.55554706, 0.5646338, 1)
+color = Color(0.13725491, 0.15294118, 0.1764706, 1)
 
 [node name="Content" type="MarginContainer" parent="." unique_id=1524929919]
 anchors_preset = 15
@@ -36,3 +40,63 @@ theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Content" unique_id=24268572]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Content/VBoxContainer" unique_id=1382269420]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.4
+
+[node name="Button" type="Button" parent="Content/VBoxContainer/HBoxContainer" unique_id=529064270]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "<"
+
+[node name="TitleLabel" type="Label" parent="Content/VBoxContainer/HBoxContainer" unique_id=1291262907]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 9.0
+text = "Flutter e Dart Docs"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Content/VBoxContainer/HBoxContainer" unique_id=345430601]
+layout_mode = 2
+texture = ExtResource("2_k2acq")
+stretch_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="Content/VBoxContainer/HBoxContainer" unique_id=866865549]
+layout_mode = 2
+texture = ExtResource("3_k2acq")
+stretch_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Content/VBoxContainer" unique_id=1357445994]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Content/VBoxContainer/HBoxContainer2" unique_id=827433823]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Tree" type="Tree" parent="Content/VBoxContainer/HBoxContainer2/ScrollContainer" unique_id=638286563 node_paths=PackedStringArray("handler")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+hide_root = true
+script = ExtResource("4_vjc5l")
+handler = NodePath("../../ScrollContainer2/ProjectView")
+
+[node name="ScrollContainer2" type="ScrollContainer" parent="Content/VBoxContainer/HBoxContainer2" unique_id=1546164155]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 3.0
+
+[node name="ProjectView" parent="Content/VBoxContainer/HBoxContainer2/ScrollContainer2" unique_id=2070763665 instance=ExtResource("5_2kw66")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[connection signal="item_selected" from="Content/VBoxContainer/HBoxContainer2/ScrollContainer/Tree" to="Content/VBoxContainer/HBoxContainer2/ScrollContainer/Tree" method="_on_item_selected"]

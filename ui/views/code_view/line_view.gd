@@ -14,6 +14,9 @@ func _ready() -> void:
 	if code_data:
 		create_lines()
 
+func set_code_data(data: Array[String]):
+	code_data = data
+
 func config_label_sett():
 	label_sett = LabelSettings.new()
 	label_sett.set_font(preload("res://ui/views/code_view/CASCADIACODE.TTF"))

@@ -22,27 +22,29 @@ func _go_to():
 	next_scene_requested.emit()
 
 func _on_ui_input_swipe(direction: String) -> void:
+	print("ÓLHA TODOS OS ATTR: ", top_scene_name, bot_scene_name, right_scene_name, left_scene_name)
+	print("ta attached a: ", self.name)
 	match direction:
 		"up":
-			if top_scene_name:
+			if not top_scene_name.is_empty():
 				#go_to(bot_scene_name)
 				_go_to()
 			else: 
 				play_unvailable()
 		"down":
-			if bot_scene_name:
+			if not bot_scene_name.is_empty():
 				#go_to(bot_scene_name)
 				_go_to()
 			else: 
 				play_unvailable()
 		"left":
-			if left_scene_name:
+			if not left_scene_name.is_empty():
 				#go_to(left_scene_name)
 				_go_to()
 			else: 
 				play_unvailable()
 		"right":
-			if right_scene_name:
+			if not right_scene_name.is_empty():
 				#go_to(right_scene_name)
 				_go_to()
 			else: 

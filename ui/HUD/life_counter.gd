@@ -47,6 +47,7 @@ func _update_current_life(life_status: bool = true):
 	for i in range(iter[life_status][0], iter[life_status][1], iter[life_status][2]):
 		if not lifes_status[i] == life_status:
 			lifes_status[i] = life_status
+			
 			var this_life = get_child(i)
 			update_style(this_life, lifes_status[i])
 			break

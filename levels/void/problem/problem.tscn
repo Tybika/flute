@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://6q7028l7qvew"]
 
 [ext_resource type="PackedScene" uid="uid://d1axjb33n1hmy" path="res://characters/mc/mc.tscn" id="1_8s8nh"]
-[ext_resource type="Script" uid="uid://buwbyfs4fbrg2" path="res://levels/void/problem/background_handler.gd" id="1_ld66g"]
+[ext_resource type="Script" uid="uid://l5if3axul3x5" path="res://levels/void/problem/problem.gd" id="1_ld66g"]
 [ext_resource type="PackedScene" uid="uid://c4alrmuq3dxcc" path="res://screens/problem_screen/problem_screen.tscn" id="2_j8bp0"]
 [ext_resource type="Script" uid="uid://c74bhshb66n4q" path="res://problems/problem_data.gd" id="3_q2v8u"]
 [ext_resource type="Resource" uid="uid://bk5e0i7oc5xir" path="res://problems/background_image_problem.tres" id="4_ld66g"]
@@ -9,12 +9,32 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q2v8u"]
 bg_color = Color(0.004019165, 0.004019165, 0.004019165, 1)
 
+[sub_resource type="Animation" id="Animation_ld66g"]
+resource_name = "move_camera"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vvpk3"]
+_data = {
+&"move_camera": SubResource("Animation_ld66g")
+}
+
 [node name="Problem" type="Node2D" unique_id=500156309]
 script = ExtResource("1_ld66g")
 
 [node name="Panel" type="Panel" parent="." unique_id=1242240256]
 custom_minimum_size = Vector2(1280, 720)
-offset_right = 1280.0
+offset_right = 1864.0
 offset_bottom = 720.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -24,9 +44,20 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_q2v8u")
 position = Vector2(635, 325)
 default_theme = "8"
 
-[node name="ProblemScreen" parent="." unique_id=1344442422 node_paths=PackedStringArray("handler") instance=ExtResource("2_j8bp0")]
+[node name="ProblemScreen" parent="." unique_id=1344442422 instance=ExtResource("2_j8bp0")]
+position = Vector2(-48, -46)
 problems = Array[ExtResource("3_q2v8u")]([ExtResource("4_ld66g")])
-handler = NodePath("..")
-methods = Array[StringName]([&"on_bg_hot_reload"])
+handlers = Array[Dictionary]([{
+"method": &"on_bg_hot_reload",
+"node": NodePath("..")
+}])
 default_theme = "8"
 hud_visible = false
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=794182828]
+anchor_mode = 0
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera2D" unique_id=1130745331]
+libraries/ = SubResource("AnimationLibrary_vvpk3")

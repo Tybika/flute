@@ -5,21 +5,18 @@ class_name BaseModal
 @export var modal_data: ProblemData
 @export var handler: Dictionary
 
-# Implement this block on subclasses and extends
+# Implement this block on subclasses
 func _ready() -> void:
 	pass
 
 func set_data(data: ProblemData):
 	modal_data = data
 
-func set_handler(node: Node, method_name: StringName, params: Dictionary):
-	handler = {
-		"node": node,
-		"method": method_name,
-		}
-		
-	if not params.is_empty():
-		handler["params"] = params
+func set_handler(handler_ref: Dictionary):
+	print(handler_ref["node"])
+	handler["node"] = handler_ref["node"]
+	handler["method"] = handler_ref["method"]
+	print("conectou handler:", handler)
 
 func setup():
 	if back_button:

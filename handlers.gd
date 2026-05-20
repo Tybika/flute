@@ -6,33 +6,40 @@ signal next_scene_requested
 func _ready() -> void:
 	pass # Replace with function body.
 
+func do_nothing():
+	pass
 
-func _on_coin_hot_reload(data: Dictionary):
+func coin_hot_reload(data: Dictionary):
 	if data.has("answer"):
 		pass
 
+func cloud_hot_reload(data:Dictionary):
+	pass
 
-func _on_life_hot_reload():
-	SceneManager.get_current_scene().update_life()
+func joystick_hot_reload(data:Dictionary):
+	pass
 
-func on_theme_hot_reload(data: Dictionary):
+func life_hot_reload():
+	SceneManager.get_current_scene().life_update()
+
+func theme_hot_reload(data: Dictionary):
 	var current_scn = SceneManager.get_current_scene()
 	if data.has("answer"):
-		data = data["answer"].split(".")
+		var answer = data["answer"].split(".")
 		
-		if data[1].begins_with("8"):
-			current_scn.update_style("8", data[1].substr(1, -1).to_lower())
+		if answer[1].begins_with("8"):
+			current_scn.update_style("8", answer[1].substr(1, -1).to_lower())
 		else:
 			current_scn.update_style("32")
 
-func on_bg_hot_reload(data: Dictionary):
+func bg_hot_reload(data: Dictionary):
 	# implement alternatives when non linear scenes been supported
 	#if data.has("answer"):
 		#data = data["answer"].get_slice("/", -1).get_slice(".png", 0)
 	
 	next_scene_requested.emit()
 
-func on_goal_hot_reload(data: Dictionary):
+func goal_hot_reload(data: Dictionary):
 	if data.has("answer") and typeof(data["answer"]) == TYPE_ARRAY:
 		pass
 	SceneManager.get_current().update_mc_mov()

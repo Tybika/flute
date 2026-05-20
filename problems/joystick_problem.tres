@@ -5,5 +5,12 @@
 [resource]
 script = ExtResource("1_jce7w")
 title = "Joystick"
-answer_line = Array[String]([""])
+answer_line = Array[String](["player.move(speed * details.x, speed * details.y);", "player.move(details.x * speed, speed * details.y);", "player.move(details.x * speed, details.y * speed);", "player.move(speed * details.x, details.y * speed);"])
+tags = Dictionary[String, Array]({
+"métodos": [".set_position", ".move", ".moveOrigin"],
+"operadores": ["=", "+", "-", "*"],
+"propriedades": [".x", ".y"],
+"sintaxe": ["(", ")", "[", "]", "{", "}", ":", ";", ",", "\""],
+"variáveis": ["player", "_x", "_y", "speed", "details"]
+})
 metadata/_custom_type_script = "uid://c74bhshb66n4q"

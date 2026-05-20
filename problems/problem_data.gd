@@ -2,6 +2,7 @@ extends Resource
 class_name ProblemData
 
 @export var title: String = ""
+@export var type: String = "linecode"
 @export var context: Array[String] = []
 @export var answer_line: Array[String] = []
 @export var answer_position: Array[int] = []

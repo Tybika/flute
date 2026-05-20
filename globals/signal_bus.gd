@@ -8,6 +8,7 @@ signal next_scene_requested
 
 const SIGNALS: Array = [
 	"save_requested",
+	"load_requested",
 	"shader_requested",
 	"shader_released",
 	"add_tree_requested",

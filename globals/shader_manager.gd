@@ -14,6 +14,9 @@ func _ready() -> void:
 	SignalBus.shader_released.connect(deactivate)
 
 func _search_recursive(node: Node, target: Array, nodes: Array):
+	if node == null:
+		return 
+		
 	if node is CanvasItem:
 		if node.material in target:
 			nodes.append(node)

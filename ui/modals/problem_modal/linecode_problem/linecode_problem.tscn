@@ -10,7 +10,6 @@
 oversampling_override = 1.0
 initial_position = 1
 size = Vector2i(900, 600)
-visible = true
 min_size = Vector2i(50, 50)
 script = ExtResource("1_n0vok")
 back_button = NodePath("Content/VBox/ToolBar/Button")
@@ -83,6 +82,7 @@ layout_mode = 2
 [node name="LineView" parent="Content/VBox" unique_id=1392753470 instance=ExtResource("5_v1ila")]
 layout_mode = 2
 size_flags_stretch_ratio = 3.0
+code_data = Array[String]([])
 
 [node name="HSeparator2" type="HSeparator" parent="Content/VBox" unique_id=577770881]
 layout_mode = 2

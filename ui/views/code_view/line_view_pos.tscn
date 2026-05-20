@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cr5vnyxd2lhq"]
+
+[ext_resource type="Script" uid="uid://7o72kuny1aeb" path="res://ui/views/code_view/line_view_pos.gd" id="1_08eiu"]
+
+[node name="LineView" type="ScrollContainer" unique_id=1274117872]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_08eiu")
+
+[node name="VBox" type="VBoxContainer" parent="." unique_id=800804020]
+layout_mode = 2
+size_flags_horizontal = 3

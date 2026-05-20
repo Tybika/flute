@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_lreyp")
 title = "Sample Problem"
-context = Array[String](["Widget build(", "Algo algo mais pipipi", "outra linha e tal", "", "texto texto texto"])
+context = Array[String](["Widget build(", "     Algo algo mais pipipi", "     outra linha e tal", "", "texto texto texto"])
 answer_line = Array[String](["final int =", "final ="])
 tags = Dictionary[String, Array]({
 "Operador": ["=", "+", "||", "&&", ">", "<", "!"],

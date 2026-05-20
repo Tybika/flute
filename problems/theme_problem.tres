@@ -5,6 +5,7 @@
 [resource]
 script = ExtResource("1_nwgyd")
 title = "Background"
+context = Array[String](["a", "a", "", "a"])
 answer_line = Array[String](["seedColor : Colors.8pink", "seedColor : Colors.8black", "seedColor : Colors.8gray", "seedColor : Colors.8red", "seedColor : Colors.8marsala", "seedColor : Colors.8blue", "seedColor : Colors.8navy", "seedColor : Colors.8magenta", "seedColor : Colors.8green", "seedColor : Colors.32full"])
 tags = Dictionary[String, Array]({
 "classe": ["Colors"],

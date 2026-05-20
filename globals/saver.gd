@@ -5,7 +5,7 @@ var basic_save : Dictionary= {
 	"theme": "",
 	"style": "",
 	"shader": false,
-	"problems_status": {},
+	"problems": [],
 	"solved_problems": [],
 	"achievements": [],
 }
@@ -17,9 +17,6 @@ var last_save: Dictionary = {}
 func _ready() -> void:
 	last_save = saveload()
 
-
-func handle_problems(data):
-	pass
 
 func _reset_save():
 	basic_save = {
@@ -38,13 +35,25 @@ func _merge_saves():
 			basic_save[key] = last_save[key]
 
 func _get_data() -> Dictionary:
+	var save_nodes = get_tree().get_nodes_in_group("Persist")
+	var problem = {
+		"name": "",
+		"answer": "",
+	}
+	
+	
+	for node in save_nodes:
+		pass
 	
 	return {}
 
 func _map_data(data: Dictionary) -> Dictionary:
 	return {}
 
-func save():
+func saveload() -> Dictionary:
+	return {}
+
+func _on_save_requested():
 	var data = _get_data()
 	
 	for key in basic_save:
@@ -52,7 +61,8 @@ func save():
 			basic_save[key] = data[key]
 	
 	if data.has("problems"):
-		basic_save["solved_problems"] = handle_problems(data["problems"])
+		for problem in data["problems"]:
+			_save_problem(problem)
 	
 	_merge_saves()
 	
@@ -62,7 +72,10 @@ func save():
 	
 	_reset_save()
 
-func saveload() -> Dictionary:
+func _save_problem(problem: Dictionary):
+	pass
+
+func _on_load_requested() -> Dictionary:
 	return {}
 
 func get_last_save() -> Dictionary:

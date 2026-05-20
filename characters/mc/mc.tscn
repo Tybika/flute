@@ -8,7 +8,10 @@
 [ext_resource type="Texture2D" uid="uid://bl8ygmkrpat1u" path="res://characters/mc/mc_back_8b_white2.png" id="4_qlr3a"]
 [ext_resource type="Texture2D" uid="uid://dae4c4ym7knua" path="res://characters/mc/mc_right_8b_white.png" id="5_0micv"]
 [ext_resource type="Texture2D" uid="uid://co76747bi2uim" path="res://characters/mc/mc_front_32b.png" id="5_c8vv2"]
+[ext_resource type="Texture2D" uid="uid://bdyu446yypqxo" path="res://characters/mc/mc_drop_8b_white1.png" id="5_xv0xg"]
+[ext_resource type="Texture2D" uid="uid://maq15t7t2lhg" path="res://characters/mc/mc_drop_8b_white2.png" id="6_emon4"]
 [ext_resource type="Texture2D" uid="uid://byj0ck5dooepa" path="res://characters/mc/mc_front_8b_white1.png" id="6_kds3f"]
+[ext_resource type="Texture2D" uid="uid://dtrco70kjnok4" path="res://characters/mc/mc_drop_8b_white3.png" id="7_0q348"]
 [ext_resource type="Texture2D" uid="uid://cyku4bo1g2coi" path="res://characters/mc/mc_front_8b_white2.png" id="7_c8vv2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0micv"]
@@ -34,6 +37,20 @@ animations = [{
 "loop": true,
 "name": &"back_walking_8",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_xv0xg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_emon4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_0q348")
+}],
+"loop": true,
+"name": &"front_drop_8",
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -120,7 +137,7 @@ shape = SubResource("RectangleShape2D_0micv")
 use_parent_material = true
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_g05og")
-animation = &"front_idle_32"
+animation = &"front_idle_8"
 
 [node name="DialogueSprite" type="AnimatedSprite2D" parent="." unique_id=1818757662]
 visible = false

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://sbyx3ui1qbo1"
-path="res://.godot/imported/title_hand0006.png-7ed5917fb85bf654af3435b19de1ddab.ctex"
+uid="uid://b1m11duf371fw"
+path="res://.godot/imported/hand_0021.png-dd2af1c89a101375ff2cdf1cb492219b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://screens/title_screen/hand_frames/title_hand0006.png"
-dest_files=["res://.godot/imported/title_hand0006.png-7ed5917fb85bf654af3435b19de1ddab.ctex"]
+source_file="res://screens/title_screen/hand_frames/hand_0021.png"
+dest_files=["res://.godot/imported/hand_0021.png-dd2af1c89a101375ff2cdf1cb492219b.ctex"]
 
 [params]
 

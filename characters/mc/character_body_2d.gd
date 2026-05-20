@@ -41,7 +41,22 @@ func tools_cutscene_back():
 	body.play("front_walking_" + theme_suffix)
 
 func drop_cutscene_mov():
-	pass
+	var tween = self.create_tween()
+	
+	tween.tween_property(self, "position", Vector2(position.x, 540), 3)
+	body.play("front_drop_8")
+
+func turn_direction(direction: String):
+	match direction:
+		"right":
+			body.flip_h = true
+			body.play("side_idle_" + theme_suffix)
+		"left":
+			body.play("side_idle_" + theme_suffix)
+		"front":
+			body.play("front_idle_" + theme_suffix)
+		"back":
+			body.play("back_idle_"  + theme_suffix)
 
 func castle_cutscene_mov():
 	pass

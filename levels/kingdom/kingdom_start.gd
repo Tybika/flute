@@ -6,6 +6,9 @@ extends Node2D
 @onready var mc = $MainCharacter
 @onready var problem = $ProblemScreen
 
+var current_theme: String
+var current_color: String
+
 const colors = {
 	"black": Color.BLACK,
 	"gray": Color("#303030"),
@@ -20,7 +23,9 @@ const colors = {
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	mc.turn_direction("right")
+	update_style(current_theme, current_color)
+
 
 func update_style(style: String, color = null):
 	var method_name = null

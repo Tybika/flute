@@ -5,6 +5,7 @@
 [resource]
 script = ExtResource("1_mtyy3")
 title = "Background"
+context = Array[String](["Conetxto e taltal atl", ""])
 answer_line = Array[String](["Image.asset(\"img/background.png\")", "Image.asset(\"img/background_final.png\")", "Image.file(imgFile)"])
 tags = Dictionary[String, Array]({
 "caminhos": ["sfx", "img", "coin.wav", "error.wav", "step.wav", "success.wav", "background.png", "background_final.png", "coin_icon.gif", "life_icon.png"],

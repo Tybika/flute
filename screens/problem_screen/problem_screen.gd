@@ -8,8 +8,7 @@ extends Node2D
 
 
 @export var problems: Array[ProblemData]
-@export var handler: Node
-@export var methods: Array[StringName]
+@export var handlers: Array[Dictionary]
 @export var default_theme : String = "32"
 @export var hud_visible: bool = true
 @export var problem_visible: bool = true
@@ -19,6 +18,11 @@ extends Node2D
 func _ready() -> void:
 	if problems:
 		problem_grid.set_problems(problems)
+		
+		if handlers:
+			_get_handler_from_path()
+			problem_grid.set_handlers(handlers)
+			
 		problem_grid.grid_create()
 		
 	if default_theme and default_theme == "8":
@@ -29,17 +33,26 @@ func _ready() -> void:
 	
 	if not problem_visible:
 		hide_problems()
+	
 
 
 func _update_style(method_name: String):
 	hud.call(method_name)
 	tools.call(method_name)
 
+
+func _get_handler_from_path():
+	for handler in handlers:
+		handler["node"] = get_node(handler["node"])
+	print("óia os handler que getou: ", handlers)
+
 func coin_alignment(alignment: String):
 	hud.coin_alignment(alignment)
 
+
 func life_update():
 	hud.life_default()
+
 
 func show_hud():
 	hud.show()

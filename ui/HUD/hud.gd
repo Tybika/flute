@@ -26,5 +26,8 @@ func coin_alignment(alignment: String):
 
 func life_default():
 	life_cont.update_total_life(15)
+	
 	for i in range(14):
 		life_cont.lose_life()
+	
+	life_cont.update_style()

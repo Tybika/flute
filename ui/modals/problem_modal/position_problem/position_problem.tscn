@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://cgp8x5ktmncrg"]
+
+[ext_resource type="Script" uid="uid://cigq2e5002yaa" path="res://ui/modals/problem_modal/position_problem/position_problem.gd" id="1_37e0n"]
+[ext_resource type="PackedScene" uid="uid://d2s316l611lfc" path="res://ui/buttons/simulator/hot_reload.tscn" id="2_6qf6o"]
+[ext_resource type="PackedScene" uid="uid://21tpbdithc8v" path="res://ui/buttons/simulator/debug.tscn" id="3_nbrir"]
+[ext_resource type="PackedScene" uid="uid://cr5vnyxd2lhq" path="res://ui/views/code_view/line_view_pos.tscn" id="4_d01ll"]
+[ext_resource type="PackedScene" uid="uid://p4chpx46efyt" path="res://ui/modals/problem_modal/draggable_line/draggable_line.tscn" id="5_d01ll"]
+
+[node name="PositionProblemModal" type="PopupPanel" unique_id=971610259]
+oversampling_override = 1.0
+initial_position = 1
+size = Vector2i(900, 600)
+min_size = Vector2i(50, 50)
+script = ExtResource("1_37e0n")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1658290119]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = -4.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Content" type="MarginContainer" parent="." unique_id=1580201465]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = -4.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBox" type="VBoxContainer" parent="Content" unique_id=815435012]
+layout_mode = 2
+
+[node name="ToolBar" type="HBoxContainer" parent="Content/VBox" unique_id=471871483]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.64
+
+[node name="Button" type="Button" parent="Content/VBox/ToolBar" unique_id=1235286622]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+text = "<"
+flat = true
+
+[node name="TitleLabel" type="Label" parent="Content/VBox/ToolBar" unique_id=86516359]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+text = "TITLE SLA"
+horizontal_alignment = 1
+
+[node name="IdeButtons" type="HBoxContainer" parent="Content/VBox/ToolBar" unique_id=858435760]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.43
+
+[node name="HotReload" parent="Content/VBox/ToolBar/IdeButtons" unique_id=505492822 node_paths=PackedStringArray("handler") instance=ExtResource("2_6qf6o")]
+layout_mode = 2
+size_flags_horizontal = 3
+handler = NodePath("../../../../..")
+
+[node name="Debug" parent="Content/VBox/ToolBar/IdeButtons" unique_id=1128422462 instance=ExtResource("3_nbrir")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HSeparator" type="HSeparator" parent="Content/VBox" unique_id=1727155082]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Content/VBox" unique_id=1987754607]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 4.89
+
+[node name="EnumeratedColumn" type="VBoxContainer" parent="Content/VBox/HBoxContainer" unique_id=1320089974]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.14
+
+[node name="VSeparator" type="VSeparator" parent="Content/VBox/HBoxContainer" unique_id=139732895]
+layout_mode = 2
+
+[node name="LineView" parent="Content/VBox/HBoxContainer" unique_id=1274117872 instance=ExtResource("4_d01ll")]
+layout_mode = 2
+size_flags_stretch_ratio = 2.87
+
+[node name="DraggableLine" parent="Content/VBox/HBoxContainer/LineView" unique_id=1603412359 instance=ExtResource("5_d01ll")]
+layout_mode = 2
