@@ -5,6 +5,7 @@
 [resource]
 script = ExtResource("1_jce7w")
 title = "Joystick"
+context = Array[String](["              child: Joystick(", "                mode: _joystickMode,", "                listener: (details) {", "                  double speed = Player.getSpeed();", "", "                  setState(() {", "                    _x = _x + step * details.x;", "                    _y = _y + step * details.y;", "                  }", "                  );", "                },", "              ),"])
 answer_line = Array[String](["player.move(speed * details.x, speed * details.y);", "player.move(details.x * speed, speed * details.y);", "player.move(details.x * speed, details.y * speed);", "player.move(speed * details.x, details.y * speed);"])
 tags = Dictionary[String, Array]({
 "métodos": [".set_position", ".move", ".moveOrigin"],

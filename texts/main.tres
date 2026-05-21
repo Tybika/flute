@@ -1,0 +1,80 @@
+[gd_resource type="Resource" script_class="TextData" format=3 uid="uid://dqsdaujqakn1s"]
+
+[ext_resource type="Script" uid="uid://b8ttwtxu3cyox" path="res://texts/text_data.gd" id="1_vvk8w"]
+
+[resource]
+script = ExtResource("1_vvk8w")
+long_text = "import 'dart:core';
+import 'package:flutter/material.dart';
+import 'package:flutter_calc/cloud.dart';
+import 'player.dart';
+import 'player_widget.dart';
+import 'background.dart';
+import 'life_counter.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutteria World',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepOrange),
+        useMaterial3: true,
+      ),
+      home: const GamePage(title: 'Gamestart'),
+    );
+  }
+}
+
+class GamePage extends StatefulWidget {
+  final String title;
+  const GamePage({super.key, required this.title});
+
+  @override
+  State<GamePage> createState() => _GamePageState();
+}
+
+class _GamePageState extends State<GamePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Stack(
+        children: [
+          const BackgroundWidget(filePath: 'background.png'),
+          const PlayerWidget(),
+          const CloudWidget(),
+          const Positioned(
+            top: 40,
+            left: 20,
+            child: LifeWidget(),
+          ),
+
+          // Exemplo de Título ou Pontuação
+          Positioned(
+            top: 40,
+            right: 20,
+            child: Text(
+              widget.title,
+              style: const TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+                shadows: [Shadow(blurRadius: 5, color: Colors.black)],
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+"
+metadata/_custom_type_script = "uid://b8ttwtxu3cyox"

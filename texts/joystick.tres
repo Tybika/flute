@@ -1,0 +1,61 @@
+[gd_resource type="Resource" script_class="TextData" format=3 uid="uid://bplqb11vjm1ml"]
+
+[ext_resource type="Script" uid="uid://b8ttwtxu3cyox" path="res://texts/text_data.gd" id="1_b3hlj"]
+
+[resource]
+script = ExtResource("1_b3hlj")
+long_text = "import 'package:flutter/material.dart';
+import 'package:flutter_calc/player.dart';
+import 'package:flutter_joystick/flutter_joystick.dart';
+
+const ballSize = 20.0;
+const step = 10.0;
+
+class MyJoystick extends StatefulWidget {
+  const MyJoystick({super.key});
+
+  @override
+  State<Joystick> createState() => _JoystickState();
+}
+
+class _JoystickState extends State<Joystick> {
+  final player = Player();
+  final JoystickMode _joystickMode = JoystickMode.all;
+  double _x = 100;
+  double _y = 100;
+
+  @override
+  void didChangeDependencies() {
+    _x = MediaQuery.of(context).size.width / 2 - ballSize / 2;
+    super.didChangeDependencies();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.grey.shade100,
+      body: SafeArea(
+        child: Stack(
+          children: [
+            Align(
+              alignment: const Alignment(0, 0.8),
+              child: Joystick(
+                mode: _joystickMode,
+                listener: (details) {
+                  double speed = Player.getSpeed();
+
+                  setState(() {
+                    _x = _x + step * details.x;
+                    _y = _y + step * details.y;
+                  }
+                  );
+                },
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+} "
+metadata/_custom_type_script = "uid://b8ttwtxu3cyox"

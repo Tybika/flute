@@ -252,6 +252,7 @@ sources/1 = SubResource("TileSetAtlasSource_lu05x")
 
 [node name="KingdomStart" type="Node2D" unique_id=52564875]
 script = ExtResource("1_8r3nu")
+current_theme = "8"
 
 [node name="Handlers" type="Node" parent="." unique_id=1044223731]
 script = ExtResource("2_wl1nl")

@@ -6,8 +6,8 @@ extends Node2D
 @onready var mc = $MainCharacter
 @onready var problem = $ProblemScreen
 
-var current_theme: String
-var current_color: String
+@export var current_theme: String
+@export var current_color: String
 
 const colors = {
 	"black": Color.BLACK,

@@ -16,11 +16,11 @@ extends Control
 	"step.wav" = "",
 	"step_wet.wav" = "",
 	"success.wav" = "",
-	"character.dart" = "",
-	"enemies.dart" = "",
-	"gamepad.dart" = "",
-	"life_counter.dart" = "",
-	"main.dart" = "res://texts/formatted_main.tres",
+	"player.dart" = "res://texts/player.tres",
+	"joystick.dart" = "res://texts/joystick.tres",
+	"life.dart" = "res://texts/lifecounter.tres",
+	"main.dart" = "res://texts/main.tres",
+	"cloud.dart" = "res://texts/cloud.tres",
 }
 
 const extensions = {

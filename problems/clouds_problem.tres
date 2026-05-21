@@ -4,10 +4,11 @@
 
 [resource]
 script = ExtResource("1_d5p20")
-title = "Clouds"
-answer_line = Array[String](["class Clouds extends StatefulWidget {"])
+title = "CloudWidget"
+context = Array[String](["import 'package:flutter/material.dart';", "import 'player.dart';", "", "  const CloudWidget({super.key});", "  @override", "  Widget build(BuildContext context) {...}", "}"])
+answer_line = Array[String](["class CloudWidget extends StatelessWidget {"])
 tags = Dictionary[String, Array]({
-"classes": ["class", "StatelessWidget", "StatefulWidget", "InheritedWidget", "extends", "Clouds"],
+"classes": ["class", "StatelessWidget", "StatefulWidget", "InheritedWidget", "extends", "CloudWidget"],
 "sintaxe": ["(", ")", "[", "]", "{", "}", ":", ";", ",", "\""]
 })
 metadata/_custom_type_script = "uid://c74bhshb66n4q"
