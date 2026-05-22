@@ -9,7 +9,6 @@
 oversampling_override = 1.0
 initial_position = 1
 size = Vector2i(900, 600)
-visible = true
 min_size = Vector2i(50, 50)
 script = ExtResource("1_37e0n")
 back_button = NodePath("Content/VBox/ToolBar/Button")
@@ -72,9 +71,10 @@ layout_mode = 2
 size_flags_horizontal = 3
 handler = NodePath("../../../../..")
 
-[node name="Debug" parent="Content/VBox/ToolBar/IdeButtons" unique_id=1128422462 instance=ExtResource("3_nbrir")]
+[node name="Debug" parent="Content/VBox/ToolBar/IdeButtons" unique_id=1128422462 node_paths=PackedStringArray("handler") instance=ExtResource("3_nbrir")]
 layout_mode = 2
 size_flags_horizontal = 3
+handler = NodePath("../../../../..")
 
 [node name="HSeparator" type="HSeparator" parent="Content/VBox" unique_id=1727155082]
 layout_mode = 2

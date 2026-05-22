@@ -22,12 +22,14 @@ extends Control
 	"main.dart" = "res://texts/main.tres",
 	"cloud.dart" = "res://texts/cloud.tres",
 	"background.dart" = "res://texts/background.tres",
+	"README.md" = "res://texts/readme.tres",
+	"hud.dart" = "res://texts/hud.tres",
 }
 
 const extensions = {
 	"audio" = [".wav", ".mp3", ".ogg"],
 	"image" = [".png", ".jpg", ".jpeg"],
-	"text" = [".dart", ".cpp"],
+	"text" = [".dart", ".cpp", ".md"],
 }
 
 func show_view(view_type: String, data: String):

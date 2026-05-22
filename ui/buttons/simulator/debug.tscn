@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://21tpbdithc8v"]
 
 [ext_resource type="Texture2D" uid="uid://dxl6fs5rkm34t" path="res://ui/buttons/simulator/debug.png" id="1_xmljn"]
+[ext_resource type="Script" path="res://ui/buttons/simulator/debug.gd" id="2_a1x3n"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xmljn"]
 
@@ -11,6 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("2_a1x3n")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1427975441]
 layout_mode = 1

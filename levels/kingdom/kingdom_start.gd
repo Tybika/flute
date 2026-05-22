@@ -34,11 +34,16 @@ func _ready() -> void:
 		SignalBus.problem_solved.connect(_on_problem_solved)
 
 	mc.turn_direction("right")
+	problem.hide_hud()
+	
 	update_style(current_theme, current_color)
 	_check_required_problems()
 
 func get_player():
 	return mc
+
+func get_problem_scr():
+	return problem
 
 func update_style(style: String, color = null):
 	var method_name = null

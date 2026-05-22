@@ -49,7 +49,7 @@ func _connect_g_signal():
 	SignalBus.next_scene_requested.connect(_on_next_scene_requested)
 
 func _resize_control_node(node: Control):
-	node.size = Vector2(1280, 720)
+	node.size = Vector2(1320, 750)
 
 func _remove_current_scene() -> void:
 	remove_child(get_children()[0])

@@ -15,7 +15,8 @@ func _ready() -> void:
 func tree_structure():
 	# Resources
 	var dir_icon = preload("res://ui/modals/project_window/dir.png")
-	var blocked_icon = preload("res://ui/modals/project_window/dir_block.png")
+	var blocked_dir = preload("res://ui/modals/project_window/dir_block.png")
+	var blocked_code = preload("res://ui/modals/project_window/padlock.png")
 	var dart_icon = preload("res://ui/modals/project_window/dart.png")
 	var img_icon = preload("res://ui/modals/project_window/image.png")
 	var sound_icon = preload("res://ui/modals/project_window/sound.png")
@@ -32,16 +33,23 @@ func tree_structure():
 	root.set_icon(0, dir_icon)
 	
 	# First layer
-	new_tree_item(root, "android", blocked_icon)
+	new_tree_item(root, "android", blocked_dir)
 	var editable_asset = new_tree_item(root, "assets", dir_icon, false)
-	new_tree_item(root, "build", blocked_icon)
-	new_tree_item(root, "ios", blocked_icon)
+	new_tree_item(root, "build", blocked_dir)
+	new_tree_item(root, "ios", blocked_dir)
 	var editable_lib = new_tree_item(root, "lib", dir_icon, false)
-	new_tree_item(root, "linux", blocked_icon)
-	new_tree_item(root, "macos", blocked_icon)
-	new_tree_item(root, "test", blocked_icon)
-	new_tree_item(root, "web", blocked_icon)
-	new_tree_item(root, "windows", blocked_icon)
+	new_tree_item(root, "linux", blocked_dir)
+	new_tree_item(root, "macos", blocked_dir)
+	new_tree_item(root, "test", blocked_dir)
+	new_tree_item(root, "web", blocked_dir)
+	new_tree_item(root, "windows", blocked_dir)
+	new_tree_item(root, ".metadata", blocked_code, false)
+	new_tree_item(root, "flutteria_world.iml", blocked_code, false)
+	new_tree_item(root, "pubspec.lock", blocked_code, false)
+	new_tree_item(root, "pubspec.yaml", blocked_code, false)
+	new_tree_item(root, "README.md", blocked_code, false)
+	
+	
 	
 	# Second layer
 	var editable_src = new_tree_item(editable_lib, "src", dir_icon, false)
@@ -49,20 +57,21 @@ func tree_structure():
 	
 	var editable_img = new_tree_item(editable_asset, "img", dir_icon, false)
 	var editable_sfx = new_tree_item(editable_asset, "sfx", dir_icon, false)
-	new_tree_item(editable_asset, "vfx", blocked_icon)
+	new_tree_item(editable_asset, "vfx", blocked_dir)
 	
 	# Third layer
 	new_tree_item(editable_src, "background.dart", dart_icon, false)
 	new_tree_item(editable_src, "cloud.dart", dart_icon, false)
+	new_tree_item(editable_src, "hud.dart", dart_icon, false)
 	new_tree_item(editable_src, "joystick.dart", dart_icon, false)
 	new_tree_item(editable_src, "life.dart", dart_icon, false)
 	new_tree_item(editable_src, "player.dart", dart_icon, false)
 	
 	
-	new_tree_item(editable_img, "chars", blocked_icon)
-	new_tree_item(editable_img, "itens", blocked_icon)
-	new_tree_item(editable_img, "skills", blocked_icon)
-	new_tree_item(editable_img, "weapons", blocked_icon)
+	new_tree_item(editable_img, "chars", blocked_dir)
+	new_tree_item(editable_img, "itens", blocked_dir)
+	new_tree_item(editable_img, "skills", blocked_dir)
+	new_tree_item(editable_img, "weapons", blocked_dir)
 	new_tree_item(editable_img, "background.png", img_icon, false)
 	new_tree_item(editable_img, "background_final.png", img_icon, false)
 	new_tree_item(editable_img, "coin_icon.png", img_icon, false)

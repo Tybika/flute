@@ -1,0 +1,53 @@
+[gd_resource type="Resource" script_class="TextData" format=3 uid="uid://dd283qdldbfok"]
+
+[ext_resource type="Script" uid="uid://b8ttwtxu3cyox" path="res://texts/text_data.gd" id="1_64iig"]
+
+[resource]
+script = ExtResource("1_64iig")
+long_text = "#Flute 
+Este projeto é um caminho legítimo e verídico/n
+ totalmente íntegro e aprovado por pares para/n
+ alcançar o castelo de Flutteria.
+
+##Por que contribuir?
+Você pode treinar suas habilidades de lógica e /n
+programação em Flutter, além de fazer um /n
+serzinho muito feliz e jogar um jogo legal.
+
+
+##Porque você é especial
+Além de você programar muito bem, você:
+-- é capaz de superar obstáculos
+-- está aqui já, querendo jogar Flute
+-- faz diferença no mundo e no futuro com /n
+suas ações \\(^u^ )/
+
+
+##Como contribuir
+Sempre leia os readme.md! Eles têm /n
+informações importantes, depois: /n
+-- use a chave de boca para visualizar /n
+as regiões com problemas a serem resolvidos
+-- pressione uma região de problema /n
+para desparafusar
+-- leia o problema e tente reconhecer /n
+o que está faltando naquele contexto
+-- consulte implementação completa nos /n
+diretórios (terceiro botão na coluna à direita) e /n
+a documentação da linguagem e do framework/n
+ (primeiro botão na coluna à direita)
+-- monte a ordem da linha que resolve o /n
+problema arrastando tags para a caixa ou 
+-- ordene as linhas arrastando elas para a  /n
+posição desejada
+-- pressione o botão de debug (um insetinho /n
+ à direita superior da tela de problema)
+-- se não houver erro, pressione o botão de /n
+hot reload (um trovãozinho à direita superior /n
+da tela) para aplicar mudanças
+-- repita até ter resolvido todos problemas 
+
+
+##Informações do projeto
+Está tudo meio bloqueado, mas é um jogo!!!"
+metadata/_custom_type_script = "uid://b8ttwtxu3cyox"

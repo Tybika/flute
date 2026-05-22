@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ProblemData" format=3 uid="uid://cfb2bigh80xwh"]
+
+[ext_resource type="Script" uid="uid://c74bhshb66n4q" path="res://problems/problem_data.gd" id="1_g3yo0"]
+
+[resource]
+script = ExtResource("1_g3yo0")
+title = "Problema resolvido"
+type = "lineposition"
+context = Array[String](["Esse eu resolvi sozinho!"])
+metadata/_custom_type_script = "uid://c74bhshb66n4q"

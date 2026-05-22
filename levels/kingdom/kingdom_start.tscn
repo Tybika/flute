@@ -10,13 +10,13 @@
 [ext_resource type="PackedScene" uid="uid://c4alrmuq3dxcc" path="res://screens/problem_screen/problem_screen.tscn" id="4_ben2r"]
 [ext_resource type="Script" uid="uid://cgqdabfgu8w3" path="res://levels/kingdom/tilemap.gd" id="4_lu05x"]
 [ext_resource type="Script" uid="uid://c74bhshb66n4q" path="res://problems/problem_data.gd" id="5_uyvqg"]
-[ext_resource type="Resource" uid="uid://uhgbm6u7fnxf" path="res://problems/sample_problem.tres" id="6_lu05x"]
 [ext_resource type="Material" uid="uid://dw0al0sue3gld" path="res://shaders/glitch_material.tres" id="7_6227m"]
 [ext_resource type="Resource" uid="uid://bhrqvnftw17gn" path="res://problems/life_reference_problem.tres" id="11_aw6nl"]
 [ext_resource type="Resource" uid="uid://byejspmnfwg6g" path="res://problems/clouds_problem.tres" id="12_wqj8n"]
 [ext_resource type="Resource" uid="uid://bpxpx1lbm37l" path="res://problems/coin_layout_problem.tres" id="13_wqj8n"]
 [ext_resource type="Resource" uid="uid://c85pyq83k37cr" path="res://problems/theme_problem.tres" id="14_bo5ia"]
 [ext_resource type="Resource" uid="uid://bgd3kvrwdv2q" path="res://problems/joystick_problem.tres" id="16_bo5ia"]
+[ext_resource type="Resource" uid="uid://cfb2bigh80xwh" path="res://problems/solved_problem.tres" id="17_wl1nl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hqguy"]
 resource_name = "earth_32"
@@ -322,7 +322,7 @@ radius = 95.33625
 [node name="KingdomStart" type="Node2D" unique_id=52564875]
 script = ExtResource("1_8r3nu")
 current_theme = "8"
-required_problems = Array[ExtResource("5_uyvqg")]([ExtResource("16_bo5ia")])
+required_problems = Array[ExtResource("5_uyvqg")]([ExtResource("16_bo5ia"), ExtResource("13_wqj8n"), ExtResource("12_wqj8n"), ExtResource("11_aw6nl"), ExtResource("14_bo5ia")])
 
 [node name="Handlers" type="Node" parent="." unique_id=1044223731]
 script = ExtResource("2_wl1nl")
@@ -357,7 +357,7 @@ material = ExtResource("7_6227m")
 position = Vector2(348, 544)
 
 [node name="ProblemScreen" parent="." unique_id=1344442422 instance=ExtResource("4_ben2r")]
-problems = Array[ExtResource("5_uyvqg")]([ExtResource("11_aw6nl"), ExtResource("12_wqj8n"), ExtResource("13_wqj8n"), ExtResource("6_lu05x"), ExtResource("14_bo5ia"), ExtResource("6_lu05x"), ExtResource("6_lu05x"), ExtResource("6_lu05x"), ExtResource("16_bo5ia")])
+problems = Array[ExtResource("5_uyvqg")]([ExtResource("11_aw6nl"), ExtResource("12_wqj8n"), ExtResource("13_wqj8n"), ExtResource("17_wl1nl"), ExtResource("14_bo5ia"), ExtResource("17_wl1nl"), ExtResource("17_wl1nl"), ExtResource("17_wl1nl"), ExtResource("16_bo5ia")])
 handlers = Array[Dictionary]([{
 "method": &"life_hot_reload",
 "node": NodePath("../Handlers")

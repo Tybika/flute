@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_db3xv")
-title = "CoinCounter"
+title = "GameHud"
 type = "lineposition"
-context = Array[String](["FIXA", "1sla outra linha", "1ouralinha", "essa é fixa vamo ver", "essa tbm", "1graddable"])
+context = Array[String](["    return ", "1           Container(", "...", "      child: ", "1             Column(", "....", "        children: [", "1          Row( ...)", "1          Align( ... )", "        ],", "      ),", "    );"])
 metadata/_custom_type_script = "uid://c74bhshb66n4q"

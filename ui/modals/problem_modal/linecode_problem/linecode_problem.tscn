@@ -72,9 +72,10 @@ layout_mode = 2
 size_flags_horizontal = 3
 handler = NodePath("../../../../..")
 
-[node name="Debug" parent="Content/VBox/ToolBar/IdeButtons" unique_id=1128422462 instance=ExtResource("4_5wvnm")]
+[node name="Debug" parent="Content/VBox/ToolBar/IdeButtons" unique_id=1128422462 node_paths=PackedStringArray("handler") instance=ExtResource("4_5wvnm")]
 layout_mode = 2
 size_flags_horizontal = 3
+handler = NodePath("../../../../..")
 
 [node name="HSeparator" type="HSeparator" parent="Content/VBox" unique_id=1727155082]
 layout_mode = 2

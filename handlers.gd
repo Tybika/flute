@@ -1,6 +1,7 @@
 extends Node
 
 var mc : Node
+var problem: Node
 signal next_scene_requested
 
 # Called when the node enters the scene tree for the first time.
@@ -10,16 +11,18 @@ func _ready() -> void:
 func do_nothing():
 	pass
 
-func coin_hot_reload(data: Dictionary):
-	if data.has("answer"):
-		pass
+func coin_hot_reload():
+	if problem == null:
+		problem = get_parent().get_problem_scr()
+	problem.show_hud()
 
 func cloud_hot_reload(data:Dictionary):
 	pass
 
 func joystick_hot_reload():
-	mc = get_parent().get_player()
-	print("ÓIA AQUI O MC SE ACHOU NE:", mc)
+	if mc == null:
+		mc = get_parent().get_player()
+		
 	mc.activate_physics()
 
 func life_hot_reload():
