@@ -12,6 +12,19 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_08eiu")
 
-[node name="VBox" type="VBoxContainer" parent="." unique_id=800804020]
+[node name="HBox" type="HBoxContainer" parent="." unique_id=664753044]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+
+[node name="NumColumn" type="VBoxContainer" parent="HBox" unique_id=1320089974]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+
+[node name="VSeparator" type="VSeparator" parent="HBox" unique_id=139732895]
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="HBox" unique_id=800804020]
 layout_mode = 2
 size_flags_horizontal = 3

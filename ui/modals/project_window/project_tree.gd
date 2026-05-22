@@ -52,10 +52,12 @@ func tree_structure():
 	new_tree_item(editable_asset, "vfx", blocked_icon)
 	
 	# Third layer
-	new_tree_item(editable_src, "player.dart", dart_icon, false)
+	new_tree_item(editable_src, "background.dart", dart_icon, false)
 	new_tree_item(editable_src, "cloud.dart", dart_icon, false)
 	new_tree_item(editable_src, "joystick.dart", dart_icon, false)
 	new_tree_item(editable_src, "life.dart", dart_icon, false)
+	new_tree_item(editable_src, "player.dart", dart_icon, false)
+	
 	
 	new_tree_item(editable_img, "chars", blocked_icon)
 	new_tree_item(editable_img, "itens", blocked_icon)

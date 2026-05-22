@@ -62,6 +62,7 @@ func check_syntax() -> bool:
 func _on_hot_reload_button_up():
 	if check_answer():
 		shader_released.emit()
+		SignalBus.problem_solved.emit(modal_data.title)
 		
 		if not handler == null:
 			_call_handler(

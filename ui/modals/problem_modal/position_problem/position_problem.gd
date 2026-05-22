@@ -1,6 +1,5 @@
 extends BaseModal
 
-@onready var num_column: VBoxContainer = $Content/VBox/HBoxContainer/EnumeratedColumn
 @onready var modal_title: Label = $Content/VBox/ToolBar/TitleLabel
 @onready var line_view = $Content/VBox/HBoxContainer/LineView
 
@@ -14,7 +13,6 @@ func _ready() -> void:
 	if modal_data:
 		push_data()
 		_build_correct_order()
-		_gen_enum_column()
 		shuffle_order()
 		setup()
 
@@ -23,16 +21,10 @@ func _call_handler() -> void:
 	var method_name = handler["method"]
 
 	if handler.has("params"):
+		print("oia o handler aí: ", handler)
 		node.call(method_name, handler["params"])
 	else:
 		node.call(method_name)
-
-func _gen_enum_column() -> void:
-	if modal_data.context:
-		for i in range(modal_data.context.size()):
-			var num = Label.new()
-			num.text = str(i + 1)
-			num_column.add_child(num)
 
 func push_data() -> void:
 	if modal_data:
@@ -95,6 +87,7 @@ func check_syntax() -> bool:
 func _on_hot_reload_button_up() -> void:
 	if check_answer():
 		shader_released.emit()
+		SignalBus.problem_solved.emit(modal_data.title)
 		if not handler.is_empty():
 			_call_handler()
 	else:

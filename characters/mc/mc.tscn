@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://ctd5kp24ojef7" path="res://characters/mc/mc_side_32b.png" id="12_emon4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0micv"]
-size = Vector2(21, 23)
+size = Vector2(61, 53)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g05og"]
 animations = [{
@@ -139,7 +139,7 @@ animations = [{
 script = ExtResource("1_a5uke")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1832254575]
-position = Vector2(1.5, 3.5)
+position = Vector2(1.5, 5.5)
 shape = SubResource("RectangleShape2D_0micv")
 
 [node name="BodySprite" type="AnimatedSprite2D" parent="." unique_id=1882492044]

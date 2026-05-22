@@ -36,7 +36,7 @@ func swipe_require():
 	animator.play("handling")
 	timer = get_tree().create_timer(5)
 	timer.timeout.connect(_on_timer_timeout)
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(0.5).timeout
 	navigation.show()
 
 # Provide instruction if player don't swipe in defined time

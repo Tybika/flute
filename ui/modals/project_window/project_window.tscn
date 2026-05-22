@@ -68,16 +68,12 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("2_gtt7h")
-handler = NodePath("../../ScrollContainer2/ProjectView")
+handler = NodePath("../../ProjectView")
 
-[node name="ScrollContainer2" type="ScrollContainer" parent="Content/VBoxContainer/HBoxContainer2" unique_id=576510230]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 3.0
-
-[node name="ProjectView" parent="Content/VBoxContainer/HBoxContainer2/ScrollContainer2" unique_id=1780776079 instance=ExtResource("3_j0sbb")]
+[node name="ProjectView" parent="Content/VBoxContainer/HBoxContainer2" unique_id=1780776079 instance=ExtResource("3_j0sbb")]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+size_flags_stretch_ratio = 3.0
 
 [connection signal="item_selected" from="Content/VBoxContainer/HBoxContainer2/ScrollContainer/Tree" to="Content/VBoxContainer/HBoxContainer2/ScrollContainer/Tree" method="_on_item_selected"]

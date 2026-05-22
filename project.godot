@@ -15,7 +15,7 @@ config/description="Jogo educacional de gerenciamento de informação e puzzle p
 config/version="1.0"
 run/main_scene="uid://cxcijfp2wss2p"
 config/features=PackedStringArray("4.6", "Mobile")
-boot_splash/use_filter=false
+boot_splash/bg_color=Color(0, 0, 0, 1)
 config/icon="res://icon.svg"
 run/stretch/aspect="expand"
 
@@ -36,6 +36,10 @@ window/size/viewport_width=1280
 window/size/viewport_height=720
 window/stretch/mode="viewport"
 window/stretch/aspect="ignore"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/glitch_intro/plugin.cfg")
 
 [gui]
 

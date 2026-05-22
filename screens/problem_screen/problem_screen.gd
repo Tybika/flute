@@ -33,7 +33,6 @@ func _ready() -> void:
 	
 	if not problem_visible:
 		hide_problems()
-	
 
 
 func _update_style(method_name: String):
@@ -45,6 +44,7 @@ func _get_handler_from_path():
 	for handler in handlers:
 		handler["node"] = get_node(handler["node"])
 	print("óia os handler que getou: ", handlers)
+
 
 func coin_alignment(alignment: String):
 	hud.coin_alignment(alignment)

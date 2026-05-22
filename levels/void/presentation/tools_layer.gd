@@ -17,9 +17,8 @@ const TOOLS_DESC: Dictionary[String, String] = {
 	"project": 
 		"Tem umas papeladas, uns lugares, não sei, nunca abri",
 	"wrench": 
-		"Usando isso você vai conseguir ver uma camada abaixo de onde estamos,
-		sei que bater duas vezes nas coisas resolve, mas deve ter um jeito mais 
-		delicado de usar",
+		"Isso vai te deixar ver uma camada abaixo de onde estamos,
+		deve ter um jeito delicado de usar ao invés de bater nas coisas",
 }
 
 @onready var buttons_pos: Dictionary = {

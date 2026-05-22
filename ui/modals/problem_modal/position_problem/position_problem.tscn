@@ -84,14 +84,6 @@ layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 4.89
 
-[node name="EnumeratedColumn" type="VBoxContainer" parent="Content/VBox/HBoxContainer" unique_id=1320089974]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 0.14
-
-[node name="VSeparator" type="VSeparator" parent="Content/VBox/HBoxContainer" unique_id=139732895]
-layout_mode = 2
-
 [node name="LineView" parent="Content/VBox/HBoxContainer" unique_id=1274117872 instance=ExtResource("4_d01ll")]
 layout_mode = 2
 size_flags_stretch_ratio = 2.87

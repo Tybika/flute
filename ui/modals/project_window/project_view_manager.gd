@@ -21,6 +21,7 @@ extends Control
 	"life.dart" = "res://texts/lifecounter.tres",
 	"main.dart" = "res://texts/main.tres",
 	"cloud.dart" = "res://texts/cloud.tres",
+	"background.dart" = "res://texts/background.tres",
 }
 
 const extensions = {

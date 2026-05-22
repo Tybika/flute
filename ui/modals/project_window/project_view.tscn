@@ -12,6 +12,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
 script = ExtResource("1_ut2bi")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1617134493]
@@ -22,16 +25,24 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
+size_flags_vertical = 3
 size_flags_stretch_ratio = 2.71
+mouse_filter = 2
 
 [node name="ImageView" parent="MarginContainer" unique_id=90139097 instance=ExtResource("2_ywf7v")]
 visible = false
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [node name="RawView" parent="MarginContainer" unique_id=547206734 instance=ExtResource("3_0onn0")]
 visible = false
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [node name="AudioView" parent="MarginContainer" unique_id=1434968181 instance=ExtResource("4_evx55")]
 visible = false
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3

@@ -1,11 +1,11 @@
 extends Node
 
-@onready var mc : Node2D = $"./MainCharacter"
+var mc : Node
 signal next_scene_requested
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	pass
 
 func do_nothing():
 	pass
@@ -18,6 +18,8 @@ func cloud_hot_reload(data:Dictionary):
 	pass
 
 func joystick_hot_reload():
+	mc = get_parent().get_player()
+	print("ÓIA AQUI O MC SE ACHOU NE:", mc)
 	mc.activate_physics()
 
 func life_hot_reload():
