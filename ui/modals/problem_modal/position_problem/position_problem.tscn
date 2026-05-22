@@ -4,14 +4,15 @@
 [ext_resource type="PackedScene" uid="uid://d2s316l611lfc" path="res://ui/buttons/simulator/hot_reload.tscn" id="2_6qf6o"]
 [ext_resource type="PackedScene" uid="uid://21tpbdithc8v" path="res://ui/buttons/simulator/debug.tscn" id="3_nbrir"]
 [ext_resource type="PackedScene" uid="uid://cr5vnyxd2lhq" path="res://ui/views/code_view/line_view_pos.tscn" id="4_d01ll"]
-[ext_resource type="PackedScene" uid="uid://p4chpx46efyt" path="res://ui/modals/problem_modal/draggable_line/draggable_line.tscn" id="5_d01ll"]
 
-[node name="PositionProblemModal" type="PopupPanel" unique_id=971610259]
+[node name="PositionProblemModal" type="PopupPanel" unique_id=971610259 node_paths=PackedStringArray("back_button")]
 oversampling_override = 1.0
 initial_position = 1
 size = Vector2i(900, 600)
+visible = true
 min_size = Vector2i(50, 50)
 script = ExtResource("1_37e0n")
+back_button = NodePath("Content/VBox/ToolBar/Button")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1658290119]
 anchors_preset = 15
@@ -94,6 +95,3 @@ layout_mode = 2
 [node name="LineView" parent="Content/VBox/HBoxContainer" unique_id=1274117872 instance=ExtResource("4_d01ll")]
 layout_mode = 2
 size_flags_stretch_ratio = 2.87
-
-[node name="DraggableLine" parent="Content/VBox/HBoxContainer/LineView" unique_id=1603412359 instance=ExtResource("5_d01ll")]
-layout_mode = 2

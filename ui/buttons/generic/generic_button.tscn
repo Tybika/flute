@@ -12,10 +12,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 script = ExtResource("1_nfkc4")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=79402445]
-custom_minimum_size = Vector2(50, 0)
+custom_minimum_size = Vector2(50, 1)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -47,6 +48,7 @@ theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
 [node name="Button" type="Button" parent="MarginContainer/MarginContainer" unique_id=1142980040]
+custom_minimum_size = Vector2(30, 10)
 layout_mode = 2
 theme_override_styles/focus = SubResource("StyleBoxEmpty_yaggh")
 flat = true

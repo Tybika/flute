@@ -3,6 +3,9 @@
 [ext_resource type="Script" uid="uid://brgr5b5frhouv" path="res://ui/modals/problem_modal/editable_line/editable_line.gd" id="1_bhqpe"]
 [ext_resource type="Texture2D" uid="uid://c8jkmwjm120py" path="res://ui/modals/problem_modal/editable_line/close.png" id="2_10ow5"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tady6"]
+bg_color = Color(0.33288068, 0.3328807, 0.33288056, 1)
+
 [node name="EditableLine" type="MarginContainer" unique_id=676310873]
 anchors_preset = 15
 anchor_right = 1.0
@@ -17,6 +20,7 @@ script = ExtResource("1_bhqpe")
 
 [node name="Panel" type="Panel" parent="." unique_id=1036409565]
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_tady6")
 
 [node name="HBoxContainer" type="FlowContainer" parent="." unique_id=1019692879]
 custom_minimum_size = Vector2(0, 10)

@@ -2,11 +2,10 @@ extends CanvasLayer
 
 @onready var instructions = $Control/Buttons/ToolsInstructions
 @onready var label = $Control/Buttons/ToolsInstructions/MarginContainer/Label
-
 @onready var docs_b = $Control/Buttons/DocButton
 @onready var project_b = $Control/Buttons/ProjectButton
 @onready var wrench_b = $Control/Buttons/WrenchButton
-@onready var buttons = $Control/Buttons
+@onready var buttons = $Control
 @onready var anim_player = $Control/AnimationPlayer 
 
 var saw: Array[String]
@@ -34,6 +33,7 @@ func _ready() -> void:
 	docs_b.style_8bit()
 	project_b.style_8bit()
 	wrench_b.style_8bit()
+	
 
 func update_label(event, type: String):
 	if event is InputEventScreenTouch && !event.pressed:
@@ -49,6 +49,7 @@ func update_label(event, type: String):
 			instructions.queue_free()
 			buttons.gui_input.disconnect(_on_buttons_gui_input)
 			anim_player.play("button_switch")
+
 
 
 func _on_buttons_gui_input(event: InputEvent) -> void:

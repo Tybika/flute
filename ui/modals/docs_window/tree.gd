@@ -40,7 +40,8 @@ func tree_structure():
 	new_tree_item(flutter, "ThemeData")
 	new_tree_item(flutter, "Widget")
 	new_tree_item(flutter, "Joystick")
-
+	
+	
 
 
 # Creates and configure TreeItems
@@ -48,7 +49,7 @@ func new_tree_item(parent: TreeItem, text: String):
 	var item = tree.create_item(parent)
 	item.set_text(0, text)
 	
-	item.set_collapsed(true)
+	item.set_collapsed(false)
 	return item
 
 # Handles try of open blocked folders

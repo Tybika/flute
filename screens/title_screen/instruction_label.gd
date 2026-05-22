@@ -5,6 +5,8 @@ extends Control
 @onready var label: Label = $VBox/InstructionLabel
 @onready var navigation = $Navigation
 
+var timer = null
+
 signal add_tree_requested(item_name: String)
 
 const instructions = [
@@ -32,10 +34,16 @@ func _on_gui_input(event: InputEvent) -> void:
 func swipe_require():
 	handSprite.show()
 	animator.play("handling")
-	get_tree().create_timer(5).timeout.connect(_on_timer_timeout)
+	timer = get_tree().create_timer(5)
+	timer.timeout.connect(_on_timer_timeout)
 	await get_tree().create_timer(1).timeout
 	navigation.show()
 
 # Provide instruction if player don't swipe in defined time
 func _on_timer_timeout() -> void:
 	label.text = instructions[3]
+
+
+func _on_tree_exiting() -> void:
+	timer.timeout.disconnect(_on_timer_timeout)
+	print("tem alguma connection: ", timer.has_connections("timeout"))

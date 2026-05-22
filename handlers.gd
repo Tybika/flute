@@ -1,5 +1,6 @@
 extends Node
 
+@onready var mc : Node2D = $"./MainCharacter"
 signal next_scene_requested
 
 # Called when the node enters the scene tree for the first time.
@@ -16,8 +17,8 @@ func coin_hot_reload(data: Dictionary):
 func cloud_hot_reload(data:Dictionary):
 	pass
 
-func joystick_hot_reload(data:Dictionary):
-	pass
+func joystick_hot_reload():
+	mc.activate_physics()
 
 func life_hot_reload():
 	SceneManager.get_current_scene().life_update()

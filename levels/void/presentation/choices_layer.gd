@@ -12,7 +12,7 @@ func _ready() -> void:
 
 func next():
 	var current_choice = get_child(0)
-	if current_choice :
+	if current_choice:
 		current_choice.show()
 		await current_choice.tree_exited
 

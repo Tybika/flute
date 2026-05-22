@@ -5,14 +5,17 @@ signal shader_requested
 signal shader_released
 signal add_tree_requested
 signal next_scene_requested
+signal problem_solved(problem_title: String)
+signal all_problems_solved
 
 const SIGNALS: Array = [
 	"save_requested",
-	"load_requested",
 	"shader_requested",
 	"shader_released",
 	"add_tree_requested",
 	"next_scene_requested",
+	"problem_solved",
+	"all_problems_solved",
 ]
 
 # Called when the node enters the scene tree for the first time.
@@ -26,7 +29,8 @@ func _create_signals():
 
 func _connect_recursive(node: Node):
 	for signal_info in node.get_signal_list():
-		if signal_info.name in SIGNALS:
+		
+		if signal_info.name in SIGNALS and not node.has_connections(signal_info.name):
 			Signal(node, signal_info.name).connect(emit_signal.bind(
 					signal_info.name))
 	

@@ -35,14 +35,11 @@ Saver="*uid://by5edqdq5ou3y"
 window/size/viewport_width=1280
 window/size/viewport_height=720
 window/stretch/mode="viewport"
+window/stretch/aspect="ignore"
 
 [gui]
 
-theme/custom_font="uid://diexthh42xb4e"
-
-[input_devices]
-
-pointing/emulate_touch_from_mouse=true
+theme/custom="uid://bq7d4vgmm5kye"
 
 [rendering]
 

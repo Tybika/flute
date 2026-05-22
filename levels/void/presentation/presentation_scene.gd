@@ -9,7 +9,7 @@ extends Node2D
 
 @onready var scene_order = [
 	mc.spin,
-	dg_layer.next, 
+	dg_layer.next,
 	cc_layer.next,
 	dg_layer.next,
 	cc_layer.next,
