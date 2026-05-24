@@ -20,6 +20,11 @@ Se o celular pedir permissão para instalar apps desconhecidos, isso é esperado
 
 ## Desenvolvedor
 Em breve
+**IMPORTANTE: esse projeto está passando por uma grande refatoração, por favor, aguarde para contribuir sem retrabalho. Data máxima de refatoração: dez. 2026**
+
+## Contribuintes
+Tybika é uma estudante de graduação estudando desenvolvimento de software e desenvolvimento de jogos educacionais.
+
 
 
 EN
@@ -43,26 +48,8 @@ After downloading the APK on your Android device:
 If your phone asks for permission to install unknown apps, this is expected for APK files downloaded outside the Play Store. You can disable that permission again after installing.
 
 ## Developer
+Coming soon.
 **IMPORTANT: this project is passing by a big refactor, please, await to contribute without rework. Max date to refactoring: Dec. 2026**
 
 ### Contributors 
-
-### Version and project info
-
-Godot 4.6.1
-
-### How this project is organized
-
-According Godot Docs, the scenes and their resources are grouped by generic directories named by function, in resume:
-1. "res://characters" groups scenes with sprites, animations and physics 
-2. "res://levels" groups scenes with tilemap, background and characters
-3. "res://ui" groups scenes with sprites, layout and interface events
-4. "res://problems" groups the problems data resources
-5. "res://dialogues" groups the dialogues data resources
-6. "res://globals" groups global variables and global scripts
-
-
-### How to customize Flute
-
-Locales and acessibility are still unavailable.
-Despite you can alter all project, the extensible part are problems and their calls, so you can develop more problems or complex the existent and replace the original problems. The sctructure of a problem will be socumented soon.
+Tybika is a undergraduated dev, studying software development and educational game development.
